@@ -2,7 +2,7 @@
 	"name": "Sewise Player",
 	"title": "Sewise Player : HTML5 Video Player",
 	"description": "Sewise Player allows you to create a media player with a consistent interface and experience across all browsers.",
-	"keywords": [
+		"keywords": [
 	    "html5",
 	    "player",
 	    "video",
