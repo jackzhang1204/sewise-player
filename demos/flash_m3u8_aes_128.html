@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>m3u8 AES-128</title>
+		<script charset="utf-8" type="text/javascript" language="JavaScript" src="../player/js/swfobject.js"></script>
+		<script language="JavaScript" charset="utf-8" type="text/javascript">
+			var url_uri = "http://playertest.longtailvideo.com/adaptive/customIV/prog_index.m3u8";
+			var flashvars = {
+				autoStart        : 'true',
+				skin             : '../player/flash/skins/vodWhite.swf',
+				type             : 'm3u8',
+				videoUrl         : url_uri
+			};
+			var params = {
+				allowfullscreen   : true,
+				wmode             : "transparent",
+				allowscriptaccess : 'always'
+			};
+			var attributes = {
+				id : 'sewise_x_player',
+				name : 'sewise_x_player'
+			};
+			window.onload = function() {
+				swfobject.embedSWF("../player/flash/SewisePlayer.swf", "swf-container", "100%", "100%", "9.0.115", false, flashvars, params, attributes);
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width: 600px;height: 400px;">
+			<div id="swf-container">
+				加载播放器……
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title>Sewise Player</title>
+</head>
+<body>
+	<div style="width: 640px; height: 360px; ">
+		<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo 点播标题&buffer=5&skin=vodWhite"></script>
+	</div>
+	<script>
+		//点播
+		function startPlay(){
+			SewisePlayer.doPlay();
+		}
+		function playPause(){
+			SewisePlayer.doPause();
+		}
+		function seekTo(){
+			SewisePlayer.doSeek(5);
+		}
+		function playStop(){
+			SewisePlayer.doStop();
+		}
+		function changeVolume(){
+			SewisePlayer.setVolume(0.1);
+		}
+		function getDuration(){
+			alert(SewisePlayer.duration());
+		}
+		function getPlayTime(){
+			alert(SewisePlayer.playTime());
+		}
+		// function switchProgram(){
+		// 	SewisePlayer.playProgram("xqfa3cZn", 0, true);
+		// }
+		function switchVideo(){
+			SewisePlayer.toPlay("http://media.w3.org/2010/05/sintel/trailer.mp4", "Sintel", 0, true);
+		}
+		function playerReady(){
+			console.log("Sewise Player On Ready");
+			//SewisePlayer.toPlay("http://media.w3.org/2010/05/sintel/trailer.mp4", "title", 0, false);
+		}
+	</script>
+	<div style="padding-top: 20px;">
+		<div style="padding-right: 20px;float: left;">[点播接口]</div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:startPlay();">播放</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:playPause();">暂停</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:seekTo();">跳转</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:playStop();">停止</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:changeVolume();">更改音量</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:getDuration();">获取总时长</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:getPlayTime();">获取当前时间</a></div>
+		<!-- <div style="padding-right: 20px;float: left;"><a href="javascript:switchProgram();">切换节目</a></div> -->
+		<div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">切换视频</a></div>
+		<br clear="all"/>
+	</div>
+</body>
+</html>
