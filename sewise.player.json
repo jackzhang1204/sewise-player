@@ -1,0 +1,42 @@
+{
+	"name": "Sewise Player",
+	"title": "Sewise Player : HTML5 Video Player",
+	"description": "Sewise Player allows you to create a media player with a consistent interface and experience across all browsers.",
+	"keywords": [
+		"html5",
+	    "player",
+	    "video",
+	    "skin",
+	    "sewise player",
+	    "html5 player",
+	    "flash player",
+	    "vod player",
+	    "live player",
+	    "stream media player",
+	    "web player",
+	    "javascript player",
+	    "html5 css skins",
+	    "free html5 player",
+	    "opensource html5 player"
+	],
+	"version": "1.0.0",
+	"author": {
+		"name": "Jack Zhang",
+		"url": "http://player.sewise.com/"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/happyworm/jPlayer/blob/master/MIT-LICENSE.txt"
+		}
+	],
+	"dependencies": {
+		"jquery": ">1.6.0",
+    	"sewise server": ">1.0.0"
+	},
+	"homepage": "http://player.sewise.com/",
+	"demo": "http://player.sewise.com/a/yingyongshili/",
+	"docs": "http://player.sewise.com/a/bangzhuzhongxin/",
+	"download": "http://player.sewise.com/a/pifuxiazai/",
+	"bugs": "http://bbs.sewise.com/"
+}
