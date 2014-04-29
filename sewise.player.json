@@ -3,7 +3,7 @@
 	"title": "Sewise Player : HTML5 Video Player",
 	"description": "Sewise Player allows you to create a media player with a consistent interface and experience across all browsers.",
 	"keywords": [
-		"html5",
+	    "html5",
 	    "player",
 	    "video",
 	    "skin",
@@ -12,11 +12,11 @@
 	    "flash player",
 	    "vod player",
 	    "live player",
-	    "stream media player",
 	    "web player",
-	    "javascript player",
 	    "html5 css skins",
 	    "free html5 player",
+	    "javascript player",
+	    "stream media player",
 	    "opensource html5 player"
 	],
 	"version": "1.0.0",
