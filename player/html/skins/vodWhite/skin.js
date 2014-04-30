@@ -1,3 +1,13 @@
+/*
+ * Name: VodWhite SewisePlayerSkin framework V1.0.0
+ * Author: Jack Zhang
+ * Website: http://www.sewise.com/
+ * Date: 24th March 2014
+ * Copyright: 2014, Sewise
+ * 
+ */
+
+
 (function(a){a.SewisePlayerSkin={version:"1.0.0"};a.SewisePlayer=a.SewisePlayer||{}})(window);(function(a){a.SewisePlayer.IVodPlayer=a.SewisePlayer.IVodPlayer||{play:function(){},pause:function(){},stop:function(){},seek:function(){},changeClarity:function(){},setVolume:function(){},toPlay:function(){},duration:function(){},playTime:function(){},type:function(){},showTextTip:function(){},hideTextTip:function(){},muted:function(){}}})(window);(function(a){a.SewisePlayerSkin.IVodSkin=a.SewisePlayerSkin.IVodSkin||{player:function(){},started:function(){},paused:function(){},stopped:function(){},seeking:function(){},buffering:function(){},bufferProgress:function(){},loadedProgress:function(){},programTitle:function(){},duration:function(){},playTime:function(){},startTime:function(){},loadSpeed:function(){},initialClarity:function(){},lang:function(){},logo:function(){},clarityButton:function(){},timeDisplay:function(){},controlBarDisplay:function(){},
 topBarDisplay:function(){},timeUpdate:function(){}}})(window);(function(){SewisePlayerSkin.Utils={stringer:{secondsToHMS:function(a){if(!(0>a)){var b=this.time2FigFill(Math.floor(a/3600)),i=this.time2FigFill(a/60%60),a=this.time2FigFill(a%60);return b+":"+i+":"+a}},secondsToMS:function(a){if(!(0>a)){var b=this.time2FigFill(a/60),a=this.time2FigFill(a%60);return b+":"+a}},time2FigFill:function(a){var b,a=Math.floor(a);10>a?b="0"+a:b=""+a;return b},dateToTimeString:function(){var a=new Date,b=a.getFullYear(),i=a.getMonth()+1,f=a.getDate(),k=this.time2FigFill(a.getHours()),
 c=this.time2FigFill(a.getMinutes()),a=this.time2FigFill(a.getSeconds());return b+"-"+i+"-"+f+" "+k+":"+c+":"+a}}}})();(function(a){SewisePlayerSkin.ElementObject=function(){this.$sewisePlayerUi=a(".sewise-player-ui");this.$container=this.$sewisePlayerUi.parent();this.$video=this.$container.find("video").get(0);this.$controlbar=this.$sewisePlayerUi.find(".controlbar");this.$playBtn=this.$sewisePlayerUi.find(".controlbar-btns-play");this.$pauseBtn=this.$sewisePlayerUi.find(".controlbar-btns-pause");this.$stopBtn=this.$sewisePlayerUi.find(".controlbar-btns-stop");this.$fullscreenBtn=this.$sewisePlayerUi.find(".controlbar-btns-fullscreen");
