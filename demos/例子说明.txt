@@ -25,3 +25,7 @@ color_skin.html			换色皮肤
 vod_api.html			点播API接口
 
 live_api.html			直播API接口
+
+setup_parameters.html	启动参数设置模式
+
+fallback_url.html		回退兼容地址参数设置

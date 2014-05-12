@@ -57,9 +57,9 @@
 		try{
 			SewisePlayer.CommandDispatcher.dispatchEvent({type: SewisePlayer.Events.PLAYER_SKIN_LOADED, playerSkin: SewisePlayerSkin.ILiveSkin});
 		}catch(e){
-			console.log("No Main Palyer");
+			console.log("No Main Player");
 			
-			//alert("No Main Palyer");
+			//alert("No Main Player");
 		}
 		
 		//$(".sewise-player-ui").css("visibility", "hidden");

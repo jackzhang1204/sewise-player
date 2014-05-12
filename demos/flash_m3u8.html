@@ -4,46 +4,11 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>m3u8 sample</title>
-		<script charset="utf-8" type="text/javascript" language="JavaScript" src="../player/js/swfobject.js"></script>
-		<script language="JavaScript" charset="utf-8" type="text/javascript">
-			var player;
-			var type = "m3u8";
-            var url_uri = "http://www.codecomposer.net/hls/playlist.m3u8";
-			var flashvars = {
-				autoStart        : 'true',
-				skin             : '../player/flash/skins/vodWhite.swf',
-				buffer           : 1,
-				title            : 'TEST',
-				type             : type,
-				logo             : 'http://www.sewise.com/public/home/images/logo.png',
-				lang             : 'zh_CN',
-				clarityButton	 : 'disable',
-				playerName		 :'Sewise Player',
-				copyright		 :'All right reserved the SEWISE inc 2011-2013',
-				published        : 0,
-				draggable		 :"true",
-				videoUrl         : url_uri,
-				startTime        : 0
-			};
-			var params = {
-				allowfullscreen   : true,
-				wmode             : "transparent",
-				allowscriptaccess : 'always'
-			};
-			var attributes = {
-				id : 'sewise_x_player',
-				name : 'sewise_x_player'
-			};
-			window.onload = function() {
-				swfobject.embedSWF("../player/flash/SewisePlayer.swf", "swf-container", "100%", "100%", "9.0.115", false, flashvars, params, attributes);
-			}
-		</script>
 	</head>
 	<body>
 		<div style="width: 600px;height: 400px;">
-			<div id="swf-container">
-				加载播放器……
-			</div>
+			<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://www.codecomposer.net/hls/playlist.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-M3u8&buffer=5&claritybutton=disable&skin=vodWhite"></script>
+			<script type="text/javascript">
 		</div>
 	</body>
 </html>
