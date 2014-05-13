@@ -2,12 +2,15 @@
 
 Support for [jQuery](http://jquery.com/) HTML player skins.
 
+
 ## What is Sewise Player?
+
 
 ### Sewise Player是一款专业的免费网页视频、流播放器，它功能强大，体积小，跨平台，使用方便简洁、随心所欲。
 * 播放器是主要以HTML5技术为平台开发，同时兼容flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器播放视频。
 * Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或flash模式播放视频。你不需要掌握任何专业的JavaScript或ActionScript技术就可以制作出专业的网页视频播放器。
 * Sewise Player即可以做为单一的前台播放器来在页面上播放视频，也可以结合Sewise Server后台技术实现专业的可交互的点播、直播视频播放。
+
 
 ### 功能列表：
 * 支持HTML5, Flash视频播放技术。
@@ -22,7 +25,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 支持自定义HTML5与Flash皮肤，无需了解程序，即可自己制作出超烗风格皮肤。
 * 支持前置广告（swf, 图片, 视频）。
 * 支持字幕。
-* 支持多种播放参数设定。
+* 支持多种播放参数设定，并支持启动参数设置。
 * 支持丰富的api接口，快速打造功能强大的插件。
 
 
@@ -34,10 +37,9 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * html\skins\vodWhite\skin.html.js, HTML5皮肤vodWhite Dom元素对象，用于兼容跨域加载。
 * html\skins\vodWhite\skin.css, HTML5皮肤vodWhite CSS样式。
 * html\skins\vodWhite\skin.js, HTML5皮肤vodWhite JS逻辑代码。
-
-* flash, flash播放器目录
+* flash, flash播放器目录。
 * flash\SewisePlayer.swf， Flash播放器主文件。
-* flash\skins, Flash皮肤目录
+* flash\skins, Flash皮肤目录。
 * flash\skins\vodWhite.swf, Flash点播白色皮肤。
 * flash\skins\liveWhite.swf, Flash直播白色皮肤。
 * flash\skins\vodOrange.swf, Flash点播橙色皮肤。
@@ -45,37 +47,33 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 
 
 ### 页面播放器嵌入方式：
-* 点播地址sourceid请求播放
+* 点播，实际地址播放。
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="http://192.168.1.24/libs/swfplayer/player/sewise.player.min.js?server=vod&sourceid=ZIM6n32R&autostart=true&starttime=2&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&skin=vodWhite"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite"></script>
 </div>
 ```
-例子：[demos/vod_sourceid.html](demos/vod_sourceid.html)
 
-* 点播地址videourl直接播放
+* 点播，节目ID播放。
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite"></script>
+	<script type="text/javascript" src="http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js?server=vod&sourceid=eQgPHj4N&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&skin=vodWhite"></script>
 </div>
 ```
-例子：[demos/vod_videourl_mp4.html](demos/vod_videourl_mp4.html)
 
-* 直播地址pid请求播放
+* 直播，实际地址播放。
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="http://192.168.1.21/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=e4f9i5sk&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://219.232.161.204/livestream/mtzysunq&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveWhite"></script>
 </div>
 ```
-例子：[demos/live_pid.html](demos/live_pid.html)
 
-* 直播地址streamurl直接播放
+* 直播，节目ID播放。
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://192.168.1.21/livestream/ijzj7292&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveWhite"></script>
+	<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=vk5nx2cj&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
 </div>
 ```
-例子：[demos/live_streamurl_rtmp.html](demos/live_streamurl_rtmp.html)
 
 
 ### 播放器运行原理:
@@ -90,19 +88,409 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 详细参数说明，见："参数说明.md"文件。
 
 
-### API接口调用：
-* Sewise Player播放器对外提供了丰富的API接口，通过API接口调用可以轻松控制播放器播放。
-* 详细接口说明，见："接口说明.md"文件。
-* 点播接口例子：[demos/vod_api.html](demos/vod_api.html)
-* 直播接口例子：[demos/live_api.html](demos/live_api.html)
-
-
 ### 播放器皮肤：
 * Sewise Player播放器皮肤分为两部分，即HTML5与Flash皮肤。
 * HTML5皮肤由HTML、CSS、JS文件构成，一个文件目录对应一个皮肤。
 * Flash皮肤由SWF文件构成，一个SWF文件对应一个皮肤。
 * HTML5与Flash皮肤设置方法相同，只要将参数skin设置为对应的皮肤名，如skin=vodWhite表示白色点播皮肤。
 * HTML5与Flash皮肤的源代码已开放，见[source目录](source)。
+
+
+### API接口调用：
+* Sewise Player播放器对外提供了丰富的API接口，通过API接口调用可以轻松控制播放器播放。
+* 详细接口说明，见："接口说明.md"文件。
+
+* 点播接口
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo 点播标题&buffer=5&skin=vodWhite"></script>
+</div>
+<script>
+	//点播接口调用方法
+	function startPlay(){
+		SewisePlayer.doPlay();
+	}
+	function playPause(){
+		SewisePlayer.doPause();
+	}
+	function seekTo(){
+		SewisePlayer.doSeek(5);
+	}
+	function playStop(){
+		SewisePlayer.doStop();
+	}
+	function changeVolume(){
+		SewisePlayer.setVolume(0.1);
+	}
+	function getDuration(){
+		alert(SewisePlayer.duration());
+	}
+	function getPlayTime(){
+		alert(SewisePlayer.playTime());
+	}
+	// function switchProgram(){
+	// 	SewisePlayer.playProgram("xqfa3cZn", 0, true);
+	// }
+	function switchVideo(){
+		SewisePlayer.toPlay("http://media.w3.org/2010/05/sintel/trailer.mp4", "Sintel", 0, true);
+	}
+
+	//播放器回调方法
+	function playerReady(name){
+		console.log("Sewise Player On Ready");
+		//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
+	}
+	function onStart(name){
+        console.log("onStart");
+	}
+	function onStop(name){
+		 console.log("onStop");
+	}
+	function onMetadata(meta, name){
+		console.log("onMetadata");
+	}
+	function onClarity(clarity, name){
+		console.log("onClarity");
+	}
+	function onPause(name){
+		console.log("onPause");
+	}
+	function onSeek(time, name){
+		console.log("onSeek: " + time);
+	}
+	function onPlayTime(time, name){
+		console.log("onPlayTime: " + time);
+	}
+</script>
+<div style="padding-top: 20px;">
+	<div style="padding-right: 20px;float: left;">[点播接口]</div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:startPlay();">播放</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:playPause();">暂停</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:seekTo();">跳转</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:playStop();">停止</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:changeVolume();">更改音量</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:getDuration();">获取总时长</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:getPlayTime();">获取当前时间</a></div>
+	<!-- <div style="padding-right: 20px;float: left;"><a href="javascript:switchProgram();">切换节目</a></div> -->
+	<div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">切换视频</a></div>
+	<br clear="all"/>
+</div>
+```
+例子：[demos/vod_api.html](demos/vod_api.html)
+
+* 直播接口
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=vk5nx2cj
+&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
+</div>
+<script>
+	//直播接口调用方法
+	function startPlay(){
+		SewisePlayer.doPlay();
+	}
+	function playPause(){
+		SewisePlayer.doPause();
+	}
+	function seekTo(){
+		SewisePlayer.doSeek("20140224160520");
+	}
+	function playStop(){
+		SewisePlayer.doStop();
+	}
+	function livePlay(){
+		SewisePlayer.doLive();
+	}
+	function changeVolume(){
+		SewisePlayer.setVolume(0.3);
+	}
+	function getLiveTime(){
+		alert(SewisePlayer.liveTime());
+	}
+	function getPlayTime() {
+		alert(SewisePlayer.playTime());
+	}
+	function switchChannel(){
+		SewisePlayer.playChannel("br9anah3", "", true);
+	}
+	function switchStream(){
+		SewisePlayer.toPlay("rtmp://192.168.1.219/livestream/7gw3yt3h", "title", "", true);
+	}
+	
+	//播放器回调方法
+	function playerReady(name){
+		console.log("Sewise Player On Ready");
+		//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
+	}
+	function onStart(name){
+        console.log("onStart");
+	}
+	function onStop(name){
+		 console.log("onStop");
+	}
+	function onMetadata(meta, name){
+		console.log("onMetadata");
+	}
+	function onClarity(clarity, name){
+		console.log("onClarity");
+	}
+	function onPause(name){
+		console.log("onPause");
+	}
+	function onSeek(time, name){
+		console.log("onSeek: " + time);
+	}
+	function onPlayTime(time, name){
+		console.log("onPlayTime: " + time);
+	}
+</script>
+<div style="padding-top: 20px;">
+	<div style="padding-right: 15px;float: left;">[直播接口]</div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:startPlay();">播放</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:playPause();">暂停</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:seekTo();">跳转</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:playStop();">停止</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:livePlay();">直播</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:changeVolume();">更改音量</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:getLiveTime();">直播时间</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:getPlayTime();">播放时间</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:switchChannel();">切换频道</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:switchStream();">切换流</a></div>
+	<br clear="all"/>
+</div>
+```
+例子：[demos/live_api.html](demos/live_api.html)
+
+
+### Demos：
+* 点播MP4视频播放
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite"></script>
+</div>
+```
+例子：[demos/vod_videourl_mp4.html](demos/vod_videourl_mp4.html)
+
+* 点播FLV视频播放
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=flv&videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod-FLV&buffer=5&skin=vodOrange"></script>
+</div>
+```
+例子：[demos/vod_videourl_flv.html](demos/vod_videourl_flv.html)
+
+* 点播节目ID视频播放
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js?server=vod&sourceid=eQgPHj4N&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&skin=vodWhite"></script>
+</div>
+```
+例子：[demos/vod_sourceid.html](demos/vod_sourceid.html)
+
+* 直播RTMP流播放
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://219.232.161.204/livestream/mtzysunq&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveWhite"></script>
+</div>
+```
+例子：[demos/live_streamurl_rtmp.html](demos/live_streamurl_rtmp.html)
+
+* 直播HTTP流播放
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=http&streamurl=http://219.232.161.204:5080/livestream/mtzysunq.flv&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveOrange"></script>
+</div>
+```
+例子：[demos/live_streamurl_http.html](demos/live_streamurl_http.html)
+
+* 直播节目ID播放
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=vk5nx2cj&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
+</div>
+```
+例子：[demos/live_pid.html](demos/live_pid.html)
+
+* Flash m3u8播放
+```html
+<div style="width: 600px;height: 400px;">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://www.codecomposer.net/hls/playlist.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-M3u8&buffer=5&claritybutton=disable&skin=vodWhite"></script>
+</div>
+```
+例子：[demos/flash_m3u8.html](demos/flash_m3u8.html)
+
+* Flash m3u8 AES-128解码播放
+```html
+<div style="width: 600px;height: 400px;">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://playertest.longtailvideo.com/adaptive/customIV/prog_index.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-AES-M3u8&buffer=5&claritybutton=disable&skin=vodWhite"></script>
+</div>
+```
+例子：[demos/flash_m3u8_aes_128.html](demos/flash_m3u8_aes_128.html)
+
+* 启动参数设置模式
+```html
+<div style="width: 640px; height: 360px; ">
+	<!-- 1.根据给定视频地址播放 -->
+	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+	<script type="text/javascript">
+		SewisePlayer.setup({
+			server: "vod",
+			type: "mp4",
+			title:"Tile 标题",
+			videourl: "http://www.w3schools.com/html/mov_bbb.mp4",
+		       skin: "vodWhite"
+		});
+	</script>
+
+	<!-- 2.根据给定视频节目ID播放 -->
+	<!-- <script type="text/javascript" src="http://192.168.1.24/player/sewise.player.min.js"></script>
+	<script type="text/javascript">
+		SewisePlayer.setup({
+			sourceid: "uWHj4JDB",
+			server: "vod",
+		    skin: "vodWhite"
+		});
+	</script> -->
+</div>
+```
+例子：[demos/setup_parameters.html](demos/setup_parameters.html)
+
+* 回退兼容地址参数设置
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+	<script type="text/javascript">
+		SewisePlayer.setup({
+			server: "vod",
+			type: "mp4",
+			videourl: "http://www.w3schools.com/html/mov_bbb.mp4",
+		    skin: "vodWhite",
+		    fallbackurls:{
+			ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+			webm: "http://www.w3schools.com/html/mov_bbb.webm"
+			}
+		});
+	</script>
+	</div>
+```
+例子：[demos/fallback_url.html](demos/fallback_url.html)
+
+* 海报预览
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=false&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video 视频&buffer=5&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&skin=vodWhite"></script>
+</div>
+```
+例子：[demos/poster.html](demos/poster.html)
+
+* 换色皮肤
+```html
+<div style="width: 640px;height: 362px;">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=flv&videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Color-Skin&buffer=5&claritybutton=disable&skin=vodVspaas"></script>
+	<script type="text/javascript">
+		var player;
+		function playerReady() {
+			player = document.getElementById("sewise_player");
+		}
+		function setUiColor()
+	    {
+	        var uiColorArray = [0x333333, 0x56be8e, 0x3ea9f5, 0xf27398, 0xffff00, 0xff0000];
+	        var randomIndex = Math.floor(Math.random() * uiColorArray.length);
+	        player.setUiColor(uiColorArray[randomIndex]);
+	    }
+		</script>
+        <div style="padding-top: 20px;">
+        	<div style="padding-right: 20px;float: right;"><a href="javascript:setUiColor();">Switch UI Color</a></div>
+        </div>
+</div>
+```
+例子：[demos/color_skin.html](demos/color_skin.html)
+
+* 多重播放
+```html
+<div>
+	<div style="padding-right: 20px;float: left;">HTML5 播放</div><br>
+	<div style="width: 640px; height: 360px; ">
+		<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://media.w3.org/2010/05/sintel/trailer.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=HTML5 播放&buffer=5&skin=vodWhite"></script>
+	</div>
+	<br>
+	<div style="padding-right: 20px;float: left;">Flash 播放</div><br>
+	<div style="width: 640px; height: 360px; ">
+		<object type="application/x-shockwave-flash" id="sewise_player" name="sewise_player" data="../player/flash/SewisePlayer.swf" width="100%" height="100%">
+		<param name="allowfullscreen" value="true">
+		<param name="wmode" value="transparent">
+		<param name="allowscriptaccess" value="always">
+		<param name="flashvars" value="autoStart=true&programId=&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&type=flv&serverPath=&serverApi=ServerApi.execute&skin=../player/flash/skins/vodWhite.swf&title=Flash播放&draggable=true&published=0&videoUrl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&startTime=0&playerName=Sewise Player&copyright=(C) All right reserved the SEWISE inc 2011-2013&clarityButton=disable&timeDisplay=enable&controlBarDisplay=enable&topBarDisplay=enable&customStrings="></object>
+	</div>
+</div>
+```
+例子：[demos/multiplay.html](demos/multiplay.html)
+
+* 字幕
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Sewise Player-Subtitles</title>
+		<script charset="utf-8" type="text/javascript" language="JavaScript" src="../player/js/swfobject.js"></script>
+		<script language="JavaScript" charset="utf-8" type="text/javascript">
+			var player;
+            var host = "http://219.232.161.206/";
+            var video_url = "http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/02005220p.flv";
+            var subtitles_id = "2UtWdAUZ";
+            var subtitles_lang = "en";    //显示字幕语言, 英文: en, 中文: zh_CN
+            
+			var flashvars = {
+                serverPath       : host + 'flashservice/gateway.php',
+				serverApi        : 'ServerApi.execute',
+				autoStart        : 'true',
+				logo             : 'http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png',
+                title            : 'Subtitles Test',
+                clarityButton	 : 'disable',
+                lang             : 'en_US',
+				skin             : '../player/flash/skins/vodWhite.swf',
+                type             : 'flv',
+				videoUrl         : video_url,
+                
+                subtitlesPlayer  : '../player/flash/plugins/SubtitlesPlayer.swf',
+                subtitlesId      : subtitles_id,
+                subtitlesLang    : subtitles_lang
+			};
+			var params = {
+				allowfullscreen   : true,
+				wmode             : "transparent",
+				allowscriptaccess : 'always'
+			};
+			var attributes = {
+				id : 'sewise_x_player',
+				name : 'sewise_x_player'
+			};
+			window.onload = function() {
+				swfobject.embedSWF("../player/flash/SewisePlayer.swf", "swf-container", "100%", "100%", "9.0.115", false, flashvars, params, attributes);
+			}
+			function playerReady() {
+				player = document.getElementById("sewise_x_player");
+			}
+            function switchVideo(){
+                player.toPlay("http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/020058352.flv", 'test toPlay', 0, true, '', 'xMRgJgIP', 'en');
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width: 600px;height: 400px;">
+			<div id="swf-container">
+				加载播放器......
+			</div>
+            <div style="padding-top: 20px;">
+                <div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">Switch Video</a></div>
+            </div>
+		</div>
+	</body>
+</html>
+```
+例子：[demos/subtitles.html](demos/subtitles.html)
 
 
 ## License
@@ -117,10 +505,3 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 ## Author:
 Jack Zhang [jackzhang1204@gmail.com](http://www.gmail.com)
 [sewise.com](http://www.sewise.com/)
-
-
-
-
-
-
-
