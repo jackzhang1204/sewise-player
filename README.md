@@ -30,7 +30,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 
 
 ### 文件介绍：
-* sewise.player.min.js主播放器文件
+* sewise.player.min.js主播放器文件。
 * html，HTML5皮肤目录。
 * html\skins\vodWhite, HTML5皮肤vodWhite目录。
 * html\skins\vodWhite\skin.html, HTML5皮肤vodWhite Dom元素。
@@ -98,8 +98,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 
 ### API接口调用：
 * Sewise Player播放器对外提供了丰富的API接口，通过API接口调用可以轻松控制播放器播放。
-* 详细接口说明，见："接口说明.md"文件。
-
+* 详细接口说明，见：[接口说明.md](docs/接口说明.md)文件。
 * 点播接口
 ```html
 <div style="width: 640px; height: 360px; ">
@@ -177,7 +176,6 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 </div>
 ```
 例子：[demos/vod_api.html](demos/vod_api.html)
-
 * 直播接口
 ```html
 <div style="width: 640px; height: 360px; ">
