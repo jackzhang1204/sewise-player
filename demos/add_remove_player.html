@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Sewise Player</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+	var srcPath = "../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite";
+	var fallbackurls = {
+		ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+		webm: "http://www.w3schools.com/html/mov_bbb.webm"
+	}
+	function addPlayer(){
+		var script = document.createElement('script');
+		script.type = "text/javascript";
+		script.src = srcPath + "&fallbackurls=" + encodeURIComponent(JSON.stringify(fallbackurls, "", "\t"));
+		$("#container").append(script);
+	}
+	function removePlayer(){
+		$("#container").empty();
+	}
+</script>
+</head>
+<body>
+	<div>
+		<div id="container" style="width: 650px; height: 360px; border: solid 1px #DDD"></div>
+		<div>
+		<ul>
+			<button onclick="addPlayer()">Add Player</button>
+			<button onclick="removePlayer()">Remove Player</button>
+		</ul>
+		</div>
+	</div>
+</body>
+</html>
