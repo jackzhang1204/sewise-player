@@ -14,20 +14,24 @@
 			SewisePlayer.setup({
 				server: "vod",
 				type: "mp4",
-				title:"Tile 标题",
 				videourl: "http://www.w3schools.com/html/mov_bbb.mp4",
-		        skin: "vodWhite"
+		        skin: "vodWhite",
+		        title:"Tile 标题",
+		        fallbackurls:{
+					ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+					webm: "http://www.w3schools.com/html/mov_bbb.webm"
+				}
 			});
 		</script>
 		
 		<!-- 2.根据给定视频节目ID播放 -->
-		<!-- <script type="text/javascript" src="http://192.168.1.24/player/sewise.player.min.js"></script>
+		<!-- <script type="text/javascript" src="http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js"></script>
 		<script type="text/javascript">
 			SewisePlayer.setup({
-				sourceid: "uWHj4JDB",
+				sourceid: "eQgPHj4N",
 				server: "vod",
-				title:"Tile 标题",
-		        skin: "vodWhite"
+		        skin: "vodWhite",
+		        title:"sourceid 播放"
 			});
 		</script> -->
 		
