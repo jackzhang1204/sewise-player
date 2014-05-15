@@ -102,7 +102,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 点播接口
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo 点播标题&buffer=5&skin=vodWhite"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo 点播标题&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 <script>
 	//点播接口调用方法
@@ -176,6 +176,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 </div>
 ```
 例子：[demos/vod_api.html](demos/vod_api.html)
+
 * 直播接口
 ```html
 <div style="width: 640px; height: 360px; ">
@@ -264,7 +265,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 点播MP4视频播放
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 ```
 例子：[demos/vod_videourl_mp4.html](demos/vod_videourl_mp4.html)
@@ -346,7 +347,11 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 		SewisePlayer.setup({
 			sourceid: "uWHj4JDB",
 			server: "vod",
-		    skin: "vodWhite"
+		    skin: "vodWhite",
+		    fallbackurls:{
+				ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+				webm: "http://www.w3schools.com/html/mov_bbb.webm"
+			}
 		});
 	</script> -->
 </div>
@@ -399,7 +404,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 海报预览
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=false&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video 视频&buffer=5&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&skin=vodWhite"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=false&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video 视频&buffer=5&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 ```
 例子：[demos/poster.html](demos/poster.html)
@@ -432,7 +437,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 <div>
 	<div style="padding-right: 20px;float: left;">HTML5 播放</div><br>
 	<div style="width: 640px; height: 360px; ">
-		<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://media.w3.org/2010/05/sintel/trailer.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=HTML5 播放&buffer=5&skin=vodWhite"></script>
+		<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://media.w3.org/2010/05/sintel/trailer.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=HTML5 播放&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 	</div>
 	<br>
 	<div style="padding-right: 20px;float: left;">Flash 播放</div><br>
