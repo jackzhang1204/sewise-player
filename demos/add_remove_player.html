@@ -11,14 +11,21 @@
 		ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
 		webm: "http://www.w3schools.com/html/mov_bbb.webm"
 	}
+	var state = "removed";
 	function addPlayer(){
-		var script = document.createElement('script');
-		script.type = "text/javascript";
-		script.src = srcPath + "&fallbackurls=" + encodeURIComponent(JSON.stringify(fallbackurls, "", "\t"));
-		$("#container").append(script);
+		if(state == "removed"){
+			var script = document.createElement('script');
+			script.type = "text/javascript";
+			script.src = srcPath + "&fallbackurls=" + encodeURIComponent(JSON.stringify(fallbackurls, "", "\t"));
+			$("#container").append(script);
+			state = "added";
+		}
 	}
 	function removePlayer(){
-		$("#container").empty();
+		if(state == "added"){
+			$("#container").empty();
+			state = "removed";
+		}
 	}
 </script>
 </head>
@@ -26,10 +33,10 @@
 	<div>
 		<div id="container" style="width: 650px; height: 360px; border: solid 1px #DDD"></div>
 		<div>
-		<ul>
+		<div style="padding: 10px;">
 			<button onclick="addPlayer()">Add Player</button>
 			<button onclick="removePlayer()">Remove Player</button>
-		</ul>
+		</div>
 		</div>
 		<div style="padding: 20px;float: left;">注：请在Web环境下预览该文件。</div>
 	</div>

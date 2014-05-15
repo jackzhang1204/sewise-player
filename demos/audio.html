@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+	<title>Sewise Player</title>
+</head>
+<body>
+	<div style="width: 250px; height: 30px; ">
+		<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+		<script type="text/javascript">
+			SewisePlayer.setup({
+				server: "vod",
+				type: "mp3",
+				videourl: "http://www.html5rocks.com/en/tutorials/audio/quick/test.mp3",
+		        fallbackurls:{
+	        		ogg: "http://www.html5rocks.com/en/tutorials/audio/quick/test.ogg"
+				}
+			});
+		</script>
+	</div>
+</body>
+</html>

@@ -8,35 +8,35 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 
 ### Sewise Player是一款专业的免费网页视频、流播放器，它功能强大，体积小，跨平台，使用方便简洁、随心所欲。
 * 播放器是主要以HTML5技术为平台开发，同时兼容flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器播放视频。
-* Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或flash模式播放视频。你不需要掌握任何专业的JavaScript或ActionScript技术就可以制作出专业的网页视频播放器。
-* Sewise Player即可以做为单一的前台播放器来在页面上播放视频，也可以结合Sewise Server后台技术实现专业的可交互的点播、直播视频播放。
+* Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或flash模式播放视频。您不需要掌握任何JavaScript或ActionScript编码技术就可以制作出专业的网页视频播放器。
+* Sewise Player即可以做为单一的前台播放器来在页面上播放视频和流，也可以结合Sewise Server后台技术实现专业的可交互的点播、直播视频播放。
 
 
 ### 功能列表：
-* 支持HTML5, Flash视频播放技术。
+* 支持HTML5，Flash视频播放技术。
 * 支持多平台，PC包括Windows, MacOS, Linux等。Mobile包括Android, IOS, Windows Phone等。
-* 支持多浏览器兼容，IE6/7/8/9/10、Google Chrome、Firefox、safari、Opera等。
-* 支持多种视频格式，mp4、m3u8、oga、webm、theora、flv、f4v等。
-* 支持多种协议直播流，rtmp、udp、http ts、rtsp的直播和回放。
+* 支持多浏览器兼容，如IE6/7/8/9/10、Google Chrome、Firefox、safari、Opera等。
+* 支持多种视频格式，如mp4、m3u8、oga、webm、theora、flv、f4v等。
+* 支持多种协议直播流，如rtmp、udp、http ts、rtsp等。
 * 支持Flash播放m3u8文件，以及AES-128解码播放。
 * 支持PC与Mobile平台播放器自动识别功能。
 * 支持浏览器HTML5与Flash特性检测。
 * 支持播放地址AMF, AJAX, JOSNP类型请求。
-* 支持自定义HTML5与Flash皮肤，无需了解程序，即可自己制作出超烗风格皮肤。
+* 支持自定义HTML5与Flash皮肤，让您无需了解专业的编码技术也可以制作出超烗风格的皮肤。
 * 支持前置广告（swf, 图片, 视频）。
 * 支持字幕。
 * 支持多种播放参数设定，并支持启动参数设置。
-* 支持丰富的api接口，快速打造功能强大的插件。
+* 支持丰富的api接口，以此可以快速打造功能强大的插件。
 
 
 ### 文件介绍：
 * sewise.player.min.js主播放器文件。
 * html，HTML5皮肤目录。
-* html\skins\vodWhite, HTML5皮肤vodWhite目录。
-* html\skins\vodWhite\skin.html, HTML5皮肤vodWhite Dom元素。
-* html\skins\vodWhite\skin.html.js, HTML5皮肤vodWhite Dom元素对象，用于兼容跨域加载。
-* html\skins\vodWhite\skin.css, HTML5皮肤vodWhite CSS样式。
-* html\skins\vodWhite\skin.js, HTML5皮肤vodWhite JS逻辑代码。
+* html\skins\vodWhite, HTML5点播白色皮肤目录。
+* html\skins\vodWhite\skin.html, HTML5点播白色皮肤Dom元素。
+* html\skins\vodWhite\skin.html.js, HTML5点播白色皮肤Dom元素对象，用于兼容跨域加载。
+* html\skins\vodWhite\skin.css, HTML5点播白色皮肤CSS样式。
+* html\skins\vodWhite\skin.js, HTML5点播白色皮肤JS逻辑代码。
 * flash, flash播放器目录。
 * flash\SewisePlayer.swf， Flash播放器主文件。
 * flash\skins, Flash皮肤目录。
@@ -80,12 +80,12 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 第一步：页面加载sewise.player.min.js文件后，该脚本会将相应的参数解析出来，并检查出当前的设备平台、浏览器特性，同时还会根据JS文件的路径取出host地址，用于播放地址请求。
 * 第二步：通过分析出来的vod与type参数与及浏览器特性，来确定播放器是启用HTML5还是Flash模块。对于不同平台和浏览器同时支持的视频格式或流协议，将优先启用HTML5播放模块。
 * 第三步：加载对应的皮肤文件与库文件。
-* 第四步：在皮肤加载完成后将根据给定的参数来初始化播放器。播放器初始化完成后，会在当前页面中回调playerReady()方法（HTML5或Flash播放器都会回调该方法），表示播放器API接口已可用。
+* 第四步：在皮肤加载完成后将根据给定的参数来初始化播放器。播放器初始化完成后，开始播放视频、流同时会在当前页面中回调playerReady()（HTML5或Flash播放器都会回调playerReady方法，表示播放器API接口已可用）等相应的播放器回调方法。
 
 
 ### 播放器参数：
 * Sewise Player播放器提供了灵活的参数设置功能，通过设置不同的参数值可以让播放器具有不同的播放特性。
-* 详细参数说明，见："参数说明.md"文件。
+* 详细参数说明，见：[参数说明.md](docs/参数说明.md)文件。
 
 
 ### 播放器皮肤：
@@ -93,7 +93,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * HTML5皮肤由HTML、CSS、JS文件构成，一个文件目录对应一个皮肤。
 * Flash皮肤由SWF文件构成，一个SWF文件对应一个皮肤。
 * HTML5与Flash皮肤设置方法相同，只要将参数skin设置为对应的皮肤名，如skin=vodWhite表示白色点播皮肤。
-* HTML5与Flash皮肤的源代码已开放，见[source目录](source)。
+* HTML5与Flash皮肤的源代码已开放，见[source](source)目录。
 
 
 ### API接口调用：
@@ -400,6 +400,73 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 </div>
 ```
 例子：[demos/flash_fallback_html5.html](demos/flash_fallback_html5.html)
+
+* 音频播放
+```html
+<div style="width: 250px; height: 30px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+	<script type="text/javascript">
+		SewisePlayer.setup({
+			server: "vod",
+			type: "mp3",
+			videourl: "http://www.html5rocks.com/en/tutorials/audio/quick/test.mp3",
+	        fallbackurls:{
+        		ogg: "http://www.html5rocks.com/en/tutorials/audio/quick/test.ogg"
+			}
+		});
+	</script>
+</div>
+```
+例子：[demos/audio.html](demos/audio.html)
+
+* 添加删除播放器
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Sewise Player</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+	var srcPath = "../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite";
+	var fallbackurls = {
+		ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+		webm: "http://www.w3schools.com/html/mov_bbb.webm"
+	}
+	var state = "removed";
+	function addPlayer(){
+		if(state == "removed"){
+			var script = document.createElement('script');
+			script.type = "text/javascript";
+			script.src = srcPath + "&fallbackurls=" + encodeURIComponent(JSON.stringify(fallbackurls, "", "\t"));
+			$("#container").append(script);
+			state = "added";
+		}
+	}
+	function removePlayer(){
+		if(state == "added"){
+			$("#container").empty();
+			state = "removed";
+		}
+	}
+</script>
+</head>
+<body>
+	<div>
+		<div id="container" style="width: 650px; height: 360px; border: solid 1px #DDD"></div>
+		<div>
+		<ul>
+			<button onclick="addPlayer()">Add Player</button>
+			<button onclick="removePlayer()">Remove Player</button>
+		</ul>
+		</div>
+		<div style="padding: 20px;float: left;">注：请在Web环境下预览该文件。</div>
+	</div>
+</body>
+</html>
+```
+例子：[demos/add_remove_player.html](demos/add_remove_player.html)
 
 * 海报预览
 ```html
