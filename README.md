@@ -353,7 +353,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 ```
 例子：[demos/setup_parameters.html](demos/setup_parameters.html)
 
-* 回退兼容地址参数设置
+* HTML5播放回退兼容地址
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
@@ -369,9 +369,32 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 			}
 		});
 	</script>
-	</div>
+</div>
 ```
 例子：[demos/fallback_url.html](demos/fallback_url.html)
+
+* Flash回退HTML5兼容地址播放
+```html
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+	<script type="text/javascript">
+		SewisePlayer.setup({
+			server: "vod",
+			type: "flv",
+			videourl: "http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv",
+	        skin: "vodWhite",
+	        claritybutton: "false",
+			title: "flash fallback html5 兼容地址播放",
+	        fallbackurls:{
+				mp4: "http://www.w3schools.com/html/mov_bbb.mp4",
+        		ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+				webm: "http://www.w3schools.com/html/mov_bbb.webm"
+			}
+		});
+	</script>
+</div>
+```
+例子：[demos/flash_fallback_html5.html](demos/flash_fallback_html5.html)
 
 * 海报预览
 ```html

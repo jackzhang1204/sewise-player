@@ -12,12 +12,14 @@
 		<script type="text/javascript">
 			SewisePlayer.setup({
 				server: "vod",
-				type: "mp4",
-				videourl: "http://www.w3schools.com/html/mov_bbb.mp4",
+				type: "flv",
+				videourl: "http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv",
 		        skin: "vodWhite",
-				title: "fallback 兼容地址播放",
+		        claritybutton: "false",
+				title: "flash fallback html5 兼容地址播放",
 		        fallbackurls:{
-					ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+					mp4: "http://www.w3schools.com/html/mov_bbb.mp4",
+	        		ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
 					webm: "http://www.w3schools.com/html/mov_bbb.webm"
 				}
 			});
