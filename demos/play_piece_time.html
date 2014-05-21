@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Sewise Player</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+	<div>
+		<div id="container" style="width: 650px; height: 360px; border: solid 1px #DDD"></div>
+			<script type="text/javascript">
+				var srcPath = "../player/sewise.player.min.js?server=vod&type=flv&autostart=true&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite";
+				var videoUrl = "http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/02005220p.flv?starttime=100&endtime=150";
+				var script = document.createElement('script');
+				script.type = "text/javascript";
+				script.src = srcPath + "&videourl=" + encodeURIComponent(videoUrl);
+				$("#container").append(script);
+			</script>
+		<div>
+		<div style="padding: 20px;float: left;">注：请在Web环境下预览该文件。</div>
+	</div>
+</body>
+</html>
