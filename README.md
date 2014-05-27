@@ -275,7 +275,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 点播FLV视频播放
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=flv&videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod-FLV&buffer=5&skin=vodOrange"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=flv&videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&title=Vod-FLV&buffer=5&skin=vodOrange"></script>
 </div>
 ```
 例子：[demos/vod_videourl_flv.html](demos/vod_videourl_flv.html)
@@ -291,7 +291,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 直播RTMP流播放
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://219.232.161.204/livestream/mtzysunq&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveWhite"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://219.232.161.204/livestream/mtzysunq&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&title=LiveVideo&skin=liveWhite"></script>
 </div>
 ```
 例子：[demos/live_streamurl_rtmp.html](demos/live_streamurl_rtmp.html)
