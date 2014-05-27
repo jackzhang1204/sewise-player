@@ -6,71 +6,71 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 ## What is Sewise Player?
 
 
-### Sewise PlayerÊÇÒ»¿î×¨ÒµµÄÃâ·ÑÍøÒ³ÊÓÆµ¡¢Á÷²¥·ÅÆ÷£¬Ëü¹¦ÄÜÇ¿´ó£¬Ìå»ıĞ¡£¬¿çÆ½Ì¨£¬Ê¹ÓÃ·½±ã¼ò½à¡¢ËæĞÄËùÓû¡£
-* ²¥·ÅÆ÷ÊÇÖ÷ÒªÒÔHTML5¼¼ÊõÎªÆ½Ì¨¿ª·¢£¬Í¬Ê±¼æÈİflash¼¼Êõ£¬ÊµÏÖÁË¿çÆ½Ì¨¸÷ä¯ÀÀÆ÷¼æÈİµÄÊÓÆµ²¥·Å¡£Ê¹ÓÃSewise PlayerÄú¿ÉÒÔÔÚWindows, MacOS, Linux£¬Windows Phone, Android, IOSµÈÈÎÒâÆ½Ì¨ÉÏ£¬Í¨¹ı¶ÔÓ¦µÄä¯ÀÀÆ÷²¥·ÅÊÓÆµ¡£
-* Sewise PlayerÊ¹ÓÃ·Ç³£¼òµ¥£¬Ö»ÒªÔÚÒ³Ãæ¶ÔÓ¦µÄDIVÄÚÇ¶ÈëÒ»¸öJSÎÄ¼ş¼´¿É£¬²¥·ÅÆ÷½«Í¨¹ı×Ô¶¯Ê¶±ğä¯ÀÀÆ÷µÄ¹¦ÄÜÀ´ÆôÓÃHTML5»òflashÄ£Ê½²¥·ÅÊÓÆµ¡£Äú²»ĞèÒªÕÆÎÕÈÎºÎJavaScript»òActionScript±àÂë¼¼Êõ¾Í¿ÉÒÔÖÆ×÷³ö×¨ÒµµÄÍøÒ³ÊÓÆµ²¥·ÅÆ÷¡£
-* Sewise Player¼´¿ÉÒÔ×öÎªµ¥Ò»µÄÇ°Ì¨²¥·ÅÆ÷À´ÔÚÒ³ÃæÉÏ²¥·ÅÊÓÆµºÍÁ÷£¬Ò²¿ÉÒÔ½áºÏSewise ServerºóÌ¨¼¼ÊõÊµÏÖ×¨ÒµµÄ¿É½»»¥µÄµã²¥¡¢Ö±²¥ÊÓÆµ²¥·Å¡£
+### Sewise Playeræ˜¯ä¸€æ¬¾ä¸“ä¸šçš„å…è´¹ç½‘é¡µè§†é¢‘ã€æµæ’­æ”¾å™¨ï¼Œå®ƒåŠŸèƒ½å¼ºå¤§ï¼Œä½“ç§¯å°ï¼Œè·¨å¹³å°ï¼Œä½¿ç”¨æ–¹ä¾¿ç®€æ´ã€éšå¿ƒæ‰€æ¬²ã€‚
+* æ’­æ”¾å™¨æ˜¯ä¸»è¦ä»¥HTML5æŠ€æœ¯ä¸ºå¹³å°å¼€å‘ï¼ŒåŒæ—¶å…¼å®¹flashæŠ€æœ¯ï¼Œå®ç°äº†è·¨å¹³å°å„æµè§ˆå™¨å…¼å®¹çš„è§†é¢‘æ’­æ”¾ã€‚ä½¿ç”¨Sewise Playeræ‚¨å¯ä»¥åœ¨Windows, MacOS, Linuxï¼ŒWindows Phone, Android, IOSç­‰ä»»æ„å¹³å°ä¸Šï¼Œé€šè¿‡å¯¹åº”çš„æµè§ˆå™¨æ’­æ”¾è§†é¢‘ã€‚
+* Sewise Playerä½¿ç”¨éå¸¸ç®€å•ï¼Œåªè¦åœ¨é¡µé¢å¯¹åº”çš„DIVå†…åµŒå…¥ä¸€ä¸ªJSæ–‡ä»¶å³å¯ï¼Œæ’­æ”¾å™¨å°†é€šè¿‡è‡ªåŠ¨è¯†åˆ«æµè§ˆå™¨çš„åŠŸèƒ½æ¥å¯ç”¨HTML5æˆ–flashæ¨¡å¼æ’­æ”¾è§†é¢‘ã€‚æ‚¨ä¸éœ€è¦æŒæ¡ä»»ä½•JavaScriptæˆ–ActionScriptç¼–ç æŠ€æœ¯å°±å¯ä»¥åˆ¶ä½œå‡ºä¸“ä¸šçš„ç½‘é¡µè§†é¢‘æ’­æ”¾å™¨ã€‚
+* Sewise Playerå³å¯ä»¥åšä¸ºå•ä¸€çš„å‰å°æ’­æ”¾å™¨æ¥åœ¨é¡µé¢ä¸Šæ’­æ”¾è§†é¢‘å’Œæµï¼Œä¹Ÿå¯ä»¥ç»“åˆSewise Serveråå°æŠ€æœ¯å®ç°ä¸“ä¸šçš„å¯äº¤äº’çš„ç‚¹æ’­ã€ç›´æ’­è§†é¢‘æ’­æ”¾ã€‚
 
 
-### ¹¦ÄÜÁĞ±í£º
-* Ö§³ÖHTML5£¬FlashÊÓÆµ²¥·Å¼¼Êõ¡£
-* Ö§³Ö¶àÆ½Ì¨£¬PC°üÀ¨Windows, MacOS, LinuxµÈ¡£Mobile°üÀ¨Android, IOS, Windows PhoneµÈ¡£
-* Ö§³Ö¶àä¯ÀÀÆ÷¼æÈİ£¬ÈçIE6/7/8/9/10¡¢Google Chrome¡¢Firefox¡¢safari¡¢OperaµÈ¡£
-* Ö§³Ö¶àÖÖÊÓÆµ¸ñÊ½£¬Èçmp4¡¢m3u8¡¢oga¡¢webm¡¢theora¡¢flv¡¢f4vµÈ¡£
-* Ö§³Ö¶àÖÖĞ­ÒéÖ±²¥Á÷£¬Èçrtmp¡¢udp¡¢http ts¡¢rtspµÈ¡£
-* Ö§³ÖFlash²¥·Åm3u8ÎÄ¼ş£¬ÒÔ¼°AES-128½âÂë²¥·Å¡£
-* Ö§³ÖPCÓëMobileÆ½Ì¨²¥·ÅÆ÷×Ô¶¯Ê¶±ğ¹¦ÄÜ¡£
-* Ö§³Öä¯ÀÀÆ÷HTML5ÓëFlashÌØĞÔ¼ì²â¡£
-* Ö§³ÖHTML5²»Í¬ÊÓÆµ¸ñÊ½Fallback¼æÈİ²¥·ÅµÄ¹¦ÄÜ¡£
-* Ö§³ÖFlash Fallbackµ½HTML5²¥·ÅµÄ¹¦ÄÜ¡£
-* Ö§³Ö²¥·ÅµØÖ·AMF, AJAX, JOSNPÀàĞÍÇëÇó¡£
-* Ö§³Ö×Ô¶¨ÒåHTML5ÓëFlashÆ¤·ô£¬ÈÃÄúÎŞĞèÁË½â×¨ÒµµÄ±àÂë¼¼ÊõÒ²¿ÉÒÔÖÆ×÷³ö³¬ı·ç¸ñµÄÆ¤·ô¡£
-* Ö§³ÖÇ°ÖÃ¹ã¸æ£¨swf, Í¼Æ¬, ÊÓÆµ£©¡£
-* Ö§³Ö×ÖÄ»¡£
-* Ö§³Ö¶àÖÖ²¥·Å²ÎÊıÉè¶¨£¬²¢Ö§³ÖÆô¶¯²ÎÊıÉèÖÃ¡£
-* Ö§³Ö·á¸»µÄapi½Ó¿Ú£¬ÒÔ´Ë¿ÉÒÔ¿ìËÙ´òÔì¹¦ÄÜÇ¿´óµÄ²å¼ş¡£
+### åŠŸèƒ½åˆ—è¡¨ï¼š
+* æ”¯æŒHTML5ï¼ŒFlashè§†é¢‘æ’­æ”¾æŠ€æœ¯ã€‚
+* æ”¯æŒå¤šå¹³å°ï¼ŒPCåŒ…æ‹¬Windows, MacOS, Linuxç­‰ã€‚MobileåŒ…æ‹¬Android, IOS, Windows Phoneç­‰ã€‚
+* æ”¯æŒå¤šæµè§ˆå™¨å…¼å®¹ï¼Œå¦‚IE6/7/8/9/10ã€Google Chromeã€Firefoxã€safariã€Operaç­‰ã€‚
+* æ”¯æŒå¤šç§è§†é¢‘æ ¼å¼ï¼Œå¦‚mp4ã€m3u8ã€ogaã€webmã€theoraã€flvã€f4vç­‰ã€‚
+* æ”¯æŒå¤šç§åè®®ç›´æ’­æµï¼Œå¦‚rtmpã€udpã€http tsã€rtspç­‰ã€‚
+* æ”¯æŒFlashæ’­æ”¾m3u8æ–‡ä»¶ï¼Œä»¥åŠAES-128è§£ç æ’­æ”¾ã€‚
+* æ”¯æŒPCä¸Mobileå¹³å°æ’­æ”¾å™¨è‡ªåŠ¨è¯†åˆ«åŠŸèƒ½ã€‚
+* æ”¯æŒæµè§ˆå™¨HTML5ä¸Flashç‰¹æ€§æ£€æµ‹ã€‚
+* æ”¯æŒHTML5ä¸åŒè§†é¢‘æ ¼å¼åœ°å€Fallbackå…¼å®¹æ’­æ”¾åŠŸèƒ½ã€‚
+* æ”¯æŒFlash Fallbackåˆ°HTML5è§†é¢‘æ’­æ”¾åŠŸèƒ½ã€‚
+* æ”¯æŒæ’­æ”¾åœ°å€AMF, AJAX, JOSNPç±»å‹è¯·æ±‚ã€‚
+* æ”¯æŒè‡ªå®šä¹‰HTML5ä¸Flashçš®è‚¤ï¼Œè®©æ‚¨æ— éœ€äº†è§£ä¸“ä¸šçš„ç¼–ç æŠ€æœ¯ä¹Ÿå¯ä»¥åˆ¶ä½œå‡ºè¶…çƒ—é£æ ¼çš„çš®è‚¤ã€‚
+* æ”¯æŒå‰ç½®å¹¿å‘Šï¼ˆswf, å›¾ç‰‡, è§†é¢‘ï¼‰ã€‚
+* æ”¯æŒå­—å¹•ã€‚
+* æ”¯æŒå¤šç§æ’­æ”¾å‚æ•°è®¾å®šï¼Œå¹¶æ”¯æŒå¯åŠ¨å‚æ•°è®¾ç½®ã€‚
+* æ”¯æŒä¸°å¯Œçš„apiæ¥å£ï¼Œä»¥æ­¤å¯ä»¥å¿«é€Ÿæ‰“é€ åŠŸèƒ½å¼ºå¤§çš„æ’ä»¶ã€‚
 
 
-### ÎÄ¼ş½éÉÜ£º
-* sewise.player.min.jsÖ÷²¥·ÅÆ÷ÎÄ¼ş¡£
-* html£¬HTML5Æ¤·ôÄ¿Â¼¡£
-* html\skins\vodWhite, HTML5µã²¥°×É«Æ¤·ôÄ¿Â¼¡£
-* html\skins\vodWhite\skin.html, HTML5µã²¥°×É«Æ¤·ôDomÔªËØ¡£
-* html\skins\vodWhite\skin.html.js, HTML5µã²¥°×É«Æ¤·ôDomÔªËØ¶ÔÏó£¬ÓÃÓÚ¼æÈİ¿çÓò¼ÓÔØ¡£
-* html\skins\vodWhite\skin.css, HTML5µã²¥°×É«Æ¤·ôCSSÑùÊ½¡£
-* html\skins\vodWhite\skin.js, HTML5µã²¥°×É«Æ¤·ôJSÂß¼­´úÂë¡£
-* flash, flash²¥·ÅÆ÷Ä¿Â¼¡£
-* flash\SewisePlayer.swf£¬ Flash²¥·ÅÆ÷Ö÷ÎÄ¼ş¡£
-* flash\skins, FlashÆ¤·ôÄ¿Â¼¡£
-* flash\skins\vodWhite.swf, Flashµã²¥°×É«Æ¤·ô¡£
-* flash\skins\liveWhite.swf, FlashÖ±²¥°×É«Æ¤·ô¡£
-* flash\skins\vodOrange.swf, Flashµã²¥³ÈÉ«Æ¤·ô¡£
-* flash\skins\liveOrange.swf, FlashÖ±²¥³ÈÉ«Æ¤·ô¡£
+### æ–‡ä»¶ä»‹ç»ï¼š
+* sewise.player.min.jsä¸»æ’­æ”¾å™¨æ–‡ä»¶ã€‚
+* htmlï¼ŒHTML5çš®è‚¤ç›®å½•ã€‚
+* html\skins\vodWhite, HTML5ç‚¹æ’­ç™½è‰²çš®è‚¤ç›®å½•ã€‚
+* html\skins\vodWhite\skin.html, HTML5ç‚¹æ’­ç™½è‰²çš®è‚¤Domå…ƒç´ ã€‚
+* html\skins\vodWhite\skin.html.js, HTML5ç‚¹æ’­ç™½è‰²çš®è‚¤Domå…ƒç´ å¯¹è±¡ï¼Œç”¨äºå…¼å®¹è·¨åŸŸåŠ è½½ã€‚
+* html\skins\vodWhite\skin.css, HTML5ç‚¹æ’­ç™½è‰²çš®è‚¤CSSæ ·å¼ã€‚
+* html\skins\vodWhite\skin.js, HTML5ç‚¹æ’­ç™½è‰²çš®è‚¤JSé€»è¾‘ä»£ç ã€‚
+* flash, flashæ’­æ”¾å™¨ç›®å½•ã€‚
+* flash\SewisePlayer.swfï¼Œ Flashæ’­æ”¾å™¨ä¸»æ–‡ä»¶ã€‚
+* flash\skins, Flashçš®è‚¤ç›®å½•ã€‚
+* flash\skins\vodWhite.swf, Flashç‚¹æ’­ç™½è‰²çš®è‚¤ã€‚
+* flash\skins\liveWhite.swf, Flashç›´æ’­ç™½è‰²çš®è‚¤ã€‚
+* flash\skins\vodOrange.swf, Flashç‚¹æ’­æ©™è‰²çš®è‚¤ã€‚
+* flash\skins\liveOrange.swf, Flashç›´æ’­æ©™è‰²çš®è‚¤ã€‚
 
 
-### Ò³Ãæ²¥·ÅÆ÷Ç¶Èë·½Ê½£º
-* µã²¥£¬Êµ¼ÊµØÖ·²¥·Å¡£
+### é¡µé¢æ’­æ”¾å™¨åµŒå…¥æ–¹å¼ï¼š
+* ç‚¹æ’­ï¼Œå®é™…åœ°å€æ’­æ”¾ã€‚
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite"></script>
 </div>
 ```
 
-* µã²¥£¬½ÚÄ¿ID²¥·Å¡£
+* ç‚¹æ’­ï¼ŒèŠ‚ç›®IDæ’­æ”¾ã€‚
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js?server=vod&sourceid=eQgPHj4N&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&skin=vodWhite"></script>
 </div>
 ```
 
-* Ö±²¥£¬Êµ¼ÊµØÖ·²¥·Å¡£
+* ç›´æ’­ï¼Œå®é™…åœ°å€æ’­æ”¾ã€‚
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://219.232.161.204/livestream/mtzysunq&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveWhite"></script>
 </div>
 ```
 
-* Ö±²¥£¬½ÚÄ¿ID²¥·Å¡£
+* ç›´æ’­ï¼ŒèŠ‚ç›®IDæ’­æ”¾ã€‚
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=vk5nx2cj&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
@@ -78,36 +78,36 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 ```
 
 
-### ²¥·ÅÆ÷ÔËĞĞÔ­Àí:
-* µÚÒ»²½£ºÒ³Ãæ¼ÓÔØsewise.player.min.jsÎÄ¼şºó£¬¸Ã½Å±¾»á½«ÏàÓ¦µÄ²ÎÊı½âÎö³öÀ´£¬²¢¼ì²é³öµ±Ç°µÄÉè±¸Æ½Ì¨¡¢ä¯ÀÀÆ÷ÌØĞÔ£¬Í¬Ê±»¹»á¸ù¾İJSÎÄ¼şµÄÂ·¾¶È¡³öhostµØÖ·£¬ÓÃÓÚ²¥·ÅµØÖ·ÇëÇó¡£
-* µÚ¶ş²½£ºÍ¨¹ı·ÖÎö³öÀ´µÄvodÓëtype²ÎÊıÓë¼°ä¯ÀÀÆ÷ÌØĞÔ£¬À´È·¶¨²¥·ÅÆ÷ÊÇÆôÓÃHTML5»¹ÊÇFlashÄ£¿é¡£¶ÔÓÚ²»Í¬Æ½Ì¨ºÍä¯ÀÀÆ÷Í¬Ê±Ö§³ÖµÄÊÓÆµ¸ñÊ½»òÁ÷Ğ­Òé£¬½«ÓÅÏÈÆôÓÃHTML5²¥·ÅÄ£¿é¡£
-* µÚÈı²½£º¼ÓÔØ¶ÔÓ¦µÄÆ¤·ôÎÄ¼şÓë¿âÎÄ¼ş¡£
-* µÚËÄ²½£ºÔÚÆ¤·ô¼ÓÔØÍê³Éºó½«¸ù¾İ¸ø¶¨µÄ²ÎÊıÀ´³õÊ¼»¯²¥·ÅÆ÷¡£²¥·ÅÆ÷³õÊ¼»¯Íê³Éºó£¬¿ªÊ¼²¥·ÅÊÓÆµ¡¢Á÷Í¬Ê±»áÔÚµ±Ç°Ò³ÃæÖĞ»Øµ÷playerReady()£¨HTML5»òFlash²¥·ÅÆ÷¶¼»á»Øµ÷playerReady·½·¨£¬±íÊ¾²¥·ÅÆ÷API½Ó¿ÚÒÑ¿ÉÓÃ£©µÈÏàÓ¦µÄ²¥·ÅÆ÷»Øµ÷·½·¨¡£
+### æ’­æ”¾å™¨è¿è¡ŒåŸç†:
+* ç¬¬ä¸€æ­¥ï¼šé¡µé¢åŠ è½½sewise.player.min.jsæ–‡ä»¶åï¼Œè¯¥è„šæœ¬ä¼šå°†ç›¸åº”çš„å‚æ•°è§£æå‡ºæ¥ï¼Œå¹¶æ£€æŸ¥å‡ºå½“å‰çš„è®¾å¤‡å¹³å°ã€æµè§ˆå™¨ç‰¹æ€§ï¼ŒåŒæ—¶è¿˜ä¼šæ ¹æ®JSæ–‡ä»¶çš„è·¯å¾„å–å‡ºhoståœ°å€ï¼Œç”¨äºæ’­æ”¾åœ°å€è¯·æ±‚ã€‚
+* ç¬¬äºŒæ­¥ï¼šé€šè¿‡åˆ†æå‡ºæ¥çš„vodä¸typeå‚æ•°ä¸åŠæµè§ˆå™¨ç‰¹æ€§ï¼Œæ¥ç¡®å®šæ’­æ”¾å™¨æ˜¯å¯ç”¨HTML5è¿˜æ˜¯Flashæ¨¡å—ã€‚å¯¹äºä¸åŒå¹³å°å’Œæµè§ˆå™¨åŒæ—¶æ”¯æŒçš„è§†é¢‘æ ¼å¼æˆ–æµåè®®ï¼Œå°†ä¼˜å…ˆå¯ç”¨HTML5æ’­æ”¾æ¨¡å—ã€‚
+* ç¬¬ä¸‰æ­¥ï¼šåŠ è½½å¯¹åº”çš„çš®è‚¤æ–‡ä»¶ä¸åº“æ–‡ä»¶ã€‚
+* ç¬¬å››æ­¥ï¼šåœ¨çš®è‚¤åŠ è½½å®Œæˆåå°†æ ¹æ®ç»™å®šçš„å‚æ•°æ¥åˆå§‹åŒ–æ’­æ”¾å™¨ã€‚æ’­æ”¾å™¨åˆå§‹åŒ–å®Œæˆåï¼Œå¼€å§‹æ’­æ”¾è§†é¢‘ã€æµåŒæ—¶ä¼šåœ¨å½“å‰é¡µé¢ä¸­å›è°ƒplayerReady()ï¼ˆHTML5æˆ–Flashæ’­æ”¾å™¨éƒ½ä¼šå›è°ƒplayerReadyæ–¹æ³•ï¼Œè¡¨ç¤ºæ’­æ”¾å™¨APIæ¥å£å·²å¯ç”¨ï¼‰ç­‰ç›¸åº”çš„æ’­æ”¾å™¨å›è°ƒæ–¹æ³•ã€‚
 
 
-### ²¥·ÅÆ÷²ÎÊı£º
-* Sewise Player²¥·ÅÆ÷Ìá¹©ÁËÁé»îµÄ²ÎÊıÉèÖÃ¹¦ÄÜ£¬Í¨¹ıÉèÖÃ²»Í¬µÄ²ÎÊıÖµ¿ÉÒÔÈÃ²¥·ÅÆ÷¾ßÓĞ²»Í¬µÄ²¥·ÅÌØĞÔ¡£
-* ÏêÏ¸²ÎÊıËµÃ÷£¬¼û£º[²ÎÊıËµÃ÷.md](docs/²ÎÊıËµÃ÷.md)ÎÄ¼ş¡£
+### æ’­æ”¾å™¨å‚æ•°ï¼š
+* Sewise Playeræ’­æ”¾å™¨æä¾›äº†çµæ´»çš„å‚æ•°è®¾ç½®åŠŸèƒ½ï¼Œé€šè¿‡è®¾ç½®ä¸åŒçš„å‚æ•°å€¼å¯ä»¥è®©æ’­æ”¾å™¨å…·æœ‰ä¸åŒçš„æ’­æ”¾ç‰¹æ€§ã€‚
+* è¯¦ç»†å‚æ•°è¯´æ˜ï¼Œè§ï¼š[å‚æ•°è¯´æ˜.md](docs/å‚æ•°è¯´æ˜.md)æ–‡ä»¶ã€‚
 
 
-### ²¥·ÅÆ÷Æ¤·ô£º
-* Sewise Player²¥·ÅÆ÷Æ¤·ô·ÖÎªÁ½²¿·Ö£¬¼´HTML5ÓëFlashÆ¤·ô¡£
-* HTML5Æ¤·ôÓÉHTML¡¢CSS¡¢JSÎÄ¼ş¹¹³É£¬Ò»¸öÎÄ¼şÄ¿Â¼¶ÔÓ¦Ò»¸öÆ¤·ô¡£
-* FlashÆ¤·ôÓÉSWFÎÄ¼ş¹¹³É£¬Ò»¸öSWFÎÄ¼ş¶ÔÓ¦Ò»¸öÆ¤·ô¡£
-* HTML5ÓëFlashÆ¤·ôÉèÖÃ·½·¨ÏàÍ¬£¬Ö»Òª½«²ÎÊıskinÉèÖÃÎª¶ÔÓ¦µÄÆ¤·ôÃû£¬Èçskin=vodWhite±íÊ¾°×É«µã²¥Æ¤·ô¡£
-* HTML5ÓëFlashÆ¤·ôµÄÔ´´úÂëÒÑ¿ª·Å£¬¼û[source](source)Ä¿Â¼¡£
+### æ’­æ”¾å™¨çš®è‚¤ï¼š
+* Sewise Playeræ’­æ”¾å™¨çš®è‚¤åˆ†ä¸ºä¸¤éƒ¨åˆ†ï¼Œå³HTML5ä¸Flashçš®è‚¤ã€‚
+* HTML5çš®è‚¤ç”±HTMLã€CSSã€JSæ–‡ä»¶æ„æˆï¼Œä¸€ä¸ªæ–‡ä»¶ç›®å½•å¯¹åº”ä¸€ä¸ªçš®è‚¤ã€‚
+* Flashçš®è‚¤ç”±SWFæ–‡ä»¶æ„æˆï¼Œä¸€ä¸ªSWFæ–‡ä»¶å¯¹åº”ä¸€ä¸ªçš®è‚¤ã€‚
+* HTML5ä¸Flashçš®è‚¤è®¾ç½®æ–¹æ³•ç›¸åŒï¼Œåªè¦å°†å‚æ•°skinè®¾ç½®ä¸ºå¯¹åº”çš„çš®è‚¤åï¼Œå¦‚skin=vodWhiteè¡¨ç¤ºç™½è‰²ç‚¹æ’­çš®è‚¤ã€‚
+* HTML5ä¸Flashçš®è‚¤çš„æºä»£ç å·²å¼€æ”¾ï¼Œè§[source](source)ç›®å½•ã€‚
 
 
-### API½Ó¿Úµ÷ÓÃ£º
-* Sewise Player²¥·ÅÆ÷¶ÔÍâÌá¹©ÁË·á¸»µÄAPI½Ó¿Ú£¬Í¨¹ıAPI½Ó¿Úµ÷ÓÃ¿ÉÒÔÇáËÉ¿ØÖÆ²¥·ÅÆ÷²¥·Å¡£
-* ÏêÏ¸½Ó¿ÚËµÃ÷£¬¼û£º[½Ó¿ÚËµÃ÷.md](docs/½Ó¿ÚËµÃ÷.md)ÎÄ¼ş¡£
-* µã²¥½Ó¿Ú
+### APIæ¥å£è°ƒç”¨ï¼š
+* Sewise Playeræ’­æ”¾å™¨å¯¹å¤–æä¾›äº†ä¸°å¯Œçš„APIæ¥å£ï¼Œé€šè¿‡APIæ¥å£è°ƒç”¨å¯ä»¥è½»æ¾æ§åˆ¶æ’­æ”¾å™¨æ’­æ”¾ã€‚
+* è¯¦ç»†æ¥å£è¯´æ˜ï¼Œè§ï¼š[æ¥å£è¯´æ˜.md](docs/æ¥å£è¯´æ˜.md)æ–‡ä»¶ã€‚
+* ç‚¹æ’­æ¥å£
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo µã²¥±êÌâ&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo ç‚¹æ’­æ ‡é¢˜&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 <script>
-	//µã²¥½Ó¿Úµ÷ÓÃ·½·¨
+	//ç‚¹æ’­æ¥å£è°ƒç”¨æ–¹æ³•
 	function startPlay(){
 		SewisePlayer.doPlay();
 	}
@@ -136,7 +136,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 		SewisePlayer.toPlay("http://media.w3.org/2010/05/sintel/trailer.mp4", "Sintel", 0, true);
 	}
 
-	//²¥·ÅÆ÷»Øµ÷·½·¨
+	//æ’­æ”¾å™¨å›è°ƒæ–¹æ³•
 	function playerReady(name){
 		console.log("Sewise Player On Ready");
 		//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
@@ -164,29 +164,29 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	}
 </script>
 <div style="padding-top: 20px;">
-	<div style="padding-right: 20px;float: left;">[µã²¥½Ó¿Ú]</div>
-	<div style="padding-right: 20px;float: left;"><a href="javascript:startPlay();">²¥·Å</a></div>
-	<div style="padding-right: 20px;float: left;"><a href="javascript:playPause();">ÔİÍ£</a></div>
-	<div style="padding-right: 20px;float: left;"><a href="javascript:seekTo();">Ìø×ª</a></div>
-	<div style="padding-right: 20px;float: left;"><a href="javascript:playStop();">Í£Ö¹</a></div>
-	<div style="padding-right: 20px;float: left;"><a href="javascript:changeVolume();">¸ü¸ÄÒôÁ¿</a></div>
-	<div style="padding-right: 20px;float: left;"><a href="javascript:getDuration();">»ñÈ¡×ÜÊ±³¤</a></div>
-	<div style="padding-right: 20px;float: left;"><a href="javascript:getPlayTime();">»ñÈ¡µ±Ç°Ê±¼ä</a></div>
-	<!-- <div style="padding-right: 20px;float: left;"><a href="javascript:switchProgram();">ÇĞ»»½ÚÄ¿</a></div> -->
-	<div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">ÇĞ»»ÊÓÆµ</a></div>
+	<div style="padding-right: 20px;float: left;">[ç‚¹æ’­æ¥å£]</div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:startPlay();">æ’­æ”¾</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:playPause();">æš‚åœ</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:seekTo();">è·³è½¬</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:playStop();">åœæ­¢</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:changeVolume();">æ›´æ”¹éŸ³é‡</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:getDuration();">è·å–æ€»æ—¶é•¿</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:getPlayTime();">è·å–å½“å‰æ—¶é—´</a></div>
+	<!-- <div style="padding-right: 20px;float: left;"><a href="javascript:switchProgram();">åˆ‡æ¢èŠ‚ç›®</a></div> -->
+	<div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">åˆ‡æ¢è§†é¢‘</a></div>
 	<br clear="all"/>
 </div>
 ```
-Àı×Ó£º[demos/vod_api.html](demos/vod_api.html)
+ä¾‹å­ï¼š[demos/vod_api.html](demos/vod_api.html)
 
-* Ö±²¥½Ó¿Ú
+* ç›´æ’­æ¥å£
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=vk5nx2cj
 &shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
 </div>
 <script>
-	//Ö±²¥½Ó¿Úµ÷ÓÃ·½·¨
+	//ç›´æ’­æ¥å£è°ƒç”¨æ–¹æ³•
 	function startPlay(){
 		SewisePlayer.doPlay();
 	}
@@ -218,7 +218,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 		SewisePlayer.toPlay("rtmp://192.168.1.219/livestream/7gw3yt3h", "title", "", true);
 	}
 	
-	//²¥·ÅÆ÷»Øµ÷·½·¨
+	//æ’­æ”¾å™¨å›è°ƒæ–¹æ³•
 	function playerReady(name){
 		console.log("Sewise Player On Ready");
 		//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
@@ -246,104 +246,104 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	}
 </script>
 <div style="padding-top: 20px;">
-	<div style="padding-right: 15px;float: left;">[Ö±²¥½Ó¿Ú]</div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:startPlay();">²¥·Å</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:playPause();">ÔİÍ£</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:seekTo();">Ìø×ª</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:playStop();">Í£Ö¹</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:livePlay();">Ö±²¥</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:changeVolume();">¸ü¸ÄÒôÁ¿</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:getLiveTime();">Ö±²¥Ê±¼ä</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:getPlayTime();">²¥·ÅÊ±¼ä</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:switchChannel();">ÇĞ»»ÆµµÀ</a></div>
-	<div style="padding-right: 15px;float: left;"><a href="javascript:switchStream();">ÇĞ»»Á÷</a></div>
+	<div style="padding-right: 15px;float: left;">[ç›´æ’­æ¥å£]</div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:startPlay();">æ’­æ”¾</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:playPause();">æš‚åœ</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:seekTo();">è·³è½¬</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:playStop();">åœæ­¢</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:livePlay();">ç›´æ’­</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:changeVolume();">æ›´æ”¹éŸ³é‡</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:getLiveTime();">ç›´æ’­æ—¶é—´</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:getPlayTime();">æ’­æ”¾æ—¶é—´</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:switchChannel();">åˆ‡æ¢é¢‘é“</a></div>
+	<div style="padding-right: 15px;float: left;"><a href="javascript:switchStream();">åˆ‡æ¢æµ</a></div>
 	<br clear="all"/>
 </div>
 ```
-Àı×Ó£º[demos/live_api.html](demos/live_api.html)
+ä¾‹å­ï¼š[demos/live_api.html](demos/live_api.html)
 
 
-### Demos£º
-* µã²¥MP4ÊÓÆµ²¥·Å
+### Demosï¼š
+* ç‚¹æ’­MP4è§†é¢‘æ’­æ”¾
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 ```
-Àı×Ó£º[demos/vod_videourl_mp4.html](demos/vod_videourl_mp4.html)
+ä¾‹å­ï¼š[demos/vod_videourl_mp4.html](demos/vod_videourl_mp4.html)
 
-* µã²¥FLVÊÓÆµ²¥·Å
+* ç‚¹æ’­FLVè§†é¢‘æ’­æ”¾
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=flv&videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod-FLV&buffer=5&skin=vodOrange"></script>
 </div>
 ```
-Àı×Ó£º[demos/vod_videourl_flv.html](demos/vod_videourl_flv.html)
+ä¾‹å­ï¼š[demos/vod_videourl_flv.html](demos/vod_videourl_flv.html)
 
-* µã²¥½ÚÄ¿IDÊÓÆµ²¥·Å
+* ç‚¹æ’­èŠ‚ç›®IDè§†é¢‘æ’­æ”¾
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js?server=vod&sourceid=eQgPHj4N&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&skin=vodWhite"></script>
 </div>
 ```
-Àı×Ó£º[demos/vod_sourceid.html](demos/vod_sourceid.html)
+ä¾‹å­ï¼š[demos/vod_sourceid.html](demos/vod_sourceid.html)
 
-* Ö±²¥RTMPÁ÷²¥·Å
+* ç›´æ’­RTMPæµæ’­æ”¾
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://219.232.161.204/livestream/mtzysunq&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveWhite"></script>
 </div>
 ```
-Àı×Ó£º[demos/live_streamurl_rtmp.html](demos/live_streamurl_rtmp.html)
+ä¾‹å­ï¼š[demos/live_streamurl_rtmp.html](demos/live_streamurl_rtmp.html)
 
-* Ö±²¥HTTPÁ÷²¥·Å
+* ç›´æ’­HTTPæµæ’­æ”¾
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=http&streamurl=http://219.232.161.204:5080/livestream/mtzysunq.flv&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveOrange"></script>
 </div>
 ```
-Àı×Ó£º[demos/live_streamurl_http.html](demos/live_streamurl_http.html)
+ä¾‹å­ï¼š[demos/live_streamurl_http.html](demos/live_streamurl_http.html)
 
-* Ö±²¥½ÚÄ¿ID²¥·Å
+* ç›´æ’­èŠ‚ç›®IDæ’­æ”¾
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=vk5nx2cj&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
 </div>
 ```
-Àı×Ó£º[demos/live_pid.html](demos/live_pid.html)
+ä¾‹å­ï¼š[demos/live_pid.html](demos/live_pid.html)
 
-* Flash m3u8²¥·Å
+* Flash m3u8æ’­æ”¾
 ```html
 <div style="width: 600px;height: 400px;">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://www.codecomposer.net/hls/playlist.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-M3u8&buffer=5&claritybutton=disable&skin=vodWhite"></script>
 </div>
 ```
-Àı×Ó£º[demos/flash_m3u8.html](demos/flash_m3u8.html)
+ä¾‹å­ï¼š[demos/flash_m3u8.html](demos/flash_m3u8.html)
 
-* Flash m3u8 AES-128½âÂë²¥·Å
+* Flash m3u8 AES-128è§£ç æ’­æ”¾
 ```html
 <div style="width: 600px;height: 400px;">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://playertest.longtailvideo.com/adaptive/customIV/prog_index.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-AES-M3u8&buffer=5&claritybutton=disable&skin=vodWhite"></script>
 </div>
 ```
-Àı×Ó£º[demos/flash_m3u8_aes_128.html](demos/flash_m3u8_aes_128.html)
+ä¾‹å­ï¼š[demos/flash_m3u8_aes_128.html](demos/flash_m3u8_aes_128.html)
 
-* Æô¶¯²ÎÊıÉèÖÃÄ£Ê½
+* å¯åŠ¨å‚æ•°è®¾ç½®æ¨¡å¼
 ```html
 <div style="width: 640px; height: 360px; ">
-	<!-- 1.¸ù¾İ¸ø¶¨ÊÓÆµµØÖ·²¥·Å -->
+	<!-- 1.æ ¹æ®ç»™å®šè§†é¢‘åœ°å€æ’­æ”¾ -->
 	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
 	<script type="text/javascript">
 		SewisePlayer.setup({
 			server: "vod",
 			type: "mp4",
-			title:"Tile ±êÌâ",
+			title:"Tile æ ‡é¢˜",
 			videourl: "http://www.w3schools.com/html/mov_bbb.mp4",
 		       skin: "vodWhite"
 		});
 	</script>
 
-	<!-- 2.¸ù¾İ¸ø¶¨ÊÓÆµ½ÚÄ¿ID²¥·Å -->
+	<!-- 2.æ ¹æ®ç»™å®šè§†é¢‘èŠ‚ç›®IDæ’­æ”¾ -->
 	<!-- <script type="text/javascript" src="http://192.168.1.24/player/sewise.player.min.js"></script>
 	<script type="text/javascript">
 		SewisePlayer.setup({
@@ -358,9 +358,9 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	</script> -->
 </div>
 ```
-Àı×Ó£º[demos/setup_parameters.html](demos/setup_parameters.html)
+ä¾‹å­ï¼š[demos/setup_parameters.html](demos/setup_parameters.html)
 
-* HTML5²¥·Å»ØÍË¼æÈİµØÖ·
+* HTML5æ’­æ”¾å›é€€å…¼å®¹åœ°å€
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
@@ -378,9 +378,9 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	</script>
 </div>
 ```
-Àı×Ó£º[demos/fallback_url.html](demos/fallback_url.html)
+ä¾‹å­ï¼š[demos/fallback_url.html](demos/fallback_url.html)
 
-* Flash»ØÍËHTML5¼æÈİµØÖ·²¥·Å
+* Flashå›é€€HTML5å…¼å®¹åœ°å€æ’­æ”¾
 ```html
 <div style="width: 640px; height: 360px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
@@ -391,7 +391,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 			videourl: "http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv",
 	        skin: "vodWhite",
 	        claritybutton: "false",
-			title: "flash fallback html5 ¼æÈİµØÖ·²¥·Å",
+			title: "flash fallback html5 å…¼å®¹åœ°å€æ’­æ”¾",
 	        fallbackurls:{
 				mp4: "http://www.w3schools.com/html/mov_bbb.mp4",
         		ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
@@ -401,9 +401,9 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	</script>
 </div>
 ```
-Àı×Ó£º[demos/flash_fallback_html5.html](demos/flash_fallback_html5.html)
+ä¾‹å­ï¼š[demos/flash_fallback_html5.html](demos/flash_fallback_html5.html)
 
-* ÒôÆµ²¥·Å
+* éŸ³é¢‘æ’­æ”¾
 ```html
 <div style="width: 250px; height: 30px; ">
 	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
@@ -419,9 +419,9 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	</script>
 </div>
 ```
-Àı×Ó£º[demos/audio.html](demos/audio.html)
+ä¾‹å­ï¼š[demos/audio.html](demos/audio.html)
 
-* Ê±¼äÆ¬¶Ï²¥·Å
+* æ—¶é—´ç‰‡æ–­æ’­æ”¾
 ```html
 <!DOCTYPE html>
 <html>
@@ -443,14 +443,14 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 				$("#container").append(script);
 			</script>
 		<div>
-		<div style="padding: 20px;float: left;">×¢£ºÇëÔÚWeb»·¾³ÏÂÔ¤ÀÀ¸ÃÎÄ¼ş¡£</div>
+		<div style="padding: 20px;float: left;">æ³¨ï¼šè¯·åœ¨Webç¯å¢ƒä¸‹é¢„è§ˆè¯¥æ–‡ä»¶ã€‚</div>
 	</div>
 </body>
 </html>
 ```
-Àı×Ó£º[demos/play_piece_time.html](demos/play_piece_time.html)
+ä¾‹å­ï¼š[demos/play_piece_time.html](demos/play_piece_time.html)
 
-* Ìí¼ÓÉ¾³ı²¥·ÅÆ÷
+* æ·»åŠ åˆ é™¤æ’­æ”¾å™¨
 ```html
 <!DOCTYPE html>
 <html>
@@ -492,22 +492,22 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 			<button onclick="removePlayer()">Remove Player</button>
 		</ul>
 		</div>
-		<div style="padding: 20px;float: left;">×¢£ºÇëÔÚWeb»·¾³ÏÂÔ¤ÀÀ¸ÃÎÄ¼ş¡£</div>
+		<div style="padding: 20px;float: left;">æ³¨ï¼šè¯·åœ¨Webç¯å¢ƒä¸‹é¢„è§ˆè¯¥æ–‡ä»¶ã€‚</div>
 	</div>
 </body>
 </html>
 ```
-Àı×Ó£º[demos/add_remove_player.html](demos/add_remove_player.html)
+ä¾‹å­ï¼š[demos/add_remove_player.html](demos/add_remove_player.html)
 
-* º£±¨Ô¤ÀÀ
+* æµ·æŠ¥é¢„è§ˆ
 ```html
 <div style="width: 640px; height: 360px; ">
-	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=false&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video ÊÓÆµ&buffer=5&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=false&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video è§†é¢‘&buffer=5&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 ```
-Àı×Ó£º[demos/poster.html](demos/poster.html)
+ä¾‹å­ï¼š[demos/poster.html](demos/poster.html)
 
-* »»É«Æ¤·ô
+* æ¢è‰²çš®è‚¤
 ```html
 <div style="width: 640px;height: 362px;">
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=flv&videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Color-Skin&buffer=5&claritybutton=disable&skin=vodVspaas"></script>
@@ -528,29 +528,29 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
         </div>
 </div>
 ```
-Àı×Ó£º[demos/color_skin.html](demos/color_skin.html)
+ä¾‹å­ï¼š[demos/color_skin.html](demos/color_skin.html)
 
-* ¶àÖØ²¥·Å
+* å¤šé‡æ’­æ”¾
 ```html
 <div>
-	<div style="padding-right: 20px;float: left;">HTML5 ²¥·Å</div><br>
+	<div style="padding-right: 20px;float: left;">HTML5 æ’­æ”¾</div><br>
 	<div style="width: 640px; height: 360px; ">
-		<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://media.w3.org/2010/05/sintel/trailer.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=HTML5 ²¥·Å&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
+		<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://media.w3.org/2010/05/sintel/trailer.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=HTML5 æ’­æ”¾&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 	</div>
 	<br>
-	<div style="padding-right: 20px;float: left;">Flash ²¥·Å</div><br>
+	<div style="padding-right: 20px;float: left;">Flash æ’­æ”¾</div><br>
 	<div style="width: 640px; height: 360px; ">
 		<object type="application/x-shockwave-flash" id="sewise_player" name="sewise_player" data="../player/flash/SewisePlayer.swf" width="100%" height="100%">
 		<param name="allowfullscreen" value="true">
 		<param name="wmode" value="transparent">
 		<param name="allowscriptaccess" value="always">
-		<param name="flashvars" value="autoStart=true&programId=&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&type=flv&serverPath=&serverApi=ServerApi.execute&skin=../player/flash/skins/vodWhite.swf&title=Flash²¥·Å&draggable=true&published=0&videoUrl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&startTime=0&playerName=Sewise Player&copyright=(C) All right reserved the SEWISE inc 2011-2013&clarityButton=disable&timeDisplay=enable&controlBarDisplay=enable&topBarDisplay=enable&customStrings="></object>
+		<param name="flashvars" value="autoStart=true&programId=&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&type=flv&serverPath=&serverApi=ServerApi.execute&skin=../player/flash/skins/vodWhite.swf&title=Flashæ’­æ”¾&draggable=true&published=0&videoUrl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&startTime=0&playerName=Sewise Player&copyright=(C) All right reserved the SEWISE inc 2011-2013&clarityButton=disable&timeDisplay=enable&controlBarDisplay=enable&topBarDisplay=enable&customStrings="></object>
 	</div>
 </div>
 ```
-Àı×Ó£º[demos/multiplay.html](demos/multiplay.html)
+ä¾‹å­ï¼š[demos/multiplay.html](demos/multiplay.html)
 
-* ×ÖÄ»
+* å­—å¹•
 ```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -564,7 +564,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
             var host = "http://219.232.161.206/";
             var video_url = "http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/02005220p.flv";
             var subtitles_id = "2UtWdAUZ";
-            var subtitles_lang = "en";    //ÏÔÊ¾×ÖÄ»ÓïÑÔ, Ó¢ÎÄ: en, ÖĞÎÄ: zh_CN
+            var subtitles_lang = "en";    //æ˜¾ç¤ºå­—å¹•è¯­è¨€, è‹±æ–‡: en, ä¸­æ–‡: zh_CN
             
 			var flashvars = {
                 serverPath       : host + 'flashservice/gateway.php',
@@ -605,7 +605,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	<body>
 		<div style="width: 600px;height: 400px;">
 			<div id="swf-container">
-				¼ÓÔØ²¥·ÅÆ÷......
+				åŠ è½½æ’­æ”¾å™¨......
 			</div>
             <div style="padding-top: 20px;">
                 <div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">Switch Video</a></div>
@@ -614,7 +614,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 	</body>
 </html>
 ```
-Àı×Ó£º[demos/subtitles.html](demos/subtitles.html)
+ä¾‹å­ï¼š[demos/subtitles.html](demos/subtitles.html)
 
 
 ## License
