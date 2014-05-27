@@ -123,7 +123,11 @@ package interfaces.skin {
 		 * @param levels 包括IClarity对象的数组
 		 */
 		function initialClarity(levels:Array):void;
-
-
+		
+		/**
+		 * 设置海报
+		 */
+		function set poster(url:String):void;
+		
 	}
 }

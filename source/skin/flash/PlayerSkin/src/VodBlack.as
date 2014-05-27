@@ -254,6 +254,18 @@ package  {
 			}
 		}
 		
+		/**
+		 * 增加海报功能
+		 * 2014.5.26 jackzhang
+		 */
+		public function set poster(url:String) : void
+		{
+			if(url != ""){
+				videoContainer.loadPoster(url);
+			}
+		}
+		//2014.5.26 jackzhang/////////////
+		
 /**------------------------------ 私有属性和方法 ---------------------------*/
 
 		private var _player:IVodPlayerMediator;

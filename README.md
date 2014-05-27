@@ -21,6 +21,8 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 * 支持Flash播放m3u8文件，以及AES-128解码播放。
 * 支持PC与Mobile平台播放器自动识别功能。
 * 支持浏览器HTML5与Flash特性检测。
+* 支持HTML5不同视频格式Fallback兼容播放的功能。
+* 支持Flash Fallback到HTML5播放的功能。
 * 支持播放地址AMF, AJAX, JOSNP类型请求。
 * 支持自定义HTML5与Flash皮肤，让您无需了解专业的编码技术也可以制作出超烗风格的皮肤。
 * 支持前置广告（swf, 图片, 视频）。

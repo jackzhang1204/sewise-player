@@ -20,7 +20,7 @@ package utils {
 		 * @param con 指定的容器
 		 * @param whObject 指定的包含宽高属性的对象
 		 */
-		public static function resizeInContainer(displayObj : Object,con:DisplayObject,whObject:Object) : Object{
+		public static function resizeInContainer(displayObj:Object, con:DisplayObject, whObject:Object):Object{
 			var newWHobj : Object = new Object();
 			if(con.width/con.height <= whObject['width']/whObject['height']){
 				displayObj['width'] = newWHobj['width']=con.width;

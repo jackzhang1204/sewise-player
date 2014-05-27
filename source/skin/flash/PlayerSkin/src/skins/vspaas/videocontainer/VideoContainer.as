@@ -10,12 +10,16 @@
 package skins.vspaas.videocontainer {
 	import com.demonsters.debugger.MonsterDebugger;
 	
+	import flash.display.Loader;
 	import flash.display.MovieClip;
 	import flash.display.StageDisplayState;
+	import flash.events.Event;
+	import flash.events.IOErrorEvent;
 	import flash.events.MouseEvent;
 	import flash.events.TimerEvent;
 	import flash.media.Video;
 	import flash.net.NetStream;
+	import flash.net.URLRequest;
 	import flash.utils.Timer;
 	
 	import utils.Resizer;
@@ -73,6 +77,13 @@ package skins.vspaas.videocontainer {
 				whObj = {width:video.videoWidth,height:video.videoHeight};
 			}
 			Resizer.resizeInContainer(video, videoMask, whObj);
+			
+			/**
+			 * 增加海报功能
+			 * 2014.5.26 jackzhang
+			 */
+			Resizer.resizeInContainer(poster, videoMask, {width:poster.width, height:poster.height});
+			//2014.5.26 jackzhang/////////////
 		}
 		
 		public function setNetStream(stream:NetStream):void{
@@ -81,11 +92,54 @@ package skins.vspaas.videocontainer {
 		
 		public function started():void{
 			vSizeTimer.start();
+			
+			/**
+			 * 增加海报功能
+			 * 2014.5.26 jackzhang
+			 */
+			clearPoster();
+			//2014.5.26 jackzhang/////////////
 		}
 		
 		public function stopped():void{
 			video.clear();
 		}
+		
+		
+		/**
+		 * 增加海报功能
+		 * 2014.5.26 jackzhang
+		 */
+		public var poster:MovieClip;
+		private var loader:Loader;
+		public function loadPoster(url:String):void{
+			loader = new Loader();
+			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loaderCompleteHandler);
+			loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, loaderErrorHandler);
+			loader.load(new URLRequest(url));
+		}
+		private function clearPoster():void
+		{
+			while(poster.numChildren)poster.removeChildAt(0);
+			if(loader)loader.unload();
+			loader = null;
+		}
+		private function loaderCompleteHandler(e:Event):void
+		{
+			if(loader){
+				loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, loaderCompleteHandler);
+				loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR, loaderErrorHandler);
+				while(poster.numChildren)poster.removeChildAt(0);
+				poster.addChild(loader);
+				Resizer.resizeInContainer(poster, videoMask, {width:poster.width, height:poster.height});
+			}
+		}
+		private function loaderErrorHandler(e:Event):void
+		{
+			//trace("error");
+		}
+		//2014.5.26 jackzhang/////////////
+		
 		
 	}
 }

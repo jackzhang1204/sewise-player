@@ -152,5 +152,10 @@ package interfaces.skin {
 		 */
 		function set subtitlesLang(subtitlesLangArray:Array):void
 		
+		/**
+		 * 设置海报
+		 */
+		function set poster(url:String):void;
+		
 	}
 }
