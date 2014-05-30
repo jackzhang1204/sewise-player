@@ -157,5 +157,10 @@ package interfaces.skin {
 		 */
 		function set poster(url:String):void;
 		
+		/**
+		 * 设置默认音量值
+		 */
+		function set volume(value:Number):void;
+		
 	}
 }

@@ -122,6 +122,19 @@ package  {
 		}
 		//2014.5.26 jackzhang/////////////
 		
+		/**
+		 * 设置默认音量值
+		 * 2014.5.30 jackzhang
+		 */
+		public function set volume(value:Number) : void
+		{
+			if(value >= 0 && value <= 1){
+				//重置音量UI状态
+				
+			}
+		}
+		//2014.5.30 jackzhang/////////////
+		
 		public function set stream(stream : NetStream) : void {
 			videoContainer.setNetStream(stream);
 		}

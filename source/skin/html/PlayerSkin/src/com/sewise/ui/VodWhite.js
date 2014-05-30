@@ -51,8 +51,13 @@
 			
 			//console.log("logo: " + url);
 		}
-
-
+		SewisePlayerSkin.IVodSkin.volume = function(value){
+			//重置音量UI状态。
+			
+			//console.log("vod volume: " + value);
+		}
+		
+		
 		//通知主播放器皮肤已经初始化完成.
 		try{
 			SewisePlayer.CommandDispatcher.dispatchEvent({type: SewisePlayer.Events.PLAYER_SKIN_LOADED, playerSkin: SewisePlayerSkin.IVodSkin});

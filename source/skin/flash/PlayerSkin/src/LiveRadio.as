@@ -221,6 +221,31 @@ package  {
 			}
 		}
 		
+		/**
+		 * 增加海报功能
+		 * 2014.5.26 jackzhang
+		 */
+		public function set poster(url:String) : void
+		{
+			if(url != ""){
+				
+			}
+		}
+		//2014.5.26 jackzhang/////////////
+		
+		/**
+		 * 设置默认音量值
+		 * 2014.5.30 jackzhang
+		 */
+		public function set volume(value:Number) : void
+		{
+			if(value >= 0 && value <= 1){
+				//重置音量UI状态
+				
+			}
+		}
+		//2014.5.30 jackzhang/////////////
+		
 /**------------------------------ 皮肤私有属性和方法 ---------------------------*/
 
 		private var _player:ILivePlayerMediator;

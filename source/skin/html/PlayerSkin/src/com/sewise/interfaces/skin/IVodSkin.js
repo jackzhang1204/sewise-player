@@ -28,7 +28,8 @@
 		controlBarDisplay: function(state){},
 		topBarDisplay: function(state){},
 		
-		timeUpdate:function(){}
+		timeUpdate:function(){},
+		volume:function(value){}
 		
 	};
 	

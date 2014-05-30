@@ -51,6 +51,11 @@
 			
 			//console.log("logo: " + url);
 		}
+		SewisePlayerSkin.ILiveSkin.volume = function(value){
+			//重置音量UI状态。
+			
+			//console.log("live volume: " + value);
+		}
 		
 		
 		//通知主播放器皮肤已经初始化完成.
