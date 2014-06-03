@@ -278,10 +278,15 @@
 			$pauseBtn.hide();
 			$bigPlayBtn.show();
 		}
+		this.stopped = function(){
+			$playBtn.show();
+			$pauseBtn.hide();
+			$bigPlayBtn.show();
+		}
 		this.setDuration = function(totalTimes){
 			duration = totalTimes;
 			durationHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(duration);
-
+			
 			//console.log(duration);
 		}
 		this.timeUpdate = function(currentTime){
