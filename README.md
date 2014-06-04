@@ -1,5 +1,7 @@
 # [Sewise Player](http://player.sewise.com/) : HTML5 Video Player
 
+![Screenshot](player.png)
+
 Support for [jQuery](http://jquery.com/) HTML player skins.
 
 
