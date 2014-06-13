@@ -90,10 +90,15 @@ div.sewise-player-ui div.controlbar ul.controlbar-btns div.controlbar-progress {
 }
 div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-totalline {
 	position: absolute;
-	width: 100%;
-	height: 6px;
 	top: 7px;
+	width: 100%;
+	
+	height: 6px;
 	background: url("controlbar.png") 0px -140px repeat-x;
+	
+	/*height: 4px;
+	background-color: #514f52;
+	border: 1px solid #000;*/
 }
 div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-loadedline {
 	position: absolute;

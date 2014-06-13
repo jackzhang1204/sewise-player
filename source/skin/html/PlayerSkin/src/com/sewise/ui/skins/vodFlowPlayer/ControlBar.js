@@ -454,7 +454,10 @@
 
 			mutedCheck();
 		}
-
+		this.hide2 = function(){
+			$controlbar.hide();
+		}
+		
 		
 	};
 	

@@ -57,6 +57,37 @@
 			//console.log("vod volume: " + value);
 		}
 		
+		SewisePlayerSkin.IVodSkin.clarityButton = function(state){
+			//重置clarityButton显示状态。
+			/*if(state != "enable"){
+				
+			}*/
+			//console.log("clarityButton: " + state);
+		}
+		SewisePlayerSkin.IVodSkin.timeDisplay = function(state){
+			//重置playTime显示状态。
+			/*if(state != "enable"){
+
+			}*/
+		}
+		SewisePlayerSkin.IVodSkin.controlBarDisplay = function(state){
+			//重置controlBar显示状态。
+			if(state != "enable"){
+				controlBar.hide2();
+			}
+		}
+		SewisePlayerSkin.IVodSkin.topBarDisplay = function(state){
+			//重置topBar显示状态。
+			if(state != "enable"){
+				topBar.hide2();
+			}
+		}
+		SewisePlayerSkin.IVodSkin.customStrings = function(strings){
+			//customStrings值。
+			
+			//console.log("customStrings: " + strings);
+		}
+		
 		
 		//通知主播放器皮肤已经初始化完成.
 		try{

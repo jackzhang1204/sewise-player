@@ -308,7 +308,10 @@
 			var plLineWidth = loadedPt * 100 + "%";
 			$progressLoadedLine.css("width", plLineWidth);
 		}
-
+		this.hide2 = function(){
+			$controlbar.hide();
+		}
+		
 		
 	};
 	

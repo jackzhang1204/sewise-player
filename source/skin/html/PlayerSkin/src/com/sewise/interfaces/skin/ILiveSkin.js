@@ -29,7 +29,13 @@
 		topBarDisplay: function(state){},
 		
 		timeUpdate:function(){},
-		volume:function(value){}
+		volume:function(value){},
+		
+		clarityButton:function(state){},
+		timeDisplay:function(state){},
+		controlBarDisplay:function(state){},
+		topBarDisplay:function(state){},
+		customStrings:function(strings){}
 		
 	};
 	

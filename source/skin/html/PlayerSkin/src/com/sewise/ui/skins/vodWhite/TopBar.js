@@ -27,6 +27,9 @@
 		this.hide = function(){
 			$topbar.css("visibility", "hidden");
 		}
+		this.hide2 = function(){
+			$topbar.hide();
+		}
 		
 		
 	};
