@@ -13,7 +13,6 @@
 		seeking: function(b){},
 		buffering: function(b){},
 		bufferProgress: function(p){},
-		loadedProgress: function(p){},
 		programTitle: function(title){},
 		duration: function(time){},
 		playTime: function(time){},

@@ -28,7 +28,7 @@
 		controlBarDisplay: function(state){},
 		topBarDisplay: function(state){},
 		
-		timeUpdate:function(){},
+		timeUpdate:function(time){},
 		volume:function(value){},
 		
 		clarityButton:function(state){},

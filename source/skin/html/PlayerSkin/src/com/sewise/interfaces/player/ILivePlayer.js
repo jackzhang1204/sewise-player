@@ -13,6 +13,7 @@
 		seek: function(shiftTime){},
 		changeClarity: function(level){},
 		setVolume: function(volume){},
+		playChannel: function(programId, shiftTime, autostart){},
 		toPlay: function(streamUrl, title, shiftTime, autostart){},
 		duration: function(){},
 		liveTime: function(){},

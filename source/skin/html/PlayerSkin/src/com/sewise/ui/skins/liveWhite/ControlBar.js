@@ -129,9 +129,7 @@
 			$progressPlayedLine.css("width", ppLineWidth);
 			$progressPlayedPoint.css("left", ppLineWidth - ppPointW / 2);
 			seekPt = ppLineWidth / psLineWidth;
-			mainPlayer.seek(seekPt * duration);
-
-			//console.log(seekPt * duration);
+			seekPlay(seekPt);
 		});
 		$progressPlayedPoint.mousedown(function(e){
 			//console.log("mousedown");
@@ -163,7 +161,7 @@
 			if(beforeDownX != afterUpX){
 				ppLineWidth = $progressPlayedLine.width();
 				seekPt = ppLineWidth / psLineWidth;
-				mainPlayer.seek(seekPt * duration);
+				seekPlay(seekPt);
 			}
 			dragging = false;
 		}
@@ -211,11 +209,17 @@
 				if(beforeDownX != afterUpX){
 					ppLineWidth = $progressPlayedLine.width();
 					seekPt = ppLineWidth / psLineWidth;
-					//console.log("time:" + seekPt * duration);
-					mainPlayer.seek(seekPt * duration);
+					seekPlay(seekPt);
 				}
 			}
 			dragging = false;
+		}
+		function seekPlay($seekPt){
+			var shiftDate = new Date(Math.floor(mainPlayer.playTime().getTime() / 1000 / 3600) * 3600 * 1000 + $seekPt * duration * 1000);
+			var shiftTime = SewisePlayerSkin.Utils.stringer.dateToTimeStr14(shiftDate);
+			mainPlayer.seek(shiftTime);
+			//console.log(shiftDate);
+			//console.log(shiftTime);
 		}
 		function hideBar(){
 			$controlbar.css("visibility", "hidden");
@@ -237,10 +241,13 @@
 				obj.webkitRequestFullscreen();
 			}else if($video.webkitEnterFullscreen){
 				//console.log("native fullscreen");
-				$video.play();
+				/*$video.play();
 				$video.webkitEnterFullscreen();
 				$fullscreenBtn.show();
-				$normalscreenBtn.hide();
+				$normalscreenBtn.hide();*/
+
+				//为保留直播UI控制时移，取消原生UI全屏功能
+				elementLayout.fullScreen("not-support");
 			}else{
 				//console.log("not-support");
 				elementLayout.fullScreen("not-support");
@@ -285,26 +292,33 @@
 		}
 		this.setDuration = function(totalTimes){
 			duration = totalTimes;
-			durationHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(duration);
 
-			//console.log(duration);
+			//console.log("duration:" + duration);
 		}
-		this.timeUpdate = function(currentTime){
-			playTime = currentTime;
-			playTimeHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(playTime);
-			$playtime.text(playTimeHMS + "/" + durationHMS);
+		this.timeUpdate = function(){
+			if(!mainPlayer.playTime()) return;
 			
+			durationHMS = SewisePlayerSkin.Utils.stringer.dateToStrHMS(new Date(Math.ceil(mainPlayer.playTime().getTime() / 1000 / duration) * duration * 1000));
+			playTimeHMS = SewisePlayerSkin.Utils.stringer.dateToStrHMS(new Date(Math.floor(mainPlayer.playTime().getTime() / 1000 / duration) * duration * 1000));
+			$playtime.text(playTimeHMS + "/" + durationHMS);
+
 			if(dragging) return;
-			var playPt = playTime / duration;
+			var playPt = (Math.floor(mainPlayer.playTime().getTime() / 1000) % duration) / duration;
 			ppLineWidth = playPt * 100 + "%";
 			$progressPlayedLine.css("width", ppLineWidth);
-			
 			var ppPointLeft = $progressPlayedLine.width() - ppPointW / 2;
 			$progressPlayedPoint.css("left", ppPointLeft);
-		}
-		this.loadProgress = function(loadedPt){
-			//console.log(loadedPt);
-			
+
+			//////////////////////
+			var loadedPt;
+			var playTimeRightHour = Math.ceil(mainPlayer.playTime().getTime() / 1000 / 3600);
+			var liveTimeLeftHour = Math.floor(mainPlayer.liveTime().getTime() / 1000 / 3600);
+			if(liveTimeLeftHour >= playTimeRightHour){
+				loadedPt = 1;
+			}else{
+				loadedPt = (Math.floor(mainPlayer.liveTime().getTime() / 1000) % duration) / duration;
+			}
+			//console.log("loadedPt: " + loadedPt);
 			var plLineWidth = loadedPt * 100 + "%";
 			$progressLoadedLine.css("width", plLineWidth);
 		}

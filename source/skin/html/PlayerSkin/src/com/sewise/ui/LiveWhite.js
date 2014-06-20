@@ -35,11 +35,9 @@
 		SewisePlayerSkin.ILiveSkin.duration = function(totalTimes){
 			controlBar.setDuration(totalTimes);
 		}
-		SewisePlayerSkin.ILiveSkin.timeUpdate = function(currentTime){
-			controlBar.timeUpdate(currentTime);
-		}
-		SewisePlayerSkin.ILiveSkin.loadedProgress = function(loadedPt){
-			controlBar.loadProgress(loadedPt);
+		SewisePlayerSkin.ILiveSkin.timeUpdate = function(){
+			controlBar.timeUpdate();
+			topBar.setClock(mainPlayer.playTime());
 		}
 		SewisePlayerSkin.ILiveSkin.programTitle = function(title){
 			topBar.setTitle(title);
@@ -60,7 +58,7 @@
 		SewisePlayerSkin.ILiveSkin.clarityButton = function(state){
 			//重置clarityButton显示状态。
 			/*if(state != "enable"){
-
+				
 			}*/
 			//console.log("clarityButton: " + state);
 		}

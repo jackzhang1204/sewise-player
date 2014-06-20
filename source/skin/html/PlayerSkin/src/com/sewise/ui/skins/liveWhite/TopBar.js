@@ -10,14 +10,12 @@
 		var $topbarClock = elementObject.$topbarClock;
 
 		/////////////////////////////
-		var interval = setInterval(setClock, 1000);
-		function setClock(){
-			var timeString = SewisePlayerSkin.Utils.stringer.dateToTimeString();
+		this.setClock = function(date){
+			var timeString = SewisePlayerSkin.Utils.stringer.dateToTimeString(date);
 			$topbarClock.text(timeString);
 
 			//console.log(timeString);
 		}
-
 		this.setTitle = function(title){
 			$programTitle.text(title);
 		}
@@ -30,8 +28,8 @@
 		this.hide2 = function(){
 			$topbar.hide();
 		}
-
-
+		
+		
 	};
 	
 })(window.jQuery)
