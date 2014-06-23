@@ -4,6 +4,8 @@
 
 Support for [jQuery](http://jquery.com/) HTML player skins.
 
+Demos [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html)
+
 
 ## What is Sewise Player?
 
@@ -629,5 +631,9 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 
 
 ## Author:
-Jack Zhang [jackzhang1204@gmail.com](http://www.gmail.com)
-[sewise.com](http://www.sewise.com/)
+Sewise 	 [sewise.com](http://www.sewise.com)
+Mail 	 [jackzhang1204@gmail.com](http://www.gmail.com)
+GitHub 	 [https://github.com/jackzhang1204](https://github.com/jackzhang1204)
+Twitter  [https://twitter.com/jackzhang1204](https://twitter.com/jackzhang1204)
+Facebook [https://www.facebook.com/jackzhang1204](https://www.facebook.com/jackzhang1204)
+
