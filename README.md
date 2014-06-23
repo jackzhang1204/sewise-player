@@ -2,9 +2,7 @@
 
 ![Screenshot](player.png)
 
-Support for [jQuery](http://jquery.com/) HTML player skins.
-
-Demos [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html)
+Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html)
 
 
 ## What is Sewise Player?
