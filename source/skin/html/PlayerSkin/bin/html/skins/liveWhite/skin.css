@@ -75,10 +75,10 @@ div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-paus
 div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-pause:hover {
 	background: url("controlbar.png") -38px -60px no-repeat;
 }
-div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-stop {
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-live {
 	background: url("controlbar.png") 0px -90px no-repeat;
 }
-div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-stop:hover {
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-live:hover {
 	background: url("controlbar.png") -38px -90px no-repeat;
 }
 

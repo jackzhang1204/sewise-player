@@ -47,8 +47,8 @@
 		}
 		this.fullScreen = function(state){
 			if(state == "not-support"){
-				var clientW = $(window).width();
-				var clientH = $(window).height();
+				var clientW = $(window).width() - 15;
+				var clientH = $(window).height() - 15;
 				//console.log("clientW: " + clientW + "\nclientH: " + clientH);
 				$container.css("width", clientW);
 				$container.css("height", clientH);

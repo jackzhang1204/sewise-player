@@ -14,7 +14,7 @@ window.SewisePlayerSkin.localSkin =
 				'<ul class="controlbar-btns">' + 
 					'<li><a href="javascript:;" class="controlbar-btns-play" tabindex="1">播放</a></li>' + 
 					'<li><a href="javascript:;" class="controlbar-btns-pause" tabindex="1">暂停</a></li>' + 
-					'<li><a href="javascript:;" class="controlbar-btns-stop" tabindex="2">停止</a></li>' + 
+					'<li><a href="javascript:;" class="controlbar-btns-live" tabindex="2">直播</a></li>' + 
 					'<div class="controlbar-progress">' + 
 						'<div class="controlbar-progress-totalline"></div>' + 
 						'<div class="controlbar-progress-loadedline"></div>' + 

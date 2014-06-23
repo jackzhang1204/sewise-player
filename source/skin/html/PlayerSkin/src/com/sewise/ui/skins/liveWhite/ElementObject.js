@@ -14,7 +14,7 @@
 		this.$controlbar =  this.$sewisePlayerUi.find(".controlbar");
 		this.$playBtn = this.$sewisePlayerUi.find(".controlbar-btns-play");
 		this.$pauseBtn = this.$sewisePlayerUi.find(".controlbar-btns-pause");
-		this.$stopBtn = this.$sewisePlayerUi.find(".controlbar-btns-stop");
+		this.$liveBtn = this.$sewisePlayerUi.find(".controlbar-btns-live");
 		this.$fullscreenBtn = this.$sewisePlayerUi.find(".controlbar-btns-fullscreen");
 		this.$normalscreenBtn = this.$sewisePlayerUi.find(".controlbar-btns-normalscreen");
 		this.$soundopenBtn = this.$sewisePlayerUi.find(".controlbar-btns-soundopen");

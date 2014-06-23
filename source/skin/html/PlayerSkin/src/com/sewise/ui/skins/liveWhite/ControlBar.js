@@ -10,7 +10,7 @@
 		var $controlbar = elementObject.$controlbar;
 		var $playBtn = elementObject.$playBtn;
 		var $pauseBtn = elementObject.$pauseBtn;
-		var $stopBtn = elementObject.$stopBtn;
+		var $liveBtn = elementObject.$liveBtn;
 		var $fullscreenBtn = elementObject.$fullscreenBtn;
 		var $normalscreenBtn = elementObject.$normalscreenBtn;
 		var $soundopenBtn = elementObject.$soundopenBtn;
@@ -83,8 +83,8 @@
 		$pauseBtn.click(function(){
 			mainPlayer.pause();
 		});
-		$stopBtn.click(function(){
-			mainPlayer.stop();
+		$liveBtn.click(function(){
+			mainPlayer.live();
 		});
 		$bigPlayBtn.click(function(e){
 			e.originalEvent.stopPropagation();
