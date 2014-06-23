@@ -629,9 +629,9 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 
 
 ## Author:
-Sewise 	 [sewise.com](http://www.sewise.com)
-Mail 	 [jackzhang1204@gmail.com](http://www.gmail.com)
-GitHub 	 [https://github.com/jackzhang1204](https://github.com/jackzhang1204)
-Twitter  [https://twitter.com/jackzhang1204](https://twitter.com/jackzhang1204)
-Facebook [https://www.facebook.com/jackzhang1204](https://www.facebook.com/jackzhang1204)
+* [Sewise](http://www.sewise.com)
+* [Gmail](http://www.gmail.com)
+* [GitHub](https://github.com/jackzhang1204)
+* [Twitter](https://twitter.com/jackzhang1204)
+* [Facebook](https://www.facebook.com/jackzhang1204)
 
