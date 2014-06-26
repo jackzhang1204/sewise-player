@@ -1,79 +1,722 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Sewise Player : HTML5 Video Player" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Sewise Player by jackzhang1204</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Sewise Player</title>
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/jackzhang1204/sewise-player">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/jackzhang1204/sewise-player/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/jackzhang1204/sewise-player/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jackzhang1204/sewise-player">View on GitHub</a>
+    <div class="wrapper">
 
-          <h1 id="project_title">Sewise Player</h1>
-          <h2 id="project_tagline">HTML5 Video Player</h2>
+      <section>
+        <div id="title">
+          <h1>Sewise Player</h1>
+          <p>HTML5 Video Player</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/jackzhang1204">jackzhang1204</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jackzhang1204/sewise-player/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jackzhang1204/sewise-player/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <h1>
+<a name="sewise-player--html5-video-player" class="anchor" href="#sewise-player--html5-video-player"><span class="octicon octicon-link"></span></a>
+<a href="http://player.sewise.com/">Sewise Player</a> : HTML5 Video Player</h1>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<p><img src="player.png" alt="Screenshot"></p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Support for <a href="http://jquery.com/">jQuery</a> HTML player skins. Demos <a href="http://219.232.161.204/libs/swfplayer/player/vod.html">Vod点播</a> | <a href="http://219.232.161.204/libs/swfplayer/player/live.html">Live直播</a></p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h2>
+<a name="what-is-sewise-player" class="anchor" href="#what-is-sewise-player"><span class="octicon octicon-link"></span></a>What is Sewise Player?</h2>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="sewise-player%E6%98%AF%E4%B8%80%E6%AC%BE%E4%B8%93%E4%B8%9A%E7%9A%84%E5%85%8D%E8%B4%B9%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E6%B5%81%E6%92%AD%E6%94%BE%E5%99%A8%E5%AE%83%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E4%BD%93%E7%A7%AF%E5%B0%8F%E8%B7%A8%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%96%B9%E4%BE%BF%E7%AE%80%E6%B4%81%E9%9A%8F%E5%BF%83%E6%89%80%E6%AC%B2" class="anchor" href="#sewise-player%E6%98%AF%E4%B8%80%E6%AC%BE%E4%B8%93%E4%B8%9A%E7%9A%84%E5%85%8D%E8%B4%B9%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E6%B5%81%E6%92%AD%E6%94%BE%E5%99%A8%E5%AE%83%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E4%BD%93%E7%A7%AF%E5%B0%8F%E8%B7%A8%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%96%B9%E4%BE%BF%E7%AE%80%E6%B4%81%E9%9A%8F%E5%BF%83%E6%89%80%E6%AC%B2"><span class="octicon octicon-link"></span></a>Sewise Player是一款专业的免费网页视频、流播放器，它功能强大，体积小，跨平台，使用方便简洁、随心所欲。</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<ul>
+<li>播放器是主要以HTML5技术为平台开发，同时兼容flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器播放视频。</li>
+<li>Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或flash模式播放视频。您不需要掌握任何JavaScript或ActionScript编码技术就可以制作出专业的网页视频播放器。</li>
+<li>Sewise Player即可以做为单一的前台播放器来在页面上播放视频和流，也可以结合Sewise Server后台技术实现专业的可交互的点播、直播视频播放。</li>
+</ul><h3>
+<a name="%E5%8A%9F%E8%83%BD%E5%88%97%E8%A1%A8" class="anchor" href="#%E5%8A%9F%E8%83%BD%E5%88%97%E8%A1%A8"><span class="octicon octicon-link"></span></a>功能列表：</h3>
+
+<ul>
+<li>支持HTML5，Flash视频播放技术。</li>
+<li>支持多平台，PC包括Windows, MacOS, Linux等。Mobile包括Android, IOS, Windows Phone等。</li>
+<li>支持多浏览器兼容，如IE6/7/8/9/10、Google Chrome、Firefox、safari、Opera等。</li>
+<li>支持多种视频格式，如mp4、m3u8、oga、webm、theora、flv、f4v等。</li>
+<li>支持多种协议直播流，如rtmp、udp、http ts、rtsp等。</li>
+<li>支持Flash播放m3u8文件，以及AES-128解码播放。</li>
+<li>支持PC与Mobile平台播放器自动识别功能。</li>
+<li>支持浏览器HTML5与Flash特性检测。</li>
+<li>支持HTML5不同视频格式地址Fallback兼容播放功能。</li>
+<li>支持Flash Fallback到HTML5视频播放功能。</li>
+<li>支持播放地址AMF, AJAX, JOSNP类型请求。</li>
+<li>支持自定义HTML5与Flash皮肤，让您无需了解专业的编码技术也可以制作出超烗风格的皮肤。</li>
+<li>支持前置广告（swf, 图片, 视频）。</li>
+<li>支持字幕。</li>
+<li>支持多种播放参数设定，并支持启动参数设置。</li>
+<li>支持丰富的api接口，以此可以快速打造功能强大的插件。</li>
+</ul><h3>
+<a name="%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D" class="anchor" href="#%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="octicon octicon-link"></span></a>文件介绍：</h3>
+
+<ul>
+<li>sewise.player.min.js主播放器文件。</li>
+<li>html，HTML5皮肤目录。</li>
+<li>html\skins\vodWhite, HTML5点播白色皮肤目录。</li>
+<li>html\skins\vodWhite\skin.html, HTML5点播白色皮肤Dom元素。</li>
+<li>html\skins\vodWhite\skin.html.js, HTML5点播白色皮肤Dom元素对象，用于兼容跨域加载。</li>
+<li>html\skins\vodWhite\skin.css, HTML5点播白色皮肤CSS样式。</li>
+<li>html\skins\vodWhite\skin.js, HTML5点播白色皮肤JS逻辑代码。</li>
+<li>flash, flash播放器目录。</li>
+<li>flash\SewisePlayer.swf， Flash播放器主文件。</li>
+<li>flash\skins, Flash皮肤目录。</li>
+<li>flash\skins\vodWhite.swf, Flash点播白色皮肤。</li>
+<li>flash\skins\liveWhite.swf, Flash直播白色皮肤。</li>
+<li>flash\skins\vodOrange.swf, Flash点播橙色皮肤。</li>
+<li>flash\skins\liveOrange.swf, Flash直播橙色皮肤。</li>
+</ul><h3>
+<a name="%E9%A1%B5%E9%9D%A2%E6%92%AD%E6%94%BE%E5%99%A8%E5%B5%8C%E5%85%A5%E6%96%B9%E5%BC%8F" class="anchor" href="#%E9%A1%B5%E9%9D%A2%E6%92%AD%E6%94%BE%E5%99%A8%E5%B5%8C%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="octicon octicon-link"></span></a>页面播放器嵌入方式：</h3>
+
+<ul>
+<li>点播，实际地址播放。</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=mp4&amp;videourl=http://www.w3schools.com/html/mov_bbb.mp4&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=VodVideo&amp;buffer=5&amp;skin=vodWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<ul>
+<li>点播，节目ID播放。</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js?server=vod&amp;sourceid=eQgPHj4N&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;buffer=5&amp;skin=vodWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<ul>
+<li>直播，实际地址播放。</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=live&amp;type=rtmp&amp;streamurl=rtmp://219.232.161.204/livestream/mtzysunq&amp;autostart=true&amp;pid=&amp;shifttime=&amp;buffer=5&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=LiveVideo&amp;skin=liveWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<ul>
+<li>直播，节目ID播放。</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&amp;autostart=true&amp;pid=vk5nx2cj&amp;shifttime=&amp;buffer=5&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;skin=liveWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="%E6%92%AD%E6%94%BE%E5%99%A8%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86" class="anchor" href="#%E6%92%AD%E6%94%BE%E5%99%A8%E8%BF%90%E8%A1%8C%E5%8E%9F%E7%90%86"><span class="octicon octicon-link"></span></a>播放器运行原理:</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<ul>
+<li>第一步：页面加载sewise.player.min.js文件后，该脚本会将相应的参数解析出来，并检查出当前的设备平台、浏览器特性，同时还会根据JS文件的路径取出host地址，用于播放地址请求。</li>
+<li>第二步：通过分析出来的vod与type参数与及浏览器特性，来确定播放器是启用HTML5还是Flash模块。对于不同平台和浏览器同时支持的视频格式或流协议，将优先启用HTML5播放模块。</li>
+<li>第三步：加载对应的皮肤文件与库文件。</li>
+<li>第四步：在皮肤加载完成后将根据给定的参数来初始化播放器。播放器初始化完成后，开始播放视频、流同时会在当前页面中回调playerReady()（HTML5或Flash播放器都会回调playerReady方法，表示播放器API接口已可用）等相应的播放器回调方法。</li>
+</ul><h3>
+<a name="%E6%92%AD%E6%94%BE%E5%99%A8%E5%8F%82%E6%95%B0" class="anchor" href="#%E6%92%AD%E6%94%BE%E5%99%A8%E5%8F%82%E6%95%B0"><span class="octicon octicon-link"></span></a>播放器参数：</h3>
+
+<ul>
+<li>Sewise Player播放器提供了灵活的参数设置功能，通过设置不同的参数值可以让播放器具有不同的播放特性。</li>
+<li>详细参数说明，见：<a href="docs/%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E.md">参数说明.md</a>文件。</li>
+</ul><h3>
+<a name="%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%AE%E8%82%A4" class="anchor" href="#%E6%92%AD%E6%94%BE%E5%99%A8%E7%9A%AE%E8%82%A4"><span class="octicon octicon-link"></span></a>播放器皮肤：</h3>
+
+<ul>
+<li>Sewise Player播放器皮肤分为两部分，即HTML5与Flash皮肤。</li>
+<li>HTML5皮肤由HTML、CSS、JS文件构成，一个文件目录对应一个皮肤。</li>
+<li>Flash皮肤由SWF文件构成，一个SWF文件对应一个皮肤。</li>
+<li>HTML5与Flash皮肤设置方法相同，只要将参数skin设置为对应的皮肤名，如skin=vodWhite表示白色点播皮肤。</li>
+<li>HTML5与Flash皮肤的源代码已开放，见<a href="source">source</a>目录。</li>
+</ul><h3>
+<a name="api%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8" class="anchor" href="#api%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8"><span class="octicon octicon-link"></span></a>API接口调用：</h3>
+
+<ul>
+<li>Sewise Player播放器对外提供了丰富的API接口，通过API接口调用可以轻松控制播放器播放。</li>
+<li>详细接口说明，见：<a href="docs/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.md">接口说明.md</a>文件。</li>
+<li>点播接口</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=mp4&amp;videourl=http://www.w3schools.com/html/mov_bbb.mp4&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=VodVideo 点播标题&amp;buffer=5&amp;skin=vodWhite&amp;fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="c1">//点播接口调用方法</span>
+    <span class="kd">function</span> <span class="nx">startPlay</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doPlay</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">playPause</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doPause</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">seekTo</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doSeek</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">playStop</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doStop</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">changeVolume</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">setVolume</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">getDuration</span><span class="p">(){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">duration</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">getPlayTime</span><span class="p">(){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">playTime</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="c1">// function switchProgram(){</span>
+    <span class="c1">//  SewisePlayer.playProgram("xqfa3cZn", 0, true);</span>
+    <span class="c1">// }</span>
+    <span class="kd">function</span> <span class="nx">switchVideo</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">toPlay</span><span class="p">(</span><span class="s2">"http://media.w3.org/2010/05/sintel/trailer.mp4"</span><span class="p">,</span> <span class="s2">"Sintel"</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//播放器回调方法</span>
+    <span class="kd">function</span> <span class="nx">playerReady</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Sewise Player On Ready"</span><span class="p">);</span>
+        <span class="c1">//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onStart</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onStart"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onStop</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onStop"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onMetadata</span><span class="p">(</span><span class="nx">meta</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onMetadata"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onClarity</span><span class="p">(</span><span class="nx">clarity</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onClarity"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onPause</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onPause"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onSeek</span><span class="p">(</span><span class="nx">time</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onSeek: "</span> <span class="o">+</span> <span class="nx">time</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onPlayTime</span><span class="p">(</span><span class="nx">time</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onPlayTime: "</span> <span class="o">+</span> <span class="nx">time</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-top: 20px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;</span>[点播接口]<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:startPlay();"</span><span class="nt">&gt;</span>播放<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:playPause();"</span><span class="nt">&gt;</span>暂停<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:seekTo();"</span><span class="nt">&gt;</span>跳转<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:playStop();"</span><span class="nt">&gt;</span>停止<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:changeVolume();"</span><span class="nt">&gt;</span>更改音量<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:getDuration();"</span><span class="nt">&gt;</span>获取总时长<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:getPlayTime();"</span><span class="nt">&gt;</span>获取当前时间<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="c">&lt;!-- &lt;div style="padding-right: 20px;float: left;"&gt;&lt;a href="javascript:switchProgram();"&gt;切换节目&lt;/a&gt;&lt;/div&gt; --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:switchVideo();"</span><span class="nt">&gt;</span>切换视频<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;br</span> <span class="na">clear=</span><span class="s">"all"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/vod_api.html">demos/vod_api.html</a></p>
+
+<ul>
+<li>直播接口</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&amp;autostart=true&amp;pid=vk5nx2cj</span>
+<span class="s">&amp;shifttime=&amp;buffer=5&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;skin=liveWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+    <span class="c1">//直播接口调用方法</span>
+    <span class="kd">function</span> <span class="nx">startPlay</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doPlay</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">playPause</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doPause</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">seekTo</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doSeek</span><span class="p">(</span><span class="s2">"20140224160520"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">playStop</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doStop</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">livePlay</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">doLive</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">changeVolume</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">setVolume</span><span class="p">(</span><span class="mf">0.3</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">getLiveTime</span><span class="p">(){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">liveTime</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">getPlayTime</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">playTime</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">switchChannel</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">playChannel</span><span class="p">(</span><span class="s2">"br9anah3"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">switchStream</span><span class="p">(){</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">toPlay</span><span class="p">(</span><span class="s2">"rtmp://192.168.1.219/livestream/7gw3yt3h"</span><span class="p">,</span> <span class="s2">"title"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//播放器回调方法</span>
+    <span class="kd">function</span> <span class="nx">playerReady</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Sewise Player On Ready"</span><span class="p">);</span>
+        <span class="c1">//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onStart</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onStart"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onStop</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onStop"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onMetadata</span><span class="p">(</span><span class="nx">meta</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onMetadata"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onClarity</span><span class="p">(</span><span class="nx">clarity</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onClarity"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onPause</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onPause"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onSeek</span><span class="p">(</span><span class="nx">time</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onSeek: "</span> <span class="o">+</span> <span class="nx">time</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">onPlayTime</span><span class="p">(</span><span class="nx">time</span><span class="p">,</span> <span class="nx">name</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"onPlayTime: "</span> <span class="o">+</span> <span class="nx">time</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-top: 20px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;</span>[直播接口]<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:startPlay();"</span><span class="nt">&gt;</span>播放<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:playPause();"</span><span class="nt">&gt;</span>暂停<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:seekTo();"</span><span class="nt">&gt;</span>跳转<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:playStop();"</span><span class="nt">&gt;</span>停止<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:livePlay();"</span><span class="nt">&gt;</span>直播<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:changeVolume();"</span><span class="nt">&gt;</span>更改音量<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:getLiveTime();"</span><span class="nt">&gt;</span>直播时间<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:getPlayTime();"</span><span class="nt">&gt;</span>播放时间<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:switchChannel();"</span><span class="nt">&gt;</span>切换频道<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 15px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:switchStream();"</span><span class="nt">&gt;</span>切换流<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;br</span> <span class="na">clear=</span><span class="s">"all"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/live_api.html">demos/live_api.html</a></p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="demos" class="anchor" href="#demos"><span class="octicon octicon-link"></span></a>Demos：</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<ul>
+<li>点播MP4视频播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=mp4&amp;videourl=http://www.w3schools.com/html/mov_bbb.mp4&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=VodVideo&amp;buffer=5&amp;skin=vodWhite&amp;fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/vod_videourl_mp4.html">demos/vod_videourl_mp4.html</a></p>
+
+<ul>
+<li>点播FLV视频播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=flv&amp;videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&amp;title=Vod-FLV&amp;buffer=5&amp;skin=vodOrange"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/vod_videourl_flv.html">demos/vod_videourl_flv.html</a></p>
+
+<ul>
+<li>点播节目ID视频播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js?server=vod&amp;sourceid=eQgPHj4N&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;buffer=5&amp;skin=vodWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/vod_sourceid.html">demos/vod_sourceid.html</a></p>
+
+<ul>
+<li>直播RTMP流播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=live&amp;type=rtmp&amp;streamurl=rtmp://219.232.161.204/livestream/mtzysunq&amp;autostart=true&amp;pid=&amp;shifttime=&amp;buffer=5&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&amp;title=LiveVideo&amp;skin=liveWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/live_streamurl_rtmp.html">demos/live_streamurl_rtmp.html</a></p>
+
+<ul>
+<li>直播HTTP流播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=live&amp;type=http&amp;streamurl=http://219.232.161.204:5080/livestream/mtzysunq.flv&amp;autostart=true&amp;pid=&amp;shifttime=&amp;buffer=5&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=LiveVideo&amp;skin=liveOrange"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/live_streamurl_http.html">demos/live_streamurl_http.html</a></p>
+
+<ul>
+<li>直播节目ID播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&amp;autostart=true&amp;pid=vk5nx2cj&amp;shifttime=&amp;buffer=5&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;skin=liveWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/live_pid.html">demos/live_pid.html</a></p>
+
+<ul>
+<li>Flash m3u8播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 600px;height: 400px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=m3u8&amp;videourl=http://www.codecomposer.net/hls/playlist.m3u8&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=Play-M3u8&amp;buffer=5&amp;claritybutton=disable&amp;skin=vodWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/flash_m3u8.html">demos/flash_m3u8.html</a></p>
+
+<ul>
+<li>Flash m3u8 AES-128解码播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 600px;height: 400px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=m3u8&amp;videourl=http://playertest.longtailvideo.com/adaptive/customIV/prog_index.m3u8&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=Play-AES-M3u8&amp;buffer=5&amp;claritybutton=disable&amp;skin=vodWhite"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/flash_m3u8_aes_128.html">demos/flash_m3u8_aes_128.html</a></p>
+
+<ul>
+<li>启动参数设置模式</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- 1.根据给定视频地址播放 --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span>
+            <span class="nx">server</span><span class="o">:</span> <span class="s2">"vod"</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">"mp4"</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span><span class="s2">"Tile 标题"</span><span class="p">,</span>
+            <span class="nx">videourl</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.mp4"</span><span class="p">,</span>
+               <span class="nx">skin</span><span class="o">:</span> <span class="s2">"vodWhite"</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+
+    <span class="c">&lt;!-- 2.根据给定视频节目ID播放 --&gt;</span>
+    <span class="c">&lt;!-- &lt;script type="text/javascript" src="http://192.168.1.24/player/sewise.player.min.js"&gt;&lt;/script&gt;</span>
+<span class="c">    &lt;script type="text/javascript"&gt;</span>
+<span class="c">        SewisePlayer.setup({</span>
+<span class="c">            sourceid: "uWHj4JDB",</span>
+<span class="c">            server: "vod",</span>
+<span class="c">            skin: "vodWhite",</span>
+<span class="c">            fallbackurls:{</span>
+<span class="c">                ogg: "http://www.w3schools.com/html/mov_bbb.ogg",</span>
+<span class="c">                webm: "http://www.w3schools.com/html/mov_bbb.webm"</span>
+<span class="c">            }</span>
+<span class="c">        });</span>
+<span class="c">    &lt;/script&gt; --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/setup_parameters.html">demos/setup_parameters.html</a></p>
+
+<ul>
+<li>HTML5播放回退兼容地址</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span>
+            <span class="nx">server</span><span class="o">:</span> <span class="s2">"vod"</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">"mp4"</span><span class="p">,</span>
+            <span class="nx">videourl</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.mp4"</span><span class="p">,</span>
+            <span class="nx">skin</span><span class="o">:</span> <span class="s2">"vodWhite"</span><span class="p">,</span>
+            <span class="nx">fallbackurls</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">ogg</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.ogg"</span><span class="p">,</span>
+            <span class="nx">webm</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.webm"</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/fallback_url.html">demos/fallback_url.html</a></p>
+
+<ul>
+<li>Flash回退HTML5兼容地址播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span>
+            <span class="nx">server</span><span class="o">:</span> <span class="s2">"vod"</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">"flv"</span><span class="p">,</span>
+            <span class="nx">videourl</span><span class="o">:</span> <span class="s2">"http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv"</span><span class="p">,</span>
+            <span class="nx">skin</span><span class="o">:</span> <span class="s2">"vodWhite"</span><span class="p">,</span>
+            <span class="nx">claritybutton</span><span class="o">:</span> <span class="s2">"false"</span><span class="p">,</span>
+            <span class="nx">title</span><span class="o">:</span> <span class="s2">"flash fallback html5 兼容地址播放"</span><span class="p">,</span>
+            <span class="nx">fallbackurls</span><span class="o">:</span><span class="p">{</span>
+                <span class="nx">mp4</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.mp4"</span><span class="p">,</span>
+                <span class="nx">ogg</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.ogg"</span><span class="p">,</span>
+                <span class="nx">webm</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.webm"</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/flash_fallback_html5.html">demos/flash_fallback_html5.html</a></p>
+
+<ul>
+<li>音频播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 250px; height: 30px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+        <span class="nx">SewisePlayer</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span>
+            <span class="nx">server</span><span class="o">:</span> <span class="s2">"vod"</span><span class="p">,</span>
+            <span class="nx">type</span><span class="o">:</span> <span class="s2">"mp3"</span><span class="p">,</span>
+            <span class="nx">videourl</span><span class="o">:</span> <span class="s2">"http://www.html5rocks.com/en/tutorials/audio/quick/test.mp3"</span><span class="p">,</span>
+            <span class="nx">fallbackurls</span><span class="o">:</span><span class="p">{</span>
+                <span class="nx">ogg</span><span class="o">:</span> <span class="s2">"http://www.html5rocks.com/en/tutorials/audio/quick/test.ogg"</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/audio.html">demos/audio.html</a></p>
+
+<ul>
+<li>时间片断播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Sewise Player<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span> <span class="na">style=</span><span class="s">"width: 650px; height: 360px; border: solid 1px #DDD"</span><span class="nt">&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+                <span class="kd">var</span> <span class="nx">srcPath</span> <span class="o">=</span> <span class="s2">"../player/sewise.player.min.js?server=vod&amp;type=flv&amp;autostart=true&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=VodVideo&amp;buffer=5&amp;skin=vodWhite"</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">videoUrl</span> <span class="o">=</span> <span class="s2">"http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/02005220p.flv?starttime=100&amp;endtime=150"</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+                <span class="nx">script</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s2">"text/javascript"</span><span class="p">;</span>
+                <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">srcPath</span> <span class="o">+</span> <span class="s2">"&amp;videourl="</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">videoUrl</span><span class="p">);</span>
+                <span class="nx">$</span><span class="p">(</span><span class="s2">"#container"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+            <span class="nt">&lt;/script&gt;</span>
+        <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 20px;float: left;"</span><span class="nt">&gt;</span>注：请在Web环境下预览该文件。<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/play_piece_time.html">demos/play_piece_time.html</a></p>
+
+<ul>
+<li>添加删除播放器</li>
+</ul><div class="highlight highlight-html"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;title&gt;</span>Sewise Player<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="kd">var</span> <span class="nx">srcPath</span> <span class="o">=</span> <span class="s2">"../player/sewise.player.min.js?server=vod&amp;type=mp4&amp;videourl=http://www.w3schools.com/html/mov_bbb.mp4&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=VodVideo&amp;buffer=5&amp;skin=vodWhite"</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">fallbackurls</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">ogg</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.ogg"</span><span class="p">,</span>
+        <span class="nx">webm</span><span class="o">:</span> <span class="s2">"http://www.w3schools.com/html/mov_bbb.webm"</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">state</span> <span class="o">=</span> <span class="s2">"removed"</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">addPlayer</span><span class="p">(){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">state</span> <span class="o">==</span> <span class="s2">"removed"</span><span class="p">){</span>
+            <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+            <span class="nx">script</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s2">"text/javascript"</span><span class="p">;</span>
+            <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">srcPath</span> <span class="o">+</span> <span class="s2">"&amp;fallbackurls="</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">fallbackurls</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"\t"</span><span class="p">));</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#container"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+            <span class="nx">state</span> <span class="o">=</span> <span class="s2">"added"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">removePlayer</span><span class="p">(){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">state</span> <span class="o">==</span> <span class="s2">"added"</span><span class="p">){</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#container"</span><span class="p">).</span><span class="nx">empty</span><span class="p">();</span>
+            <span class="nx">state</span> <span class="o">=</span> <span class="s2">"removed"</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"container"</span> <span class="na">style=</span><span class="s">"width: 650px; height: 360px; border: solid 1px #DDD"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"addPlayer()"</span><span class="nt">&gt;</span>Add Player<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"removePlayer()"</span><span class="nt">&gt;</span>Remove Player<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding: 20px;float: left;"</span><span class="nt">&gt;</span>注：请在Web环境下预览该文件。<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/add_remove_player.html">demos/add_remove_player.html</a></p>
+
+<ul>
+<li>海报预览</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=mp4&amp;videourl=http://www.w3schools.com/html/mov_bbb.mp4&amp;sourceid=&amp;autostart=false&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=Vod Video 视频&amp;buffer=5&amp;poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&amp;skin=vodWhite&amp;fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/poster.html">demos/poster.html</a></p>
+
+<ul>
+<li>换色皮肤</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px;height: 362px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=flv&amp;videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=Color-Skin&amp;buffer=5&amp;claritybutton=disable&amp;skin=vodVspaas"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+        <span class="kd">var</span> <span class="nx">player</span><span class="p">;</span>
+        <span class="kd">function</span> <span class="nx">playerReady</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">player</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"sewise_player"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="kd">function</span> <span class="nx">setUiColor</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">uiColorArray</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x333333</span><span class="p">,</span> <span class="mh">0x56be8e</span><span class="p">,</span> <span class="mh">0x3ea9f5</span><span class="p">,</span> <span class="mh">0xf27398</span><span class="p">,</span> <span class="mh">0xffff00</span><span class="p">,</span> <span class="mh">0xff0000</span><span class="p">];</span>
+            <span class="kd">var</span> <span class="nx">randomIndex</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">uiColorArray</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+            <span class="nx">player</span><span class="p">.</span><span class="nx">setUiColor</span><span class="p">(</span><span class="nx">uiColorArray</span><span class="p">[</span><span class="nx">randomIndex</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="nt">&lt;/script&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-top: 20px;"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: right;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:setUiColor();"</span><span class="nt">&gt;</span>Switch UI Color<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/color_skin.html">demos/color_skin.html</a></p>
+
+<ul>
+<li>多重播放</li>
+</ul><div class="highlight highlight-html"><pre><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;</span>HTML5 播放<span class="nt">&lt;/div&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"../player/sewise.player.min.js?server=vod&amp;type=mp4&amp;videourl=http://media.w3.org/2010/05/sintel/trailer.mp4&amp;sourceid=&amp;autostart=true&amp;starttime=0&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;title=HTML5 播放&amp;buffer=5&amp;skin=vodWhite&amp;fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;br&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;</span>Flash 播放<span class="nt">&lt;/div&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 640px; height: 360px; "</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;object</span> <span class="na">type=</span><span class="s">"application/x-shockwave-flash"</span> <span class="na">id=</span><span class="s">"sewise_player"</span> <span class="na">name=</span><span class="s">"sewise_player"</span> <span class="na">data=</span><span class="s">"../player/flash/SewisePlayer.swf"</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"100%"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"allowfullscreen"</span> <span class="na">value=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"wmode"</span> <span class="na">value=</span><span class="s">"transparent"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"allowscriptaccess"</span> <span class="na">value=</span><span class="s">"always"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;param</span> <span class="na">name=</span><span class="s">"flashvars"</span> <span class="na">value=</span><span class="s">"autoStart=true&amp;programId=&amp;lang=en_US&amp;logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&amp;buffer=5&amp;type=flv&amp;serverPath=&amp;serverApi=ServerApi.execute&amp;skin=../player/flash/skins/vodWhite.swf&amp;title=Flash播放&amp;draggable=true&amp;published=0&amp;videoUrl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&amp;startTime=0&amp;playerName=Sewise Player&amp;copyright=(C) All right reserved the SEWISE inc 2011-2013&amp;clarityButton=disable&amp;timeDisplay=enable&amp;controlBarDisplay=enable&amp;topBarDisplay=enable&amp;customStrings="</span><span class="nt">&gt;&lt;/object&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/multiplay.html">demos/multiplay.html</a></p>
+
+<ul>
+<li>字幕</li>
+</ul><div class="highlight highlight-html"><pre><span class="cp">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"</span>
+<span class="cp">"http://www.w3.org/TR/html4/loose.dtd"&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"Content-Type"</span> <span class="na">content=</span><span class="s">"text/html; charset=utf-8"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Sewise Player-Subtitles<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">language=</span><span class="s">"JavaScript"</span> <span class="na">src=</span><span class="s">"../player/js/swfobject.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">language=</span><span class="s">"JavaScript"</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+            <span class="kd">var</span> <span class="nx">player</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">host</span> <span class="o">=</span> <span class="s2">"http://219.232.161.206/"</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">video_url</span> <span class="o">=</span> <span class="s2">"http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/02005220p.flv"</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">subtitles_id</span> <span class="o">=</span> <span class="s2">"2UtWdAUZ"</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">subtitles_lang</span> <span class="o">=</span> <span class="s2">"en"</span><span class="p">;</span>    <span class="c1">//显示字幕语言, 英文: en, 中文: zh_CN</span>
+
+            <span class="kd">var</span> <span class="nx">flashvars</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="nx">serverPath</span>       <span class="o">:</span> <span class="nx">host</span> <span class="o">+</span> <span class="s1">'flashservice/gateway.php'</span><span class="p">,</span>
+                <span class="nx">serverApi</span>        <span class="o">:</span> <span class="s1">'ServerApi.execute'</span><span class="p">,</span>
+                <span class="nx">autoStart</span>        <span class="o">:</span> <span class="s1">'true'</span><span class="p">,</span>
+                <span class="nx">logo</span>             <span class="o">:</span> <span class="s1">'http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png'</span><span class="p">,</span>
+                <span class="nx">title</span>            <span class="o">:</span> <span class="s1">'Subtitles Test'</span><span class="p">,</span>
+                <span class="nx">clarityButton</span>    <span class="o">:</span> <span class="s1">'disable'</span><span class="p">,</span>
+                <span class="nx">lang</span>             <span class="o">:</span> <span class="s1">'en_US'</span><span class="p">,</span>
+                <span class="nx">skin</span>             <span class="o">:</span> <span class="s1">'../player/flash/skins/vodWhite.swf'</span><span class="p">,</span>
+                <span class="nx">type</span>             <span class="o">:</span> <span class="s1">'flv'</span><span class="p">,</span>
+                <span class="nx">videoUrl</span>         <span class="o">:</span> <span class="nx">video_url</span><span class="p">,</span>
+
+                <span class="nx">subtitlesPlayer</span>  <span class="o">:</span> <span class="s1">'../player/flash/plugins/SubtitlesPlayer.swf'</span><span class="p">,</span>
+                <span class="nx">subtitlesId</span>      <span class="o">:</span> <span class="nx">subtitles_id</span><span class="p">,</span>
+                <span class="nx">subtitlesLang</span>    <span class="o">:</span> <span class="nx">subtitles_lang</span>
+            <span class="p">};</span>
+            <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="nx">allowfullscreen</span>   <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+                <span class="nx">wmode</span>             <span class="o">:</span> <span class="s2">"transparent"</span><span class="p">,</span>
+                <span class="nx">allowscriptaccess</span> <span class="o">:</span> <span class="s1">'always'</span>
+            <span class="p">};</span>
+            <span class="kd">var</span> <span class="nx">attributes</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="nx">id</span> <span class="o">:</span> <span class="s1">'sewise_x_player'</span><span class="p">,</span>
+                <span class="nx">name</span> <span class="o">:</span> <span class="s1">'sewise_x_player'</span>
+            <span class="p">};</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">swfobject</span><span class="p">.</span><span class="nx">embedSWF</span><span class="p">(</span><span class="s2">"../player/flash/SewisePlayer.swf"</span><span class="p">,</span> <span class="s2">"swf-container"</span><span class="p">,</span> <span class="s2">"100%"</span><span class="p">,</span> <span class="s2">"100%"</span><span class="p">,</span> <span class="s2">"9.0.115"</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">flashvars</span><span class="p">,</span> <span class="nx">params</span><span class="p">,</span> <span class="nx">attributes</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="kd">function</span> <span class="nx">playerReady</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">player</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"sewise_x_player"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="kd">function</span> <span class="nx">switchVideo</span><span class="p">(){</span>
+                <span class="nx">player</span><span class="p">.</span><span class="nx">toPlay</span><span class="p">(</span><span class="s2">"http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/020058352.flv"</span><span class="p">,</span> <span class="s1">'test toPlay'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="s1">'xMRgJgIP'</span><span class="p">,</span> <span class="s1">'en'</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width: 600px;height: 400px;"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"swf-container"</span><span class="nt">&gt;</span>
+                加载播放器......
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-top: 20px;"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"padding-right: 20px;float: left;"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:switchVideo();"</span><span class="nt">&gt;</span>Switch Video<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<p>例子：<a href="demos/subtitles.html">demos/subtitles.html</a></p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="http://player.sewise.com/">Sewise Player</a> is licensed under the <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+
+<h2>
+<a name="more-information" class="anchor" href="#more-information"><span class="octicon octicon-link"></span></a>More information:</h2>
+
+<ul>
+<li><a href="http://www.sewise.com/">sewise.com</a></li>
+<li><a href="http://player.sewise.com/">player.sewise.com</a></li>
+</ul><h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author:</h2>
+
+<ul>
+<li>Sewise Ltd        <a href="http://www.sewise.com">http://www.sewise.com</a>
+</li>
+<li>Jack's Gmail      <a href="http://www.gmail.com">jackzhang1204@gmail.com</a>
+</li>
+<li>Jack's Twitter    <a href="https://twitter.com/jackzhang1204">https://twitter.com/jackzhang1204</a>
+</li>
+<li>Jack's Facebook   <a href="https://www.facebook.com/jackzhang1204">https://www.facebook.com/jackzhang1204</a>
+</li>
+</ul>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Sewise Player maintained by <a href="https://github.com/jackzhang1204">jackzhang1204</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
