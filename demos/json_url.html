@@ -7,15 +7,21 @@
 	<title>Sewise Player</title>
 </head>
 <body>
-	<div style="width: 640px; height: 352px; ">
+	<div style="width: 640px; height: 352px; margin:50px 200px; padding: 30px; border:5px solid #CCC; ">
 		<script type="text/javascript" src="../player/sewise.player.min.js"></script>
 		<script type="text/javascript">
 			SewisePlayer.setup({
 				server: "vod",
 				type: "mp4",
-				videourl: "http://www.w3schools.com/html/mov_bbb.mp4",
-		        skin: "vodWhite",
-				title: "fallback 兼容地址播放",
+				videosjsonurl: {
+	                "programname":"json url ? : 测试 % 地址",
+	                "videos": [
+	                    { "name":"普通", "url":"http://www.w3schools.com/html/mov_bbb.mp4" },
+	                    { "name":"标清", "url":"http://media.w3.org/2010/05/sintel/trailer.mp4" }
+	                ]
+	            },
+		        skin: "vodFlowPlayer",
+		        title:"Tile",
 		        fallbackurls:{
 					ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
 					webm: "http://www.w3schools.com/html/mov_bbb.webm"

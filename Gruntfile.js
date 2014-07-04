@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
     var comments = '/*\n' +
-                   ' * Name: SewisePlayer framework 2.4.1\n' +
+                   ' * Name: SewisePlayer framework 2.4.2\n' +
                    ' * Author: Jack Zhang\n' +
                    ' * Website: http://player.sewise.com\n' +
-                   ' * Date: June 20, 2014\n' +
+                   ' * Date: July 4, 2014\n' +
                    ' * Copyright: 2013-2014, Sewise\n' +
                    ' * Mail: jackzhang1204@gmail.com\n' +
                    ' * \n */\n\n';
@@ -15,6 +15,7 @@ module.exports = function(grunt) {
                     'src/com/sewise/interfaces/player/ILivePlayer.js',
                     'src/com/sewise/interfaces/skin/ILiveSkin.js',
                     'src/com/sewise/base/globals/GlobalConst.js',
+                    'src/com/sewise/base/globals/GlobalVars.js',
                     'src/com/sewise/base/events/CommandDispatcher.js',
                     'src/com/sewise/base/events/Events.js',
                     'src/com/sewise/base/utils/Utils.js',

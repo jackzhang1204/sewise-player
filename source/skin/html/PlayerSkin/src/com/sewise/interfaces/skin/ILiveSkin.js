@@ -22,10 +22,6 @@
 		
 		lang: function(lang){},
 		logo: function(url){},
-		clarityButton: function(state){},
-		timeDisplay: function(state){},
-		controlBarDisplay: function(state){},
-		topBarDisplay: function(state){},
 		
 		timeUpdate:function(){},
 		volume:function(value){},
@@ -38,4 +34,4 @@
 		
 	};
 	
-})(window)
+})(window);

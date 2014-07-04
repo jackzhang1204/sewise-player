@@ -111,6 +111,13 @@
 			$soundcloseBtn.hide();
 		});
 		
+
+		//changeClarity方法调用
+		/*
+		mainPlayer.changeClarity({ name: "", videoUrl: "http://www.w3schools.com/html/mov_bbb.mp4", id: 0, selected: true });
+		*/
+		
+
 		/*
 		$shareBtn.click(function(){
 			if(window.shareVideo && typeof(window.shareVideo) == "function"){

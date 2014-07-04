@@ -56,6 +56,12 @@
 			
 			//console.log("vod volume: " + value);
 		}
+		SewisePlayerSkin.IVodSkin.initialClarity = function(levels){
+			//初始化多码率, name, videoUrl, id, selected.
+			
+			
+			//console.log("vod levels: " + levels[0].name);
+		}
 		
 		SewisePlayerSkin.IVodSkin.clarityButton = function(state){
 			//重置clarityButton显示状态。
