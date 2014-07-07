@@ -2,13 +2,15 @@
 
 ![Screenshot](player.png)
 
-Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html)
+Support for [jQuery](http://jquery.com/) HTML player skins. 
+
+####演示(Demos)：[Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Simple简单](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_simple.html) | [Parameters启动参数](http://jackzhang1204.github.io/sewise/sewise_player/demos/setup_parameters.html) | [Fallback多地址兼容](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | (JsonURL地址集)[http://jackzhang1204.github.io/sewise/sewise_player/demos/json_url.html] | [Audio声音](http://jackzhang1204.github.io/sewise/sewise_player/demos/audio.html)
 
 
 ## What is Sewise Player?
 
 
-### Sewise Player是一款专业的免费网页视频、流播放器，它功能强大，体积小，跨平台，使用方便简洁、随心所欲。
+### Sewise Player是一款专业的免费网页HTML5视频、流播放器，它功能强大，体积小，跨平台，兼容性好，使用方便简洁。
 * 播放器是主要以HTML5技术为平台开发，同时兼容flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器播放视频。
 * Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或flash模式播放视频。您不需要掌握任何JavaScript或ActionScript编码技术就可以制作出专业的网页视频播放器。
 * Sewise Player即可以做为单一的前台播放器来在页面上播放视频和流，也可以结合Sewise Server后台技术实现专业的可交互的点播、直播视频播放。
@@ -179,7 +181,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<br clear="all"/>
 </div>
 ```
-例子：[demos/vod_api.html](demos/vod_api.html)
+例子：[demos/vod_api.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_api.html)
 
 * 直播接口
 ```html
@@ -262,7 +264,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<br clear="all"/>
 </div>
 ```
-例子：[demos/live_api.html](demos/live_api.html)
+例子：[demos/live_api.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/live_api.html)
 
 
 ### Demos：
@@ -272,7 +274,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 ```
-例子：[demos/vod_videourl_mp4.html](demos/vod_videourl_mp4.html)
+例子：[demos/vod_videourl_mp4.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_videourl_mp4.html)
 
 * 点播FLV视频播放
 ```html
@@ -280,7 +282,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=flv&videourl=http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&title=Vod-FLV&buffer=5&skin=vodOrange"></script>
 </div>
 ```
-例子：[demos/vod_videourl_flv.html](demos/vod_videourl_flv.html)
+例子：[demos/vod_videourl_flv.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_videourl_flv.html)
 
 * 点播节目ID视频播放
 ```html
@@ -288,7 +290,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="http://219.232.161.202/libs/swfplayer/player/sewise.player.min.js?server=vod&sourceid=eQgPHj4N&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&buffer=5&skin=vodWhite"></script>
 </div>
 ```
-例子：[demos/vod_sourceid.html](demos/vod_sourceid.html)
+例子：[demos/vod_sourceid.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_sourceid.html)
 
 * 直播RTMP流播放
 ```html
@@ -296,7 +298,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=rtmp&streamurl=rtmp://219.232.161.204/livestream/mtzysunq&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&title=LiveVideo&skin=liveWhite"></script>
 </div>
 ```
-例子：[demos/live_streamurl_rtmp.html](demos/live_streamurl_rtmp.html)
+例子：[demos/live_streamurl_rtmp.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/live_streamurl_rtmp.html)
 
 * 直播HTTP流播放
 ```html
@@ -304,7 +306,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=live&type=http&streamurl=http://219.232.161.204:5080/livestream/mtzysunq.flv&autostart=true&pid=&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=LiveVideo&skin=liveOrange"></script>
 </div>
 ```
-例子：[demos/live_streamurl_http.html](demos/live_streamurl_http.html)
+例子：[demos/live_streamurl_http.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/live_streamurl_http.html)
 
 * 直播节目ID播放
 ```html
@@ -312,7 +314,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js?server=live&autostart=true&pid=vk5nx2cj&shifttime=&buffer=5&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&skin=liveWhite"></script>
 </div>
 ```
-例子：[demos/live_pid.html](demos/live_pid.html)
+例子：[demos/live_pid.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/live_pid.html)
 
 * Flash m3u8播放
 ```html
@@ -320,7 +322,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://www.codecomposer.net/hls/playlist.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-M3u8&buffer=5&claritybutton=disable&skin=vodWhite"></script>
 </div>
 ```
-例子：[demos/flash_m3u8.html](demos/flash_m3u8.html)
+例子：[demos/flash_m3u8.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/flash_m3u8.html)
 
 * Flash m3u8 AES-128解码播放
 ```html
@@ -328,7 +330,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://playertest.longtailvideo.com/adaptive/customIV/prog_index.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-AES-M3u8&buffer=5&claritybutton=disable&skin=vodWhite"></script>
 </div>
 ```
-例子：[demos/flash_m3u8_aes_128.html](demos/flash_m3u8_aes_128.html)
+例子：[demos/flash_m3u8_aes_128.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/flash_m3u8_aes_128.html)
 
 * 启动参数设置模式
 ```html
@@ -360,7 +362,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	</script> -->
 </div>
 ```
-例子：[demos/setup_parameters.html](demos/setup_parameters.html)
+例子：[demos/setup_parameters.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/setup_parameters.html)
 
 * HTML5播放回退兼容地址
 ```html
@@ -380,7 +382,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	</script>
 </div>
 ```
-例子：[demos/fallback_url.html](demos/fallback_url.html)
+例子：[demos/fallback_url.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html)
 
 * Flash回退HTML5兼容地址播放
 ```html
@@ -403,7 +405,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	</script>
 </div>
 ```
-例子：[demos/flash_fallback_html5.html](demos/flash_fallback_html5.html)
+例子：[demos/flash_fallback_html5.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/flash_fallback_html5.html)
 
 * 音频播放
 ```html
@@ -421,7 +423,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	</script>
 </div>
 ```
-例子：[demos/audio.html](demos/audio.html)
+例子：[demos/audio.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/audio.html)
 
 * 时间片断播放
 ```html
@@ -450,7 +452,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 </body>
 </html>
 ```
-例子：[demos/play_piece_time.html](demos/play_piece_time.html)
+例子：[demos/play_piece_time.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/play_piece_time.html)
 
 * 添加删除播放器
 ```html
@@ -499,7 +501,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 </body>
 </html>
 ```
-例子：[demos/add_remove_player.html](demos/add_remove_player.html)
+例子：[demos/add_remove_player.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/add_remove_player.html)
 
 * 海报预览
 ```html
@@ -507,7 +509,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=false&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video 视频&buffer=5&poster=http://www.sewise.com/data/attachment/portal/201402/10/120117q992dwsgns5cxzoz.png&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
 </div>
 ```
-例子：[demos/poster.html](demos/poster.html)
+例子：[demos/poster.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/poster.html)
 
 * 换色皮肤
 ```html
@@ -530,7 +532,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
         </div>
 </div>
 ```
-例子：[demos/color_skin.html](demos/color_skin.html)
+例子：[demos/color_skin.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/color_skin.html)
 
 * 多重播放
 ```html
@@ -550,7 +552,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	</div>
 </div>
 ```
-例子：[demos/multiplay.html](demos/multiplay.html)
+例子：[demos/multiplay.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/multiplay.html)
 
 * 字幕
 ```html
@@ -616,7 +618,7 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 	</body>
 </html>
 ```
-例子：[demos/subtitles.html](demos/subtitles.html)
+例子：[demos/subtitles.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/subtitles.html)
 
 
 ## License
@@ -633,5 +635,6 @@ Support for [jQuery](http://jquery.com/) HTML player skins. Demos [Vod点播](ht
 * Jack's GitHub 	[https://github.com/jackzhang1204](https://github.com/jackzhang1204)
 * Jack's Twitter 	[https://twitter.com/jackzhang1204](https://twitter.com/jackzhang1204)
 * Jack's Facebook 	[https://www.facebook.com/jackzhang1204](https://www.facebook.com/jackzhang1204)
+* Jack's Google+ 	[https://plus.google.com/+JackZhang1204](https://plus.google.com/+JackZhang1204)
 * Jack's Gmail 		[jackzhang1204@gmail.com](http://www.gmail.com)
 
