@@ -4,7 +4,8 @@
 
 Support for [jQuery](http://jquery.com/) HTML player skins. 
 
-####演示(Demos)：[Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Simple简单](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_simple.html) | [Parameters启动参数](http://jackzhang1204.github.io/sewise/sewise_player/demos/setup_parameters.html) | [Fallback多地址兼容](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | [JsonURL地址集](http://jackzhang1204.github.io/sewise/sewise_player/demos/json_url.html) | [Audio声音](http://jackzhang1204.github.io/sewise/sewise_player/demos/audio.html)
+#### 演示 Demos
+[Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Simple简单](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_simple.html) | [Parameters启动参数](http://jackzhang1204.github.io/sewise/sewise_player/demos/setup_parameters.html) | [Fallback多地址兼容](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | [JsonURL地址集](http://jackzhang1204.github.io/sewise/sewise_player/demos/json_url.html) | [Audio声音](http://jackzhang1204.github.io/sewise/sewise_player/demos/audio.html)
 
 
 ## What is Sewise Player?
