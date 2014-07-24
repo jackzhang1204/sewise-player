@@ -12,8 +12,13 @@
 		var that = this;
 		var defStageWidth = elementObject.defStageWidth;
 		var defStageHeight = elementObject.defStageHeight;
-		
-		
+
+		var defLeftValue = elementObject.defLeftValue;
+		var defTopValue = elementObject.defTopValue;
+		var defOffsetX = elementObject.defOffsetX;
+		var defOffsetY = elementObject.defOffsetY;
+		var defOverflow = elementObject.defOverflow;
+
 		//var btnsWidth = 38 * 5 + 118 + 3 * 6;
 		/**
 		 * 由于ios设备下不允许控制音量，所以
@@ -47,11 +52,17 @@
 		}
 		this.fullScreen = function(state){
 			if(state == "not-support"){
-				var clientW = $(window).width() - 15;
-				var clientH = $(window).height() - 15;
+				var clientW = $(window).width();
+				var clientH = $(window).height() - 8;
 				//console.log("clientW: " + clientW + "\nclientH: " + clientH);
 				$container.css("width", clientW);
 				$container.css("height", clientH);
+				
+				var offsetX = (defLeftValue - defOffsetX) + 'px';
+				var offsetY = (defTopValue - defOffsetY) + 'px';
+				$container.css("left", offsetX);
+				$container.css("top", offsetY);
+				$("body").css("overflow", "hidden");
 				
 				/*$container.css("width", window.screen.width);
 				$container.css("height", window.screen.height);*/
@@ -74,7 +85,11 @@
 		this.normalScreen = function(){
 			$container.css("width", defStageWidth);
 			$container.css("height", defStageHeight);
-
+			
+			$container.css("left", defLeftValue);
+			$container.css("top", defTopValue);
+			$("body").css("overflow", defOverflow);
+			
 			defProgressWidth = parseInt(defStageWidth) - btnsWidth;
 			if(defProgressWidth < 0){
 				defProgressWidth = defProgressWidth + $playtime.width();

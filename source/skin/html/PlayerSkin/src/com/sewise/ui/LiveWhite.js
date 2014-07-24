@@ -21,7 +21,6 @@
 		SewisePlayerSkin.ILiveSkin.player = function(mPlayer){
 			mainPlayer = mPlayer;
 			controlBar.setPlayer(mainPlayer);
-			
 		}
 		SewisePlayerSkin.ILiveSkin.started = function(){
 			controlBar.started();

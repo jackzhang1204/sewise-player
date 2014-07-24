@@ -21,7 +21,6 @@
 		SewisePlayerSkin.IVodSkin.player = function(mPlayer){
 			mainPlayer = mPlayer;
 			controlBar.setPlayer(mainPlayer);
-			
 		}
 		SewisePlayerSkin.IVodSkin.started = function(){
 			controlBar.started();

@@ -3,25 +3,34 @@
 <head>
 <meta charset=utf-8 />
 <title>Demo: Sewise Player UI</title>
-<link href="html/skins/liveWhite/skin.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="html/skins/vodFlowPlayer/skin.css"/>
+
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="../src/com/sewise/ui/core/Base.js"></script>
-<script type="text/javascript" src="../src/com/sewise/interfaces/player/ILivePlayer.js"></script>
-<script type="text/javascript" src="../src/com/sewise/interfaces/skin/ILiveSkin.js"></script>
+<script type="text/javascript" src="../src/com/sewise/interfaces/player/IVodPlayer.js"></script>
+<script type="text/javascript" src="../src/com/sewise/interfaces/skin/IVodSkin.js"></script>
 <script type="text/javascript" src="../src/com/sewise/ui/utils/Utils.js"></script>
-<script type="text/javascript" src="../src/com/sewise/ui/skins/liveWhite/ElementObject.js"></script>
-<script type="text/javascript" src="../src/com/sewise/ui/skins/liveWhite/ElementLayout.js"></script>
-<script type="text/javascript" src="../src/com/sewise/ui/skins/liveWhite/LogoBox.js"></script>
-<script type="text/javascript" src="../src/com/sewise/ui/skins/liveWhite/TopBar.js"></script>
-<script type="text/javascript" src="../src/com/sewise/ui/skins/liveWhite/ControlBar.js"></script>
-<script type="text/javascript" src="../src/com/sewise/ui/LiveWhite.js"></script>
-
+<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/ElementObject.js"></script>
+<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/ElementLayout.js"></script>
+<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/LogoBox.js"></script>
+<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/TopBar.js"></script>
+<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/ControlBar.js"></script>
+<script type="text/javascript" src="../src/com/sewise/ui/VodFlowPlayer.js"></script>
 
 <!-- <script src="http://192.168.1.116:8081/target/target-script-min.js#anonymous"></script> -->
 </head>
-<body>	
-	<div id="container" style="width: 600px; height:450px; ">
+<body>
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		Launch Player
+	</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+	  <div id="player" class="player">
+		<!-- <div id="container" style="width: 600px; height:450px; border:1px solid #555; "> -->
 		<div style="width: 100%; height: 100%; position: relative; ">
 			<video style="width: 100%; height:100%;"></video>
 			<div class="sewise-player-ui">
@@ -30,7 +39,8 @@
 					<ul class="controlbar-btns">
 						<li><a href="javascript:;" class="controlbar-btns-play" tabindex="1">播放</a></li>
 						<li><a href="javascript:;" class="controlbar-btns-pause" tabindex="2">暂停</a></li>
-						<li><a href="javascript:;" class="controlbar-btns-live" tabindex="3">直播</a></li>
+						<!-- <li><a href="javascript:;" class="controlbar-btns-stop" tabindex="3">停止</a></li> -->
+						<div class="controlbar-playtime">00:00</div>
 						<div class="controlbar-progress">
 							<div class="controlbar-progress-totalline"></div>
 							<div class="controlbar-progress-loadedline"></div>
@@ -40,10 +50,18 @@
 						</div>
 						<li class="right-float"><a href="javascript:;" class="controlbar-btns-fullscreen" tabindex="1">全屏</a></li>
 						<li class="right-float"><a href="javascript:;" class="controlbar-btns-normalscreen" tabindex="1">普屏</a></li>
+						<li class="right-float">
+							<div class="controlbar-volumeline">
+								<div class="controlbar-volumeline-bg"></div>
+								<div class="controlbar-volumeline-volume"></div>
+								<div class="controlbar-volumeline-dragger"></div>
+								<div class="controlbar-volumeline-point"></div>
+							</div>
+						</li>
 						<li class="right-float"><a href="javascript:;" class="controlbar-btns-soundclose" tabindex="1">音量关闭</a></li>
 						<li class="right-float"><a href="javascript:;" class="controlbar-btns-soundopen" tabindex="1">音量打开</a></li>
 						<!-- <li class="right-float"><a href="javascript:;" class="controlbar-btns-share" tabindex="1">分享</a></li> -->
-						<div class="controlbar-playtime">00:00:00/00:00:00</div>
+						<div class="controlbar-totaltime">00:00</div>
 					</ul>
 				</div>
 				<div class="logo">
@@ -68,6 +86,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- </div> -->
 	</div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

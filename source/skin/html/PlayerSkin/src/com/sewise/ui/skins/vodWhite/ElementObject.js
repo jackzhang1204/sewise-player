@@ -56,6 +56,12 @@
 		this.defStageWidth = this.$container.width();
 		this.defStageHeight = this.$container.height();
 		
+		//获取初始时container的相对偏移位置///////
+		this.defLeftValue = parseInt(this.$container.css("left"));
+		this.defTopValue = parseInt(this.$container.css("top"));
+		this.defOffsetX = this.$container.get(0).getBoundingClientRect().left;
+		this.defOffsetY = this.$container.get(0).getBoundingClientRect().top;
+		this.defOverflow = $("body").css("overflow");
 		
 	};
 	
