@@ -14,13 +14,14 @@
 		var elementLayout = new SewisePlayerSkin.ElementLayout(elementObject);
 		var logoBox = new SewisePlayerSkin.LogoBox(elementObject);
 		var topBar = new SewisePlayerSkin.TopBar(elementObject);
-		var controlBar = new SewisePlayerSkin.ControlBar(elementObject, elementLayout, topBar);
-		
+		var clarityWindow = new SewisePlayerSkin.ClarityWindow(elementObject);
+		var controlBar = new SewisePlayerSkin.ControlBar(elementObject, elementLayout, topBar, clarityWindow);
 		
 		//实现IVodSkin接口//////////////////////////////////////
 		SewisePlayerSkin.IVodSkin.player = function(mPlayer){
 			mainPlayer = mPlayer;
 			controlBar.setPlayer(mainPlayer);
+			clarityWindow.setPlayer(mainPlayer);
 		}
 		SewisePlayerSkin.IVodSkin.started = function(){
 			controlBar.started();
@@ -57,17 +58,16 @@
 			//console.log("vod volume: " + value);
 		}
 		SewisePlayerSkin.IVodSkin.initialClarity = function(levels){
+			clarityWindow.setControlBar(controlBar);
 			//初始化多码率, name, videoUrl, id, selected.
-			
-			
+			clarityWindow.initialClarities(levels);
 			//console.log("vod levels: " + levels[0].name);
 		}
-		
 		SewisePlayerSkin.IVodSkin.clarityButton = function(state){
 			//重置clarityButton显示状态。
-			/*if(state != "enable"){
-				
-			}*/
+			if(state != "enable"){
+				controlBar.hideClarityBtn();
+			}
 			//console.log("clarityButton: " + state);
 		}
 		SewisePlayerSkin.IVodSkin.timeDisplay = function(state){
@@ -86,6 +86,7 @@
 			//重置topBar显示状态。
 			if(state != "enable"){
 				topBar.hide2();
+				controlBar.updateClarityBtnPosition();
 			}
 		}
 		SewisePlayerSkin.IVodSkin.customStrings = function(strings){

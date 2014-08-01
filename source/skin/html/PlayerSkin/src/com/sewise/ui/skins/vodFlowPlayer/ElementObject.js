@@ -48,6 +48,9 @@
 		////////////////
 		this.$bigPlayBtn = this.$sewisePlayerUi.find(".big-play-btn");
 
+		////////////////
+		this.$claritySwitchBtn = this.$sewisePlayerUi.find(".clarity-switch-btn");
+		this.$clarityBtnText = this.$sewisePlayerUi.find(".clarity-btn-text");
 
 		//alert(this.$container.attr("id"));
 		//alert(this.$controlbar.css("top"));

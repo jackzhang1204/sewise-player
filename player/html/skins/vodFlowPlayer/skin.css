@@ -293,3 +293,24 @@ div.sewise-player-ui div.big-play-btn a.big-play-icon {
 div.sewise-player-ui div.big-play-btn:hover a.big-play-icon {
 	background: url("big_play_btn.png") -90px 0px no-repeat;
 }
+
+
+/*多分辨率开关按钮*/
+div.sewise-player-ui div.clarity-switch-btn {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 100%;
+	top: 50%;
+	margin-left: -35px;
+	margin-top: -18px;
+	background: url("clarity_btn_bg.png") 0px 0px no-repeat;
+}
+div.sewise-player-ui div.clarity-switch-btn a.clarity-btn-text {
+	position: absolute;
+	width: 35px;
+	line-height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}

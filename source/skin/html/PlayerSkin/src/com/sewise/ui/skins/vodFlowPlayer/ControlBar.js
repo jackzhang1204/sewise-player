@@ -4,7 +4,7 @@
 	 * @name ControlBar : 皮肤控制层对象.
 	 * 
 	 */
-	var ControlBar = SewisePlayerSkin.ControlBar = function(elementObject, elementLayout, topBar){
+	var ControlBar = SewisePlayerSkin.ControlBar = function(elementObject, elementLayout, topBar, clarityWindow){
 		var $container = elementObject.$container;
 		var $video = elementObject.$video;
 		var $controlbar = elementObject.$controlbar;
@@ -30,6 +30,9 @@
 		//////////////
 		var $buffer = elementObject.$buffer;
 		var $bigPlayBtn = elementObject.$bigPlayBtn;
+		//////////////
+		var $claritySwitchBtn = elementObject.$claritySwitchBtn;
+		var $clarityBtnText = elementObject.$clarityBtnText;
 		//////////////
 		var mainPlayer;
 		var screenState = "normal";
@@ -131,14 +134,11 @@
 			$volumelineVolume.css("width", vvLineWidth);
 			$volumelinePoint.css("left", vvLineWidth - vlPointW / 2);
 		});
+		$claritySwitchBtn.click(function(e){
+			e.originalEvent.stopPropagation();
+			clarityWindow.toggle();
+		});
 		
-		
-		//changeClarity方法调用
-		/*
-		mainPlayer.changeClarity({ name: "", videoUrl: "http://www.w3schools.com/html/mov_bbb.mp4", id: 0, selected: true });
-		*/
-
-
 		/*
 		$shareBtn.click(function(){
 			if(window.shareVideo && typeof(window.shareVideo) == "function"){
@@ -151,7 +151,6 @@
 		
 		$progressSeekLine.mousedown(function(e){
 			//console.log(e.pageX);
-			
 			ppLineWidth = (e.pageX - e.target.getBoundingClientRect().left);
 			psLineWidth = $progressSeekLine.width();
 			$progressPlayedLine.css("width", ppLineWidth);
@@ -163,7 +162,6 @@
 		});
 		$progressPlayedPoint.mousedown(function(e){
 			//console.log("mousedown");
-
 			this.blur();
 			dragging = true;
 			beforeDownX = e.pageX;
@@ -177,14 +175,12 @@
 			var currentWidth = ppLineWidth + (e.pageX - beforeDownX);
 			if(currentWidth > 0 && currentWidth < psLineWidth){
 				//console.log(currentWidth);
-				
 				$progressPlayedLine.css("width", currentWidth);
 				$progressPlayedPoint.css("left", currentWidth - ppPointW / 2);
 			}
 		}
 		function ppPointMouseUpHandler(e){
 			//console.log("mouseup");
-			
 			$container.unbind("mousemove", containerMouseMoveHandler);
 			$(document).unbind("mouseup", ppPointMouseUpHandler);
 			afterUpX = e.pageX;
@@ -195,7 +191,6 @@
 			}
 			dragging = false;
 		}
-
 		//touch事件处理///////////////////////
 		$progressPlayedPoint.bind("touchstart", touchstartHandler);
 		function touchstartHandler(event){
@@ -245,11 +240,9 @@
 			}
 			dragging = false;
 		}
-
 		////////////////////////////////////////////////////
 		$volumelineDragger.mousedown(function(e){
 			//console.log(e.pageX);
-			
 			vvLineWidth = (e.pageX - e.target.getBoundingClientRect().left);
 			vdLineWidth = $volumelineDragger.width();
 			$volumelineVolume.css("width", vvLineWidth);
@@ -262,7 +255,6 @@
 		});
 		$volumelinePoint.mousedown(function(e){
 			//console.log("mousedown");
-
 			this.blur();
 			vDragging = true;
 			vBeforeDownX = e.pageX;
@@ -347,7 +339,6 @@
 			}
 			vDragging = false;
 		}
-
 		////////////////////////////////
 		function hideBar(){
 			$controlbar.css("visibility", "hidden");
@@ -356,7 +347,6 @@
 			$controlbar.css("visibility", "visible");
 		}
 		//////////////////////////////////////////
-		
 		function fullScreen(obj){
 			//console.log("to fullScreen");
 			if (obj.requestFullscreen){
@@ -395,7 +385,6 @@
 			screenState = "normal";
 			return;
 		}
-
 		function mutedCheck(){
 			if(volumePt > 0){
 				mainPlayer.muted(false);
@@ -463,6 +452,16 @@
 		}
 		this.hide2 = function(){
 			$controlbar.hide();
+		}
+		this.hideClarityBtn = function(){
+			$claritySwitchBtn.hide();
+		}
+		this.updateClarityBtnPosition = function(){
+			$claritySwitchBtn.css("top", "0%");
+			$claritySwitchBtn.css("margin-top", "0px");
+		}
+		this.updateClarityBtnText = function(value){
+			$clarityBtnText.text(value);
 		}
 		
 		

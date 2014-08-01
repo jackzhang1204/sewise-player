@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/ElementLayout.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/LogoBox.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/TopBar.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/ClarityWindow.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodFlowPlayer/ControlBar.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/VodFlowPlayer.js"></script>
 
@@ -28,7 +29,7 @@
 	<div style="width: 640px; height: 352px; margin:50px; padding: 50px; border:5px solid #999;">
 		<div style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; ">
 			<!-- 主播放器文件 -->
-			<script type="text/javascript" src="sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video 标题&buffer=5&poster=http://player.sewise.com/uploads/allimg/140515/1_1447358001.png&controlbardisplay=enable&topbardisplay=enable&volume=0.6&skin="></script>
+			<script type="text/javascript" src="sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video 标题&buffer=5&poster=http://player.sewise.com/uploads/allimg/140515/1_1447358001.png&controlbardisplay=enable&topbardisplay=enable&volume=0.6&skin=&videosjsonurl=%7B%0A%09%22programname%22%3A%20%22json%20url%20%3F%20%3A%20%E6%B5%8B%E8%AF%95%20%25%20%E5%9C%B0%E5%9D%80%22%2C%0A%09%22videos%22%3A%20%5B%0A%09%09%7B%0A%09%09%09%22name%22%3A%20%22%E6%99%AE%E9%80%9A%22%2C%0A%09%09%09%22url%22%3A%20%22http%3A%2F%2Fmedia.w3.org%2F2010%2F05%2Fsintel%2Ftrailer.mp4%22%0A%09%09%7D%2C%0A%09%09%7B%0A%09%09%09%22name%22%3A%20%22%E6%A0%87%E6%B8%85%22%2C%0A%09%09%09%22url%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.mp4%22%0A%09%09%7D%0A%09%5D%0A%7D&topbardisplay=disable"></script>
 
 			<!-- vodFlowPlayer皮肤UI -->
 			<div class="sewise-player-ui">
@@ -81,6 +82,9 @@
 				</div>
 				<div class="big-play-btn">
 					<a href="javascript:;" class="big-play-icon" tabindex="1">大播放按钮</a>
+				</div>
+				<div class="clarity-switch-btn">
+					<a href="javascript:;" class="clarity-btn-text" tabindex="1">默认</a>
 				</div>
 			</div>
 

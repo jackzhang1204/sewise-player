@@ -57,4 +57,7 @@ window.SewisePlayerSkin.localSkin =
 		'<div class="big-play-btn">' + 
 			'<a href="javascript:;" class="big-play-icon" tabindex="1">大播放按钮</a>' + 
 		'</div>' + 
+		'<div class="clarity-switch-btn">' + 
+			'<a href="javascript:;" class="clarity-btn-text" tabindex="1">默认</a>' + 
+		'</div>' + 
 	'</div>';
