@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
     var comments = '/*\n' +
-                   ' * Name: SewisePlayer framework 2.4.2\n' +
+                   ' * Name: SewisePlayer framework 2.4.3\n' +
                    ' * Author: Jack Zhang\n' +
                    ' * Website: http://player.sewise.com\n' +
-                   ' * Date: July 4, 2014\n' +
+                   ' * Date: July 24, 2014\n' +
                    ' * Copyright: 2013-2014, Sewise\n' +
                    ' * Mail: jackzhang1204@gmail.com\n' +
                    ' * \n */\n\n';
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        concat: {
+        /*concat: {
             options: {
                 banner: comments,
                 stripBanners: true,
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
                 src: srcFiles,
                 dest: 'bin/<%= pkg.name %>.js'
             }
-        },
+        },*/
         uglify: {
             options: {
                 banner: comments,
@@ -80,12 +80,13 @@ module.exports = function(grunt) {
         
     });
     
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    //grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default', ['uglify', 'concat', 'jshint']);
+    //grunt.registerTask('default', ['uglify', 'concat', 'jshint']);
+    grunt.registerTask('default', ['uglify', 'jshint']);
     
 };
