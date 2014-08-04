@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SewisePlayer</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch Player
+</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+	  <div id="player" class="player" style="width: 600px; height: 400px; "></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+	var state = "removed";
+	var srcPath = "../player/sewise.player.min.js?server=vod&type=mp4&autostart=true&topbardisplay=disable&skin=vodFlowPlayer";
+	var videosjsonurl = {
+        "programname":"JSON URL",
+        "videos": [
+            { "name":"普通", "url":"http://media.w3.org/2010/05/sintel/trailer.mp4" },
+            { "name":"标清", "url":"http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=29050&quality=1" }
+        ]
+    };
+	$('#myModal').on('shown.bs.modal', function(){
+		addPlayer();
+	});
+	$('#myModal').on('hide.bs.modal', function(){
+		removePlayer();
+	});
+	function addPlayer(){
+		if(state == "removed"){
+			var script = document.createElement('script');
+			script.type = "text/javascript";
+			script.src = srcPath + "&videosjsonurl=" + encodeURIComponent(JSON.stringify(videosjsonurl, "", "\t"));
+			//$("#player").append(script);
+			//用JQ的append方法动态添加脚本会使脚本被执行两次，从而造成在IE8时创建出两Flash播放器。所以这里改为原生动态添加脚本的方式。
+			$("#player").get(0).appendChild(script);
+			state = "added";
+		}
+	}
+	function removePlayer(){
+		if(window.SewisePlayer){
+			SewisePlayer.doStop();
+		}
+		if(state == "added"){
+			$("#player").empty();
+			state = "removed";
+		}
+	}
+</script>
+</body>
+</html>
