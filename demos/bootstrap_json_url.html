@@ -14,7 +14,7 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-	  <div id="player" class="player" style="width: 600px; height: 400px; "></div>
+	  <div id="player" class="player" style="width: 605px; height: 340px; "></div>
     </div>
   </div>
 </div>
@@ -24,8 +24,24 @@
 	var videosjsonurl = {
         "programname":"JSON URL",
         "videos": [
-            { "name":"普通", "url":"http://media.w3.org/2010/05/sintel/trailer.mp4" },
-            { "name":"标清", "url":"http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=29050&quality=1" }
+        	{
+				"key": 0,
+				"clarity": "low",
+				"name": "流畅",
+				"url": "http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=41249&quality=0"
+			},
+			{
+				"key": 1,
+				"clarity": "normal",
+				"name": "标清",
+				"url": "http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=41249&quality=1"
+			},
+			{
+				"key": 3,
+				"clarity": "original",
+				"name": "原画",
+				"url": "http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=41249"
+			}
         ]
     };
 	$('#myModal').on('shown.bs.modal', function(){
