@@ -23,14 +23,17 @@
 		lang: function(lang){},
 		logo: function(url){},
 		
-		timeUpdate:function(){},
-		volume:function(value){},
+		timeUpdate: function(){},
+		volume: function(value){},
 		
-		clarityButton:function(state){},
-		timeDisplay:function(state){},
-		controlBarDisplay:function(state){},
-		topBarDisplay:function(state){},
-		customStrings:function(strings){}
+		clarityButton: function(state){},
+		timeDisplay: function(state){},
+		controlBarDisplay: function(state){},
+		topBarDisplay: function(state){},
+		customStrings: function(strings){},
+
+		fullScreen: function(){},
+		noramlScreen: function(){}
 		
 	};
 	

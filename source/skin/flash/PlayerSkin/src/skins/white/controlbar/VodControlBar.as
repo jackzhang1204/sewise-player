@@ -10,6 +10,12 @@
 package skins.white.controlbar {
 	//import com.demonsters.debugger.MonsterDebugger;
 	
+	import fl.controls.List;
+	import fl.data.DataProvider;
+	import fl.events.ListEvent;
+	import fl.transitions.Tween;
+	import fl.transitions.easing.Regular;
+	
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.display.SimpleButton;
@@ -19,12 +25,6 @@ package skins.white.controlbar {
 	import flash.events.TimerEvent;
 	import flash.text.TextField;
 	import flash.utils.Timer;
-	
-	import fl.controls.List;
-	import fl.data.DataProvider;
-	import fl.events.ListEvent;
-	import fl.transitions.Tween;
-	import fl.transitions.easing.Regular;
 	
 	import interfaces.player.IVodPlayerMediator;
 	
@@ -382,19 +382,40 @@ package skins.white.controlbar {
 		/**
 		 * 全屏按钮事件响应
 		 */
-		private function fullScreenHandler(e:MouseEvent):void{
+		private function fullScreenHandler(e:MouseEvent = null):void{
 			this.stage.displayState = StageDisplayState.FULL_SCREEN;
 			fullBtn.visible = false;
 			normalBtn.visible = true;
 		}
-
+		
 		/**
 		 * 正常屏按钮事件响应
 		 */
-		private function noramlScreenHandler(e:MouseEvent):void{
+		private function noramlScreenHandler(e:MouseEvent = null):void{
 			this.stage.displayState = StageDisplayState.NORMAL;
 			fullBtn.visible = true;
 			normalBtn.visible = false;
+		}
+		
+		/**
+		 * 全屏接口响应
+		 */
+		public function toFullScreen():void{
+			//fullScreenHandler();
+			//无法通过JS接口执行FLASH全屏操作，这里改为提示。
+			var btnY:Number = this.y + playBtn.y -_white.tipBubble.height - 3;
+			_white.tipBubble.showInfo(fullScreen_string, fullBtn.x + fullBtn.width/2, btnY, _white.x, _curW);
+			var myTimer:Timer = new Timer(2000, 1);
+			myTimer.addEventListener(TimerEvent.TIMER, timerHandler);
+			myTimer.start();
+			function timerHandler(event:TimerEvent):void{
+				_white.tipBubble.visible = false;
+				myTimer.removeEventListener(TimerEvent.TIMER, timerHandler);
+				myTimer = null;
+			}
+		}
+		public function toNoramlScreen():void{
+			noramlScreenHandler();
 		}
 		
 		/**

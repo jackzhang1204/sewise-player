@@ -110,7 +110,13 @@ package  {
 			_paused = true;
 		}
 
-
+		public function fullScreen():void{
+			controlBar.toFullScreen();
+		}
+		public function noramlScreen():void{
+			controlBar.toNoramlScreen();
+		}
+		
 		public function set bufferProgress(p : Number) : void {
 			buffer.setProgress(p);
 		}

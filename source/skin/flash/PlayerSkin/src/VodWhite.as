@@ -168,7 +168,14 @@ package  {
 			bigIcon.paused();
 			_paused = true;
 		}
-
+		
+		public function fullScreen():void{
+			controlBar.toFullScreen();
+		}
+		public function noramlScreen():void{
+			controlBar.toNoramlScreen();
+		}
+		
 /**------------------------------ 设置播放器各种进度的方法 ---------------------------*/
 
 		public function set bufferProgress(p : Number) : void {

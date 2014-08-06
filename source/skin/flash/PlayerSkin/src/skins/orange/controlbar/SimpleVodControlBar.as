@@ -246,6 +246,16 @@ package skins.orange.controlbar {
 		
 		
 		/**
+		 * 全屏接口响应
+		 */
+		public function toFullScreen():void{
+			
+		}
+		public function toNoramlScreen():void{
+			
+		}
+		
+		/**
 		 * 播放按钮事件响应
 		 */
 		private function playHandler(e:MouseEvent):void{

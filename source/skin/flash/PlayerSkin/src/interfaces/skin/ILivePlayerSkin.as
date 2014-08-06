@@ -134,5 +134,11 @@ package interfaces.skin {
 		 */
 		function set volume(value:Number):void;
 		
+		/**
+		 * 全屏切换
+		 */
+		function fullScreen():void;
+		function noramlScreen():void;
+		
 	}
 }

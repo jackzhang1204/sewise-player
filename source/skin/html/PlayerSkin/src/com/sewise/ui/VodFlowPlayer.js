@@ -94,6 +94,12 @@
 			
 			//console.log("customStrings: " + strings);
 		}
+		SewisePlayerSkin.IVodSkin.fullScreen = function(){
+			controlBar.fullScreen();
+		}
+		SewisePlayerSkin.IVodSkin.noramlScreen = function(){
+			controlBar.noramlScreen();
+		}
 		
 		
 		//通知主播放器皮肤已经初始化完成.

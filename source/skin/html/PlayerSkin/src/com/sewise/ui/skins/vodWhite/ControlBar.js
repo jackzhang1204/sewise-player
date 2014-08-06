@@ -22,12 +22,12 @@
 		var $progressPlayedPoint = elementObject.$progressPlayedPoint;
 		var $progressLoadedLine = elementObject.$progressLoadedLine;
 		var $progressSeekLine = elementObject.$progressSeekLine;
-
 		
 		//////////////
 		var $buffer = elementObject.$buffer;
 		var $bigPlayBtn = elementObject.$bigPlayBtn;
 		//////////////
+		var that = this;
 		var mainPlayer;
 		var screenState = "normal";
 		var duration = 0.1;
@@ -91,14 +91,10 @@
 			mainPlayer.play();
 		});
 		$fullscreenBtn.click(function(){
-			$fullscreenBtn.hide();
-			$normalscreenBtn.show();
-			fullScreen($container.get(0));
+			that.fullScreen();
 		});
 		$normalscreenBtn.click(function(){
-			$fullscreenBtn.show();
-			$normalscreenBtn.hide();
-			normalscreen();
+			that.noramlScreen();
 		});
 		$soundopenBtn.click(function(){
 			mainPlayer.muted(true);
@@ -111,7 +107,7 @@
 			$soundcloseBtn.hide();
 		});
 		
-
+		
 		//changeClarity方法调用
 		/*
 		mainPlayer.changeClarity({ name: "", videoUrl: "http://www.w3schools.com/html/mov_bbb.mp4", id: 0, selected: true });
@@ -317,6 +313,16 @@
 		}
 		this.hide2 = function(){
 			$controlbar.hide();
+		}
+		this.fullScreen = function(){
+			$fullscreenBtn.hide();
+			$normalscreenBtn.show();
+			fullScreen($container.get(0));
+		}
+		this.noramlScreen = function(){
+			$fullscreenBtn.show();
+			$normalscreenBtn.hide();
+			normalscreen();
 		}
 		
 		

@@ -34,6 +34,7 @@
 		var $claritySwitchBtn = elementObject.$claritySwitchBtn;
 		var $clarityBtnText = elementObject.$clarityBtnText;
 		//////////////
+		var that = this;
 		var mainPlayer;
 		var screenState = "normal";
 		var duration = 0.1;
@@ -107,14 +108,10 @@
 			mainPlayer.play();
 		});
 		$fullscreenBtn.click(function(){
-			$fullscreenBtn.hide();
-			$normalscreenBtn.show();
-			fullScreen($container.get(0));
+			that.fullScreen();
 		});
 		$normalscreenBtn.click(function(){
-			$fullscreenBtn.show();
-			$normalscreenBtn.hide();
-			normalscreen();
+			that.noramlScreen();
 		});
 		$soundopenBtn.click(function(){
 			mainPlayer.muted(true);
@@ -463,7 +460,17 @@
 		this.updateClarityBtnText = function(value){
 			$clarityBtnText.text(value);
 		}
-		
+		this.fullScreen = function(){
+			$fullscreenBtn.hide();
+			$normalscreenBtn.show();
+			fullScreen($container.get(0));
+		}
+		this.noramlScreen = function(){
+			$fullscreenBtn.show();
+			$normalscreenBtn.hide();
+			normalscreen();
+		}
+
 		
 	};
 	

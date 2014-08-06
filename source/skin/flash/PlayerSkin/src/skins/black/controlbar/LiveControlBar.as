@@ -276,7 +276,7 @@ package skins.black.controlbar {
 		/**
 		 * 全屏按钮事件响应
 		 */
-		private function fullScreenHandler(e:MouseEvent):void{
+		private function fullScreenHandler(e:MouseEvent = null):void{
 			this.stage.displayState = StageDisplayState.FULL_SCREEN;
 			fullBtn.visible = false;
 			normalBtn.visible = true;
@@ -285,10 +285,31 @@ package skins.black.controlbar {
 		/**
 		 * 正常屏按钮事件响应
 		 */
-		private function noramlScreenHandler(e:MouseEvent):void{
+		private function noramlScreenHandler(e:MouseEvent = null):void{
 			this.stage.displayState = StageDisplayState.NORMAL;
 			fullBtn.visible = true;
 			normalBtn.visible = false;
+		}
+		
+		/**
+		 * 全屏接口响应
+		 */
+		public function toFullScreen():void{
+			//fullScreenHandler();
+			//无法通过JS接口执行FLASH全屏操作，这里改为提示。
+			var btnY:Number = this.y + playBtn.y -_black.tipBubble.height - 3;
+			_black.tipBubble.showInfo(fullScreen_string, fullBtn.x + fullBtn.width/2, btnY, _black.x, _curW);
+			var myTimer:Timer = new Timer(2000, 1);
+			myTimer.addEventListener(TimerEvent.TIMER, timerHandler);
+			myTimer.start();
+			function timerHandler(event:TimerEvent):void{
+				_black.tipBubble.visible = false;
+				myTimer.removeEventListener(TimerEvent.TIMER, timerHandler);
+				myTimer = null;
+			}
+		}
+		public function toNoramlScreen():void{
+			noramlScreenHandler();
 		}
 		
 		/**

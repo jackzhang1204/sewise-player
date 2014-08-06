@@ -294,7 +294,7 @@ package skins.radio.controlbar {
 		/**
 		 * 全屏按钮事件响应
 		 */
-		private function fullScreenHandler(e:MouseEvent):void{
+		private function fullScreenHandler(e:MouseEvent = null):void{
 			this.stage.displayState = StageDisplayState.FULL_SCREEN;
 			//fullBtn.visible = false;
 			//normalBtn.visible = true;
@@ -303,10 +303,20 @@ package skins.radio.controlbar {
 		/**
 		 * 正常屏按钮事件响应
 		 */
-		private function noramlScreenHandler(e:MouseEvent):void{
+		private function noramlScreenHandler(e:MouseEvent = null):void{
 			this.stage.displayState = StageDisplayState.NORMAL;
 			//fullBtn.visible = true;
 			//normalBtn.visible = false;
+		}
+		
+		/**
+		 * 全屏接口响应
+		 */
+		public function toFullScreen():void{
+			//fullScreenHandler();
+		}
+		public function toNoramlScreen():void{
+			noramlScreenHandler();
 		}
 		
 		/**
