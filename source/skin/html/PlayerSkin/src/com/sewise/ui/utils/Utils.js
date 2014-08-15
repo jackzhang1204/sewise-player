@@ -54,8 +54,77 @@
 				var mi = this.time2FigFill(date.getMinutes());
 				var se = this.time2FigFill(date.getSeconds());
 				return ho + ":" + mi + ":" + se;
+			},
+			dateToYMD: function(date){
+				var ye = date.getFullYear();
+				var mo = this.time2FigFill(date.getMonth() + 1);
+				var da = this.time2FigFill(date.getUTCDate());
+				return ye + "-" + mo + "-" + da;
+			},
+			hmsToDate: function(hms){
+				var hmsArray = hms.split(":");
+				var ho = hmsArray[0] ? hmsArray[0] : 0;
+				var mi = hmsArray[1] ? hmsArray[1] : 0;
+				var se = hmsArray[2] ? hmsArray[2] : 0;
+				var date = new Date();
+				date.setHours(ho, mi, se);
+				return date;
 			}
 			
+		},
+		language: {
+			zh_cn: {
+				"stop": "停止播放",
+				"pause": "暂停",
+				"play": "播放",
+				"fullScreen": "全屏",
+				"normalScreen": "恢复",
+				"soundOn": "打开声音",
+				"soundOff": "关闭声音",
+				"clarity": "清晰度",
+				"titleTip": "正在播放：",
+				"claritySetting": "清晰度设置",
+				"clarityOk": "确定",
+				"clarityCancel": "取消",
+				"backToLive": "回到直播",
+				"loading": "缓冲节目",
+				"subtitles": "字幕",
+				"default": "默认"
+			},
+			en_us: {
+				"stop": "Stop",
+				"pause": "Pause",
+				"play": "Play",
+				"fullScreen": "Full Screen",
+				"normalScreen": "Normal Screen",
+				"soundOn": "Sound On",
+				"soundOff": "Sound Off",
+				"clarity": "Clarity",
+				"titleTip": "Playing: ",
+				"claritySetting": "Definition Setting",
+				"clarityOk": "OK",
+				"clarityCancel": "Cancel",
+				"backToLive": "Back To Live",
+				"loading": "Loading",
+				"subtitles": "Subtitles",
+				"default": "Default"
+			},
+			lang:{},
+			init: function(lan){
+				switch(lan){
+					case "en_US":
+						this.lang = this.en_us;
+						break;
+					case "zh_CN":
+						this.lang = this.zh_cn;
+						break;
+					default:
+						this.lang = this.zh_cn;
+				}
+			},
+			getString: function(str){
+				return this.lang[str];
+			}
 			
 		}
 		

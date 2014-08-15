@@ -6,15 +6,15 @@
 	 */
 	var TopBar = SewisePlayerSkin.TopBar = function(elementObject){
 		var $topbar = elementObject.$topbar;
+		var $programTip = elementObject.$programTip;
 		var $programTitle = elementObject.$programTitle;
 		var $topbarClock = elementObject.$topbarClock;
-
+		
 		/////////////////////////////
 		var interval = setInterval(setClock, 1000);
 		function setClock(){
 			var timeString = SewisePlayerSkin.Utils.stringer.dateToTimeString();
 			$topbarClock.text(timeString);
-
 			//console.log(timeString);
 		}
 		
@@ -29,6 +29,10 @@
 		}
 		this.hide2 = function(){
 			$topbar.hide();
+		}
+		this.initLanguage = function(){
+			var titleTip = SewisePlayerSkin.Utils.language.getString("titleTip");
+			$programTip.text(titleTip);
 		}
 		
 		

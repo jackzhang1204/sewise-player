@@ -22,10 +22,11 @@ div.sewise-player-ui {
 	bottom: 0px;
 	margin: 0px;
 	padding: 0px;
-	
+	overflow: hidden;
 	color: white;
 	font-size: 14px;
 	font-family: 'Trebuchet MS' Verdana, Arial, sans-serif;
+	pointer-events: none;
 }
 div.sewise-player-ui *{
 	outline: none;
@@ -38,6 +39,7 @@ div.sewise-player-ui div.controlbar {
 	width: 100%;
 	left: 0px;
 	bottom: 30px;
+	pointer-events: auto;
 }
 div.sewise-player-ui div.controlbar div.controlbar-bg {
 	position: absolute;
@@ -265,6 +267,7 @@ div.sewise-player-ui div.big-play-btn {
 	overflow: hidden;
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0);
+	pointer-events: auto;
 }
 div.sewise-player-ui div.big-play-btn a.big-play-icon {
 	display:block;

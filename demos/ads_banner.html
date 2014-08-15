@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title>Sewise Player</title>
+</head>
+<body>
+	<div style="width: 640px; height: 352px; margin:50px; padding: 50px; border:5px solid #999;">
+		<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+		<script type="text/javascript">
+			var ads_json_data = 
+			{
+			    "banners": {
+			        "0000-00-00": [
+			            {
+			                "time": "00:00:00",
+			                "ads": [
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/01.jpg",
+			                        "link_url": "http://www.sewise.com"
+			                    },
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/02.jpg",
+			                        "link_url": "http://player.sewise.com"
+			                    }
+			                ]
+			            },
+			            {
+			                "time": "06:00:00",
+			                "ads": [
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/03.jpg",
+			                        "link_url": "http://player.sewise.com"
+			                    },
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/04.gif",
+			                        "link_url": "http://www.sewise.com"
+			                    }
+			                ]
+			            },
+			            {
+			                "time": "12:00:00",
+			                "ads": [
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/05.jpg",
+			                        "link_url": "http://player.sewise.com"
+			                    },
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/06.jpg",
+			                        "link_url": "http://www.sewise.com"
+			                    }
+			                ]
+			            },
+			            {
+			                "time": "18:00:00",
+			                "ads": [
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/03.jpg",
+			                        "link_url": "http://player.sewise.com/"
+			                    },
+			                    {
+			                        "picurl": "http://jackzhang1204.github.io/materials/04.gif",
+			                        "link_url": "http://www.sewise.com/"
+			                    }
+			                ]
+			            }
+			        ]
+			    }
+			}
+			SewisePlayer.setup({
+				server: "vod",
+				type: "mp4",
+				videourl: "http://jackzhang1204.github.io/materials/mov_bbb.mp4",
+				lang: "zh_CN",
+		        skin: "vodWhite",
+		        title: "ADS TEST",
+		        adsjsondata: ads_json_data,
+		        fallbackurls:{
+					ogg: "http://jackzhang1204.github.io/materials/mov_bbb.ogg",
+					webm: "http://jackzhang1204.github.io/materials/mov_bbb.webm"
+				}
+			});
+		</script>
+	</div>
+	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fock it on GitHub</a></div>
+</body>
+</html>

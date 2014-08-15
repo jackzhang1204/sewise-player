@@ -11,8 +11,8 @@ Demos: [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Liv
 
 
 ### Sewise Player是一款专业的免费网页HTML5视频、流播放器，它功能强大，体积小，跨平台，兼容性好，使用方便简洁。
-* 播放器是主要以HTML5技术为平台开发，同时兼容flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器播放视频。
-* Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或flash模式播放视频。您不需要掌握任何JavaScript或ActionScript编码技术就可以制作出专业的网页视频播放器。
+* 播放器是主要以HTML5技术为平台开发，同时兼容Flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器播放视频。
+* Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或Flash模式播放视频。您不需要掌握任何JavaScript或ActionScript编码技术就可以制作出专业的网页视频播放器。
 * Sewise Player即可以做为单一的前台播放器来在页面上播放视频和流，也可以结合Sewise Server后台技术实现专业的可交互的点播、直播视频播放。
 
 
@@ -43,7 +43,7 @@ Demos: [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Liv
 * html\skins\vodWhite\skin.html.js, HTML5点播白色皮肤Dom元素对象，用于兼容跨域加载。
 * html\skins\vodWhite\skin.css, HTML5点播白色皮肤CSS样式。
 * html\skins\vodWhite\skin.js, HTML5点播白色皮肤JS逻辑代码。
-* flash, flash播放器目录。
+* flash, Flash播放器目录。
 * flash\SewisePlayer.swf， Flash播放器主文件。
 * flash\skins, Flash皮肤目录。
 * flash\skins\vodWhite.swf, Flash点播白色皮肤。

@@ -6,6 +6,7 @@
 	 */
 	var TopBar = SewisePlayerSkin.TopBar = function(elementObject){
 		var $topbar = elementObject.$topbar;
+		var $programTip = elementObject.$programTip;
 		var $programTitle = elementObject.$programTitle;
 		var $topbarClock = elementObject.$topbarClock;
 
@@ -27,6 +28,10 @@
 		}
 		this.hide2 = function(){
 			$topbar.hide();
+		}
+		this.initLanguage = function(){
+			var titleTip = SewisePlayerSkin.Utils.language.getString("titleTip");
+			$programTip.text(titleTip);
 		}
 		
 		

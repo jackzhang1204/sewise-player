@@ -455,7 +455,7 @@
 		}
 		this.updateClarityBtnPosition = function(){
 			$claritySwitchBtn.css("top", "0%");
-			$claritySwitchBtn.css("margin-top", "0px");
+			$claritySwitchBtn.css("margin-top", "-5px");
 		}
 		this.updateClarityBtnText = function(value){
 			$clarityBtnText.text(value);
@@ -470,7 +470,7 @@
 			$normalscreenBtn.hide();
 			normalscreen();
 		}
-
+		
 		
 	};
 	

@@ -34,6 +34,7 @@
 		
 		////////////////
 		this.$topbar = this.$sewisePlayerUi.find(".topbar");
+		this.$programTip= this.$sewisePlayerUi.find(".topbar-program-tip");
 		this.$programTitle= this.$sewisePlayerUi.find(".topbar-program-title");
 		this.$topbarClock = this.$sewisePlayerUi.find(".topbar-clock");
 

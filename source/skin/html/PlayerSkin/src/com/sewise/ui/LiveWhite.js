@@ -90,6 +90,19 @@
 		SewisePlayerSkin.ILiveSkin.noramlScreen = function(){
 			controlBar.noramlScreen();
 		}
+		SewisePlayerSkin.ILiveSkin.initialAds = function(data){
+			if(data){
+				SewisePlayerSkin.AdsContainer(elementObject, data);
+			}
+			//console.log(data);
+		}
+		SewisePlayerSkin.ILiveSkin.lang = function(lan){
+			//en_US, zh_CN
+			SewisePlayerSkin.Utils.language.init(lan);
+			topBar.initLanguage();
+			
+			//console.log(SewisePlayerSkin.Utils.language.getString("titleTip"));
+		}
 		
 		
 		//通知主播放器皮肤已经初始化完成.

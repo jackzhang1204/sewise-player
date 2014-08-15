@@ -22,10 +22,11 @@ div.sewise-player-ui {
 	bottom: 0px;
 	margin: 0px;
 	padding: 0px;
-	
+	overflow: hidden;
 	color: white;
 	font-size: 12px;
 	font-family: 'Lucida Sans', "Lucida Grande", sans-serif;
+	pointer-events: none;
 }
 div.sewise-player-ui * {
 	outline: none;
@@ -38,6 +39,7 @@ div.sewise-player-ui div.controlbar {
 	width: 100%;
 	left: 0px;
 	bottom: 20px;
+	pointer-events: auto;
 }
 div.sewise-player-ui div.controlbar div.controlbar-bg {
 	position: absolute;
@@ -281,6 +283,7 @@ div.sewise-player-ui div.big-play-btn {
 	overflow: hidden;
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0);
+	pointer-events: auto;
 }
 div.sewise-player-ui div.big-play-btn a.big-play-icon {
 	display:block;
@@ -298,19 +301,21 @@ div.sewise-player-ui div.big-play-btn:hover a.big-play-icon {
 /*多分辨率开关按钮*/
 div.sewise-player-ui div.clarity-switch-btn {
 	position: absolute;
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 	left: 100%;
 	top: 50%;
 	margin-left: -35px;
-	margin-top: -18px;
+	margin-top: -20px;
 	background: url("clarity_btn_bg.png") 0px 0px no-repeat;
+	pointer-events: auto;
 }
 div.sewise-player-ui div.clarity-switch-btn a.clarity-btn-text {
 	position: absolute;
-	width: 35px;
-	line-height: 35px;
+	width: 40px;
+	line-height: 40px;
     text-align: center;
     vertical-align: middle;
     color: white;
+    text-decoration: none;
 }

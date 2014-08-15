@@ -33,7 +33,9 @@
 		customStrings: function(strings){},
 
 		fullScreen: function(){},
-		noramlScreen: function(){}
+		noramlScreen: function(){},
+
+		initialAds: function(data){}
 		
 	};
 	

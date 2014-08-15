@@ -27,6 +27,10 @@
 			controlBar = controlBarObj;
 		}
 		this.initialClarities = function(levels){
+			var claritySettingStr = SewisePlayerSkin.Utils.language.getString("claritySetting");
+			var clarityOkStr = SewisePlayerSkin.Utils.language.getString("clarityOk");
+			var clarityCancelStr = SewisePlayerSkin.Utils.language.getString("clarityCancel");
+
 			//初始化多码率, name, videoUrl, id, selected.
 			//console.log("vod clarityArray: " + clarityArray[0].name);
 			clarityArray = levels;
@@ -45,7 +49,7 @@
 			clarityPanelDom = 
 				'<div style="position:absolute; width: 300px; height: 140px; color: #FFF; border: 2px solid #FF9501; padding: 10px; background: rgba(255, 149, 1, 0.3); ">' + 
 					'<div>' + 
-				      '<div style="float: left; ">清晰度设置</div>' + 
+				      '<div style="float: left; ">' + claritySettingStr + '</div>' + 
 				      '<div style="float: right; ">' + 
 				        '<a href="javascript:;" name="cancel_clarity" style="color: #FFF; font-weight:bold; text-decoration: none; padding: 4px 6px; ">X</a>' + 
 				      '</div>' + 
@@ -54,8 +58,8 @@
 				    	radiosDom + 
 				      '</div>' + 
 				    '<div style="padding: 10px; text-align: center; ">' + 
-				      '<a href="javascript:;" name="confirm_clarity" style="color: #FFF; text-decoration: none; background-color: #FF9501; padding: 5px 10px; margin-right: 20px; ">确定</a>' + 
-				      '<a href="javascript:;" name="cancel_clarity" style="color: #FFF; text-decoration: none; background-color: #FF9501; padding: 5px 10px; margin-left: 20px; ">取消</a>' + 
+				      '<a href="javascript:;" name="confirm_clarity" style="color: #FFF; text-decoration: none; background-color: #FF9501; padding: 5px 10px; margin-right: 20px; ">' + clarityOkStr + '</a>' + 
+				      '<a href="javascript:;" name="cancel_clarity" style="color: #FFF; text-decoration: none; background-color: #FF9501; padding: 5px 10px; margin-left: 20px; ">' + clarityCancelStr + '</a>' + 
 				    '</div>' + 
 				'<div>';
 			////////////////////
@@ -102,31 +106,3 @@
 	};
 	
 })(window.jQuery)
-
-
-
-/*
-<div style="position:absolute; width: 300px; height: 140px; color: #FFF; border: 2px solid #FF9501; padding: 10px; background: rgba(255, 149, 1, 0.3); ">
-	<div>
-      <div style="float: left; ">标题</div>
-      <div style="float: right; ">
-        <a href="javascript:;" style="color: #FFF; font-weight:bold; text-decoration: none; padding: 4px 6px; ">X</a>
-      </div>
-    </div>
-      <div style="width: 100%; height: 40px; padding: 30px 0px 10px 0px; text-align: center; clear: both;">
-        <input style="width: 20px; height: 18px; " type="radio" name="clarity" value="普通">普通
-        <input style="width: 20px; height: 18px; " type="radio" name="clarity" value="高清">高清
-        <input style="width: 20px; height: 18px; " type="radio" name="clarity" value="超清">超清
-      </div>
-    <div style="padding: 10px; text-align: center; ">
-      <a href="javascript:;" style="color: #FFF; text-decoration: none; background-color: #FF9501; padding: 5px 10px; margin-right: 20px; ">确定</a>
-      <a href="javascript:;" style="color: #FFF; text-decoration: none; background-color: #FF9501; padding: 5px 10px; margin-left: 20px; ">取消</a>
-    </div>
-<div>
-*/
-
-/*
-'<input style="width: 20px; height: 18px; " type="radio" name="clarity" value="普通">普通' + 
-'<input style="width: 20px; height: 18px; " type="radio" name="clarity" value="高清">高清' + 
-'<input style="width: 20px; height: 18px; " type="radio" name="clarity" value="超清">超清' + 
-*/
