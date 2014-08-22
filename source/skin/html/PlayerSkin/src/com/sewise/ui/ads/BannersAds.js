@@ -8,7 +8,7 @@
 	var BannersAds = SewisePlayerSkin.BannersAds = function(adsBox, adsData){
 		var leftBannerBox = $(' <div style="position:absolute; display:table; width:100%; height:100%;">' + 
 									'<div style="display:table-cell; text-align:left; vertical-align:middle;">' + 
-										'<img style="pointer-events:auto; cursor:pointer;">' + 
+										'<img style="pointer-events:auto; cursor:pointer; width: auto; height: auto;">' + 
 									'</div>' + 
 								'</div> ');
 		leftBannerBox.appendTo(adsBox);
@@ -16,7 +16,7 @@
 		//////////////////////////////
 		var rightBannerBox = $(' <div style="position:absolute; display:table; width:100%; height:100%;">' + 
 									'<div style="display:table-cell; text-align:right; vertical-align:middle;">' + 
-										'<img style="pointer-events:auto; cursor:pointer;">' + 
+										'<img style="pointer-events:auto; cursor:pointer; width: auto; height: auto;">' + 
 									'</div>' + 
 								'</div> ');
 		rightBannerBox.appendTo(adsBox);
@@ -45,12 +45,22 @@
 		leftImg.click(function(e){
 			e.originalEvent.stopPropagation();
 			var leftLink = currentDateAdsData[currentAdsIndexOfDate]["ads"][0]["link_url"];
-			window.open(leftLink, "_blank");
+			//如果链接回调函数存在执行回调函数，否则直接打开链接。
+			if(window.openAdsLink && typeof(window.openAdsLink) == "function"){
+				window.openAdsLink(leftLink);
+			}else{
+				window.open(leftLink, "_blank");
+			}
 		})
 		rightImg.click(function(e){
 			e.originalEvent.stopPropagation();
 			var rightLink = currentDateAdsData[currentAdsIndexOfDate]["ads"][1]["link_url"];
-			window.open(rightLink, "_blank");
+			//如果链接回调函数存在执行回调函数，否则直接打开链接。
+			if(window.openAdsLink && typeof(window.openAdsLink) == "function"){
+				window.openAdsLink(rightLink);
+			}else{
+				window.open(rightLink, "_blank");
+			}
 		})
 		function initCurrentDateAdsData(){
 			ymdDate = SewisePlayerSkin.Utils.stringer.dateToYMD(new Date());

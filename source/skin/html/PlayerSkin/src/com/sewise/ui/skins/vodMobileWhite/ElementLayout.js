@@ -8,7 +8,7 @@
 		var $container = elementObject.$container;
 		var $controlBarProgress = elementObject.$controlBarProgress;
 		var $playtime = elementObject.$playtime;
-
+		
 		var that = this;
 		var defStageWidth = elementObject.defStageWidth;
 		var defStageHeight = elementObject.defStageHeight;
@@ -20,7 +20,7 @@
 		 * 这里统一取消音量控制按钮。
 		 */
 		//var btnsWidth = 38 * 4 + 118 + 3 * 6;
-		var btnsWidth = 38 * 3 + 88 + 3 * 6;
+		var btnsWidth = 38 * 3 + 90 + 3 * 6;
 		var defProgressWidth = parseInt(defStageWidth) - btnsWidth;
 		this.screenRotate = false;
 		//console.log("defProgressWidth: " + defStageWidth);
@@ -51,7 +51,7 @@
 		this.fullScreen = function(){
 			if(window.toFullScreen && typeof(window.toFullScreen) == "function"){
 				window.toFullScreen();
-
+				
 				$container.get(0).style.transform = "rotateZ(90deg)";
 				$container.get(0).style.MsTransform = "rotateZ(90deg)";
 				$container.get(0).style.MozTransform = "rotateZ(90deg)";
@@ -89,7 +89,7 @@
 		this.normalScreen = function(){
 			if(window.toNormalScreen && typeof(window.toNormalScreen) == "function"){
 				window.toNormalScreen();
-
+				
 				$container.get(0).style.transform = "rotateZ(0deg)";
 				$container.get(0).style.MsTransform = "rotateZ(0deg)";
 				$container.get(0).style.MozTransform = "rotateZ(0deg)";

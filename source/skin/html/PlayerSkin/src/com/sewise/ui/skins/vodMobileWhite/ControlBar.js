@@ -31,8 +31,8 @@
 		var duration = 1;
 
 		var playTime = 0;
-		var playTimeHMS = "000:00";
-		var durationHMS = "000:00";
+		var playTimeHMS = "00:00";
+		var durationHMS = "00:00";
 		var ppPointW = 0;
 		var dragging = false;
 		var beforeDownX = 0;
@@ -63,6 +63,7 @@
 			$normalscreenBtn.hide();
 			$soundcloseBtn.hide();
 			$buffer.hide();
+			$playtime.text(playTimeHMS + "/" + durationHMS);
 		}
 		$playBtn.click(function(e){
 			mainPlayer.play();
@@ -78,14 +79,17 @@
 			mainPlayer.play();
 		});
 		$fullscreenBtn.click(function(){
+			if(SewisePlayerSkin.mobileExtEvent.block) {return false};
+
 			that.fullScreen();
 		});
 		$normalscreenBtn.click(function(){
+			if(SewisePlayerSkin.mobileExtEvent.block) {return false};
+
 			that.noramlScreen();
 		});
-		this.fullScreen = function(){
-			if (SewisePlayerSkin.mobileExtEvent.block) {return false};
 
+		this.fullScreen = function(){
 			fullScreen($container.get(0));
 			elementLayout.fullScreen();
 			screenRotate = elementLayout.screenRotate;
@@ -95,8 +99,6 @@
 			$normalscreenBtn.show();
 		}
 		this.noramlScreen = function(){
-			if (SewisePlayerSkin.mobileExtEvent.block) {return false};
-
 			normalscreen();
 			elementLayout.normalScreen();
 			screenRotate = elementLayout.screenRotate;
@@ -105,7 +107,7 @@
 			$fullscreenBtn.show();
 			$normalscreenBtn.hide();
 		}
-		
+
 		SewisePlayerSkin.mobileExtEvent = {
 			block: false,
 			fullScreen: $fullscreenBtn,
@@ -113,20 +115,17 @@
 			intoFullScreen: that.fullScreen,
 			exitFullScreen: that.noramlScreen
 		}
-		
 		SewisePlayerSkin.exitFullscreen = function(){
-			normalscreen();
-			elementLayout.normalScreen();
-			screenRotate = elementLayout.screenRotate;
-			pageX = "pageX";
-
-			$fullscreenBtn.show();
-			$normalscreenBtn.hide();
+			that.noramlScreen();
 		}
-		
-		$controlbar.click(function(e){
+		$controlbar.on('tap', function(e){
 			e.originalEvent.stopPropagation();
 		});
+		
+		/*$controlbar.click(function(e){
+			e.originalEvent.stopPropagation();
+		});*/
+		
 		/*$container.click(function(e){
 			if(displayBar){
 				hideBar();
@@ -138,7 +137,7 @@
 				displayBar = true;
 			}
 		});*/
-
+		
 		$soundopenBtn.click(function(){
 			mainPlayer.muted(true);
 			$soundopenBtn.hide();
@@ -150,8 +149,6 @@
 			$soundcloseBtn.hide();
 		});
 		$shareBtn.click(function(){
-			//console.log("share video");
-			
 			if(window.shareVideo && typeof(window.shareVideo) == "function"){
 				window.shareVideo();
 			}else{
@@ -254,13 +251,13 @@
 			}
 			dragging = false;
 		}
-		function hideBar(){
+		/*function hideBar(){
 			$controlbar.css("visibility", "hidden");
 		}
 		function showBar(){
 			$controlbar.css("visibility", "visible");
-		}
-
+		}*/
+		
 		//////////////////////////////////////////
 		function fullScreen(obj){
 			if (obj.requestFullscreen){
@@ -319,6 +316,11 @@
 			this.setDuration(SewisePlayerSkin.duration);
 		}
 		this.timeUpdate = function(currentTime){
+			//当直播使用点播皮肤时，由于直播没有返回currentTime时间所以直接取video的当前播放时间。
+			if(currentTime == undefined){
+				currentTime = SewisePlayer.video.currentTime;
+			}
+			
 			playTime = currentTime;
 			//playTimeHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(playTime);
 			playTimeHMS = SewisePlayerSkin.Utils.stringer.secondsToMS(playTime);

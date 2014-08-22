@@ -12,6 +12,8 @@
 
 		/////////////////////////////
 		var interval = setInterval(setClock, 1000);
+
+		$programTip.hide();
 		function setClock(){
 			var timeString = SewisePlayerSkin.Utils.stringer.dateToTimeString();
 			$topbarClock.text(timeString);
@@ -32,8 +34,8 @@
 			$topbar.hide();
 		}
 		this.initLanguage = function(){
-			var titleTip = SewisePlayerSkin.Utils.language.getString("titleTip");
-			$programTip.text(titleTip);
+			//var titleTip = SewisePlayerSkin.Utils.language.getString("titleTip");
+			//$programTip.text(titleTip);
 		}
 
 		

@@ -16,7 +16,6 @@
 		var topBar = new SewisePlayerSkin.TopBar(elementObject);
 		var controlBar = new SewisePlayerSkin.ControlBar(elementObject, elementLayout, topBar);
 		
-		
 		//实现IVodSkin接口//////////////////////////////////////
 		SewisePlayerSkin.IVodSkin.player = function(mPlayer){
 			mainPlayer = mPlayer;
@@ -118,7 +117,7 @@
 			SewisePlayer.CommandDispatcher.dispatchEvent({type: SewisePlayer.Events.PLAYER_SKIN_LOADED, playerSkin: SewisePlayerSkin.IVodSkin});
 		}catch(e){
 			console.log("No Main Player");
-
+			
 			//alert("No Main Player");
 		}
 		

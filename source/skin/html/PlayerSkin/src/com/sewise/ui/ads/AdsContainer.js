@@ -11,7 +11,7 @@
 		//banner ads init////////////
 		var bannersData = data["banners"];
 		if(bannersData){
-			var adsBanner = $("<div class='sewise_player_ads_banner'></div>");
+			var adsBanner = $("<div class='sewise-player-ads-banner'></div>");
 			adsBanner.css({
 				"position": "absolute",
 				"width": "100%",

@@ -1,6 +1,6 @@
 # [Sewise Player](http://player.sewise.com/) : HTML5 Video Player
 
-![Screenshot](player.png)
+![Screenshot](https://github.com/jackzhang1204/sewise-player/raw/master/player.png)
 
 Support for [jQuery](http://jquery.com/) HTML player skins. 
 
@@ -619,6 +619,13 @@ Demos: [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Liv
 </html>
 ```
 例子：[demos/subtitles.html](http://jackzhang1204.github.io/sewise/sewise_player/demos/subtitles.html)
+
+
+## Who is using Sewise Player?
+* [foream.cn](http://www.foream.cn/trending.html)
+* [autotiming.com](http://hiho.autotiming.com/search?keywords=CNN)
+* [csu.edu.cn](http://tv.csu.edu.cn/)
+* [hnntv.cn](http://www.hnntv.cn/zhibo/ly.html)
 
 
 ## License

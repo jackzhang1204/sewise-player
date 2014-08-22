@@ -16,7 +16,6 @@
 		var topBar = new SewisePlayerSkin.TopBar(elementObject);
 		var controlBar = new SewisePlayerSkin.ControlBar(elementObject, elementLayout, topBar);
 		
-		
 		//实现ILiveSkin接口//////////////////////////////////////
 		SewisePlayerSkin.ILiveSkin.player = function(mPlayer){
 			mainPlayer = mPlayer;
