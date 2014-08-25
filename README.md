@@ -626,6 +626,7 @@ Demos: [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Liv
 * [autotiming.com](http://hiho.autotiming.com/search?keywords=CNN)
 * [csu.edu.cn](http://tv.csu.edu.cn/)
 * [hnntv.cn](http://www.hnntv.cn/zhibo/ly.html)
+* [ltetv](http://www.wandoujia.com/apps/com.sewise.ltetv)
 
 
 ## License
