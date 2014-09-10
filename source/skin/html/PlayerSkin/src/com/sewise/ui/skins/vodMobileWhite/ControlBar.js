@@ -305,9 +305,11 @@
 			$bigPlayBtn.show();
 		}
 		this.setDuration = function(totalTimes){
-			duration = totalTimes;
-			//durationHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(duration);
-			if(totalTimes >= 1){
+			//duration = totalTimes;
+			//当时间为无限大时设置为3600秒，用于解决直播时间显示的问题。
+			duration = (totalTimes != Infinity) ? totalTimes : 3600;
+			
+			if(totalTimes > 1){
 				durationHMS = SewisePlayerSkin.Utils.stringer.secondsToMS(duration);
 			}
 			SewisePlayerSkin.duration = duration;

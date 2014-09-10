@@ -172,7 +172,6 @@ div.sewise-player-ui div.controlbar ul.controlbar-btns div.controlbar-playtime {
 	position: relative;
 	float: right;
 	display: block;
-	//width: 118px;
 	width: 90px;
 	height: 30px;
 	right: 6px;
@@ -194,6 +193,7 @@ div.sewise-player-ui div.logo a.logo-icon {
 	height: 27px;
 	background: url("logo.png") 0px 0px no-repeat;
 	text-indent: -10000px;
+	pointer-events: auto;
 }
 
 

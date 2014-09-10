@@ -195,6 +195,7 @@ div.sewise-player-ui div.logo a.logo-icon {
 	height: 27px;
 	background: url("logo.png") 0px 0px no-repeat;
 	text-indent: -10000px;
+	pointer-events: auto;
 }
 
 
