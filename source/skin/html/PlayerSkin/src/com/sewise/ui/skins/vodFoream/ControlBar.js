@@ -29,6 +29,7 @@
 
 		//////////////
 		var $buffer = elementObject.$buffer;
+		var $bufferTip = elementObject.$bufferTip;
 		var $bigPlayBtn = elementObject.$bigPlayBtn;
 		//////////////
 		var $claritySwitchBtn = elementObject.$claritySwitchBtn;
@@ -506,6 +507,16 @@
 			$fullscreenBtn.show();
 			$normalscreenBtn.hide();
 			normalscreen();
+		}
+		this.showBuffer = function(){
+			$buffer.show();
+		}
+		this.hideBuffer = function(){
+			$buffer.hide();
+		}
+		this.initLanguage = function(){
+			var bufferTipStr = SewisePlayerSkin.Utils.language.getString("loading");
+			$bufferTip.text(bufferTipStr);
 		}
 		
 		

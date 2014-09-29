@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+   <!--vodTransparent皮肤样式文件-->
+	<title>Sewise Player</title>
+	<link href="html/skins/vodTransparent/skin.css" rel="stylesheet" type="text/css" />
+	<!--用到的其它JS库-->
+	<script type="text/javascript" src="js/swfobject.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<!-- vodTransparent皮肤逻辑代码 -->
+	<script type="text/javascript" src="../src/com/sewise/ui/core/Base.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/interfaces/player/IVodPlayer.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/interfaces/skin/IVodSkin.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/utils/Utils.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/ads/BannersAds.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/ads/AdsContainer.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodTransparent/ElementObject.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodTransparent/ElementLayout.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodTransparent/LogoBox.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodTransparent/TopBar.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodTransparent/ControlBar.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/VodTransparent.js"></script>
+
+	<!-- <script src="http://192.168.1.116:8081/target/target-script-min.js#anonymous"></script> -->
+</head>
+<body>
+	<div style="width: 640px; height: 352px; margin:50px; padding: 50px; border:5px solid #999;">
+		<div style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; ">
+			<script type="text/javascript" src="sewise.player.min.js"></script>
+			<script type="text/javascript">
+	  			SewisePlayer.setup({
+					server: "vod",
+					type: "mp4",
+					videourl: "http://jackzhang1204.github.io/materials/mov_bbb.mp4",
+					//videourl: "http://media.w3.org/2010/05/sintel/trailer.mp4",
+					//type: "m3u8",
+					//videourl: "http://netdisk.foream.cn:8080/netdisk/m3u8/25179_0.m3u8",
+			        //skin: "vodTransparent",
+			        title: "TEST测试视频"
+				});
+			</script>
+
+			<!-- vodTransparent皮肤UI -->
+			<div class="sewise-player-ui" style="width: 100%; height: 100%;">
+				<div class="controlbar">
+					<div class="controlbar-bg">控制栏背景</div>
+					<div class="controlbar-progress">
+						<div class="controlbar-progress-totalline"></div>
+						<div class="controlbar-progress-loadedline"></div>
+						<div class="controlbar-progress-playedline"></div>
+						<div class="controlbar-progress-seekline"></div>
+						<div class="controlbar-progress-playpoint"></div>
+					</div>
+					<ul class="controlbar-btns">
+						<li><a href="javascript:;" class="controlbar-btns-play" tabindex="1">播放</a></li>
+						<li><a href="javascript:;" class="controlbar-btns-pause" tabindex="2">暂停</a></li>
+						<li class="right-float"><a href="javascript:;" class="controlbar-btns-fullscreen" tabindex="1">全屏</a></li>
+						<li class="right-float"><a href="javascript:;" class="controlbar-btns-normalscreen" tabindex="1">普屏</a></li>
+						<li class="right-float">
+							<div class="controlbar-volumeline">
+								<div class="controlbar-volumeline-bg"></div>
+								<div class="controlbar-volumeline-volume"></div>
+								<div class="controlbar-volumeline-dragger"></div>
+								<div class="controlbar-volumeline-point"></div>
+							</div>
+						</li>
+						<li class="right-float"><a href="javascript:;" class="controlbar-btns-soundclose" tabindex="1">音量关闭</a></li>
+						<li class="right-float"><a href="javascript:;" class="controlbar-btns-soundopen" tabindex="1">音量打开</a></li>
+						<div class="controlbar-playtime">00:00/00:00</div>
+					</ul>
+				</div>
+				<div class="logo">
+					<a href="http://www.sewise.com/" target="_blank" class="logo-icon">logo</a>
+				</div>
+				<div class="topbar">
+					<div class="topbar-program">
+						<div class="topbar-program-tip">正在播放：</div>
+						<div class="topbar-program-title">电视剧</div>
+					</div>
+					<div class="topbar-clock">2013-01-01 00:00:00</div>
+				</div>
+				<div class="buffer">
+					<div class="buffer-bg">背景图片</div>
+					<div class="buffer-text">
+						<div class="buffer-text-tip">缓冲节目</div>
+						<div class="buffer-text-bufferPt">...</div>
+					</div>
+				</div>
+				<div class="big-play-btn">
+					<a href="javascript:;" class="big-play-icon" tabindex="1">大播放按钮</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<script>
+		//手机专有回调函数
+		/*function toFullScreen(){
+
+		}
+		function toNormalScreen(){
+			
+		}*/
+		function shareVideo(){
+			console.log("share video.")
+		}
+		function openAdsLink(link){
+			console.log("open link: " + link);
+		}
+		
+		//点播
+		function startPlay1(){
+			SewisePlayer.doPlay();
+		}
+		function playPause1(){
+			SewisePlayer.doPause();
+		}
+		function seekTo1(){
+			SewisePlayer.doSeek(20);
+		}
+		function playStop1(){
+			SewisePlayer.doStop();
+		}
+		function changeVolume1(){
+			SewisePlayer.setVolume(0.1);
+		}
+		function getDuration1(){
+			alert(SewisePlayer.duration());
+		}
+		function getPlayTime1(){
+			alert(SewisePlayer.playTime());
+		}
+		function switchProgram1(){
+			SewisePlayer.playProgram("xqfa3cZn", 0, true);
+		}
+		function switchVideo1(){
+			SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
+		}
+		function toFullScreen1(){
+			SewisePlayer.fullScreen();
+		}
+		function toNoramlScreen1(){
+			SewisePlayer.noramlScreen();
+		}
+		
+		function playerReady(){
+			//console.log("Sewise Player On Ready");
+			//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
+		}
+		
+	</script>
+	<div style="padding-top: 20px;">
+		<div style="padding-right: 20px;float: left;">[点播接口]</div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:startPlay1();">播放</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:playPause1();">暂停</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:seekTo1();">跳转</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:playStop1();">停止</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:changeVolume1();">更改音量</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:getDuration1();">获取总时长</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:getPlayTime1();">获取当前时间</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:switchProgram1();">切换节目</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo1();">切换视频</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:toFullScreen1();">全屏</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:toNoramlScreen1();">普屏</a></div>
+		<br clear="all"/>
+	</div>
+	
+	<script>
+		//直播
+		function startPlay2(){
+			SewisePlayer.doPlay();
+		}
+		function playPause2(){
+			SewisePlayer.doPause();
+		}
+		function seekTo2(){
+			SewisePlayer.doSeek("20140224160520");
+		}
+		function playStop2(){
+			SewisePlayer.doStop();
+		}
+		function livePlay2(){
+			SewisePlayer.doLive();
+		}
+		function changeVolume2(){
+			SewisePlayer.setVolume(0.3);
+		}
+		function getLiveTime2(){
+			alert(SewisePlayer.liveTime());
+		}
+		function getPlayTime2() {
+			alert(SewisePlayer.playTime());
+		}
+		function switchChannel2(){
+			SewisePlayer.playChannel("br9anah3", "", true);
+		}
+		function switchStream2(){
+			SewisePlayer.toPlay("rtmp://192.168.1.219/livestream/7gw3yt3h", "title", "", true);
+		}
+		
+	</script>
+	<div style="padding-top: 20px;">
+		<div style="padding-right: 15px;float: left;">[直播接口]</div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:startPlay2();">播放</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:playPause2();">暂停</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:seekTo2();">跳转</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:playStop2();">停止</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:livePlay2();">直播</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:changeVolume2();">更改音量</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:getLiveTime2();">直播时间</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:getPlayTime2();">播放时间</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:switchChannel2();">切换频道</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:switchStream2();">切换流</a></div>
+		<br clear="all"/>
+	</div>
+	
+<!-- </div> -->
+</body>
+</html>

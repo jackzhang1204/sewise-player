@@ -43,8 +43,8 @@ window.SewisePlayerSkin.localSkin =
 			'<div class="buffer">' + 
 				'<div class="buffer-bg">背景图片</div>' + 
 				'<div class="buffer-text">' + 
-					'<div class="buffer-text-tip">缓冲节目</div>' + 
-					'<div class="buffer-text-bufferPt">0%</div>' + 
+					'<div class="buffer-text-tip">缓冲</div>' + 
+					'<div class="buffer-text-bufferPt">...</div>' + 
 				'</div>' + 
 			'</div>' + 
 			'<div class="big-play-btn">' + 

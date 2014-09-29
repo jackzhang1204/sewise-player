@@ -636,7 +636,7 @@ Demos: [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Liv
 ## More information:
 * [sewise.com](http://www.sewise.com/)
 * [player.sewise.com](http://player.sewise.com/)
-
+* QQ群：237432172
 
 ## Author:
 * Sewise Ltd 		[http://www.sewise.com](http://www.sewise.com)

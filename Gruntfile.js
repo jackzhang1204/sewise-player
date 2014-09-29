@@ -1,12 +1,12 @@
 module.exports = function(grunt) {
     var comments = '/*\n' +
-                   ' * Name: SewisePlayer framework 2.4.7\n' +
+                   ' * Name: SewisePlayer framework 2.4.8\n' +
                    ' * Author: Jack Zhang\n' +
                    ' * Website: http://player.sewise.com\n' +
-                   ' * Date: September 10, 2014\n' +
+                   ' * Date: September 29, 2014\n' +
                    ' * Copyright: 2013-2014, Sewise\n' +
                    ' * Mail: jackzhang1204@gmail.com\n' +
-                   ' * QQ: 1324999535\n' +
+                   ' * QQ: 237432172\n' +
                    ' * \n */\n\n';
 
     var srcFiles = [

@@ -29,6 +29,7 @@
 
 		//////////////
 		var $buffer = elementObject.$buffer;
+		var $bufferTip = elementObject.$bufferTip;
 		var $bigPlayBtn = elementObject.$bigPlayBtn;
 		//////////////
 		var $claritySwitchBtn = elementObject.$claritySwitchBtn;
@@ -57,6 +58,9 @@
 		var vDragging = false;
 		var vBeforeDownX = 0;
 		var vAfterUpX = 0;
+		var isPlaying = false;
+		var hideTimeout;
+		var delayTime = 5000;
 		
 		init();
 		/////////////////////////////////////////
@@ -79,20 +83,57 @@
 			$normalscreenBtn.hide();
 			$soundcloseBtn.hide();
 			$buffer.hide();
+
+			hideTimeout = setTimeout(hideControlBar, delayTime);
 		}
+		
+		$container.click(function(e){
+			$container.mousemove();
+			if(isPlaying){
+				mainPlayer.pause();
+			}else{
+				mainPlayer.play();
+			}
+		});	
+		$container.dblclick(function(e){
+			if(screenState == "normal"){
+				that.fullScreen();
+			}else{
+				that.noramlScreen();
+			}
+		});
+		
+		$container.bind({"mousemove": containerOnMoveHandler, "touchmove": containerOnMoveHandler});
+		$controlbar.bind({"mouseover": controlbarOnOverHandler, "touchstart": controlbarOnOverHandler});
+		$controlbar.bind({"mouseout": controlbarOnOutHandler, "touchend": controlbarOnOutHandler});
+		function containerOnMoveHandler(e){
+			if(displayBar == false){
+				showControlBar();
+				hideTimeout = setTimeout(hideControlBar, delayTime);
+			}
+		}
+		function controlbarOnOverHandler(e){
+			clearTimeout(hideTimeout);
+		}
+		function controlbarOnOutHandler(e){
+			hideTimeout = setTimeout(hideControlBar, delayTime);
+		}
+
+		function hideControlBar(){
+			$claritySwitchBtn.hide();
+			hideBar();
+			topBar.hide();
+			displayBar = false;
+		}
+		function showControlBar(){
+			$claritySwitchBtn.show();
+			showBar();
+			topBar.show();
+			displayBar = true;
+		}
+
 		$controlbar.click(function(e){
 			e.originalEvent.stopPropagation();
-		});
-		$container.click(function(e){
-			if(displayBar){
-				hideBar();
-				topBar.hide();
-				displayBar = false;
-			}else{
-				showBar();
-				topBar.show();
-				displayBar = true;
-			}
 		});
 		$playBtn.click(function(){
 			mainPlayer.play();
@@ -402,16 +443,19 @@
 			$playBtn.hide();
 			$pauseBtn.show();
 			$bigPlayBtn.hide();
+			isPlaying = true;
 		}
 		this.paused = function(){
 			$playBtn.show();
 			$pauseBtn.hide();
 			$bigPlayBtn.show();
+			isPlaying = false;
 		}
 		this.stopped = function(){
 			$playBtn.show();
 			$pauseBtn.hide();
 			$bigPlayBtn.show();
+			isPlaying = false;
 		}
 		this.setDuration = function(totalTimes){
 			duration = totalTimes;
@@ -469,6 +513,16 @@
 			$fullscreenBtn.show();
 			$normalscreenBtn.hide();
 			normalscreen();
+		}
+		this.showBuffer = function(){
+			$buffer.show();
+		}
+		this.hideBuffer = function(){
+			$buffer.hide();
+		}
+		this.initLanguage = function(){
+			var bufferTipStr = SewisePlayerSkin.Utils.language.getString("loading");
+			$bufferTip.text(bufferTipStr);
 		}
 		
 		

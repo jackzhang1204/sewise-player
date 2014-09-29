@@ -37,6 +37,13 @@
 			controlBar.timeUpdate();
 			topBar.setClock(mainPlayer.playTime());
 		}
+		SewisePlayerSkin.ILiveSkin.loadedOpen = function(){
+			controlBar.showBuffer();
+		}
+		SewisePlayerSkin.ILiveSkin.loadedComplete = function(loadedPt){
+			controlBar.hideBuffer();
+		}
+
 		SewisePlayerSkin.ILiveSkin.programTitle = function(title){
 			topBar.setTitle(title);
 			
@@ -98,6 +105,7 @@
 		SewisePlayerSkin.ILiveSkin.lang = function(lan){
 			//en_US, zh_CN
 			SewisePlayerSkin.Utils.language.init(lan);
+			controlBar.initLanguage();
 			topBar.initLanguage();
 			
 			//console.log(SewisePlayerSkin.Utils.language.getString("titleTip"));

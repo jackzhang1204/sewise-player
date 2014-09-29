@@ -13,6 +13,9 @@
 		seeking: function(b){},
 		buffering: function(b){},
 		bufferProgress: function(p){},
+		loadedOpen: function(){},
+		loadedComplete: function(){},
+		
 		programTitle: function(title){},
 		duration: function(time){},
 		playTime: function(time){},

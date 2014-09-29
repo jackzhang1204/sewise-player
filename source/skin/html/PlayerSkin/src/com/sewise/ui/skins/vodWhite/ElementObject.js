@@ -41,6 +41,7 @@
 
 		////////////////
 		this.$buffer = this.$sewisePlayerUi.find(".buffer");
+		this.$bufferTip = this.$sewisePlayerUi.find(".buffer-text-tip");
 		
 		////////////////
 		this.$bigPlayBtn = this.$sewisePlayerUi.find(".big-play-btn");

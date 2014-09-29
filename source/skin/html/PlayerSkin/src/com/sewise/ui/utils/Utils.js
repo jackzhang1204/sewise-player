@@ -87,7 +87,7 @@
 				"clarityOk": "确定",
 				"clarityCancel": "取消",
 				"backToLive": "回到直播",
-				"loading": "缓冲节目",
+				"loading": "缓冲",
 				"subtitles": "字幕",
 				"default": "默认"
 			},

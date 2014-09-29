@@ -23,6 +23,7 @@
 		
 		//////////////
 		var $buffer = elementObject.$buffer;
+		var $bufferTip = elementObject.$bufferTip;
 		var $bigPlayBtn = elementObject.$bigPlayBtn;
 		//////////////
 		var that = this;
@@ -305,6 +306,8 @@
 			$bigPlayBtn.show();
 		}
 		this.setDuration = function(totalTimes){
+			//alert("totalTimes: " + totalTimes);
+			//console.log("totalTimes: " + totalTimes);
 			//duration = totalTimes;
 			//当时间为无限大时设置为3600秒，用于解决直播时间显示的问题。
 			duration = (totalTimes != Infinity) ? totalTimes : 3600;
@@ -318,12 +321,14 @@
 			this.setDuration(SewisePlayerSkin.duration);
 		}
 		this.timeUpdate = function(currentTime){
+			//console.log("currentTime: " + currentTime);
 			//当直播使用点播皮肤时，由于直播没有返回currentTime时间所以直接取video的当前播放时间。
-			if(currentTime == undefined){
-				currentTime = SewisePlayer.video.currentTime;
+			if(currentTime == undefined || currentTime == Infinity){
+				//currentTime = SewisePlayer.video.currentTime;
+				currentTime = (SewisePlayer.video.currentTime != Infinity) ? SewisePlayer.video.currentTime : 0;
 			}
-			
 			playTime = currentTime;
+
 			//playTimeHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(playTime);
 			playTimeHMS = SewisePlayerSkin.Utils.stringer.secondsToMS(playTime);
 
@@ -345,6 +350,16 @@
 		}
 		this.hide2 = function(){
 			$controlbar.hide();
+		}
+		this.showBuffer = function(){
+			$buffer.show();
+		}
+		this.hideBuffer = function(){
+			$buffer.hide();
+		}
+		this.initLanguage = function(){
+			var bufferTipStr = SewisePlayerSkin.Utils.language.getString("loading");
+			$bufferTip.text(bufferTipStr);
 		}
 		
 		

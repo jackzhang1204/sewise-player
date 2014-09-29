@@ -39,6 +39,13 @@
 		SewisePlayerSkin.IVodSkin.loadedProgress = function(loadedPt){
 			controlBar.loadProgress(loadedPt);
 		}
+		SewisePlayerSkin.IVodSkin.loadedOpen = function(){
+			controlBar.showBuffer();
+		}
+		SewisePlayerSkin.IVodSkin.loadedComplete = function(loadedPt){
+			controlBar.hideBuffer();
+		}
+		
 		SewisePlayerSkin.IVodSkin.programTitle = function(title){
 			topBar.setTitle(title);
 			
@@ -106,6 +113,7 @@
 		SewisePlayerSkin.IVodSkin.lang = function(lan){
 			//en_US, zh_CN
 			SewisePlayerSkin.Utils.language.init(lan);
+			controlBar.initLanguage();
 			topBar.initLanguage();
 			
 			//console.log(SewisePlayerSkin.Utils.language.getString("titleTip"));
