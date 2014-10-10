@@ -4,7 +4,7 @@
 
 Support for [jQuery](http://jquery.com/) HTML player skins. 
 
-Demos: [Vod点播](http://219.232.161.204/libs/swfplayer/player/vod.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Fallback地址](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | [Bootstrap支持](http://jackzhang1204.github.io/sewise/sewise_player/demos/bootstrap.html) | [M3u8跨平台](http://jackzhang1204.github.io/sewise/sewise_player/demos/m3u8_cross_platform.html) | [More更多](http://jackzhang1204.github.io/sewise/sewise_player/demos/index.html)
+Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_videourl_mp4.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Fallback地址](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | [Bootstrap支持](http://jackzhang1204.github.io/sewise/sewise_player/demos/bootstrap.html) | [M3u8跨平台](http://jackzhang1204.github.io/sewise/sewise_player/demos/m3u8_cross_platform.html) | [More更多](http://jackzhang1204.github.io/sewise/sewise_player/demos/index.html)
 
 
 ## What is Sewise Player?

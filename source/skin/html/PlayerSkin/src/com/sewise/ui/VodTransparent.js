@@ -72,15 +72,15 @@
 		}
 		SewisePlayerSkin.IVodSkin.clarityButton = function(state){
 			//重置clarityButton显示状态。
-			if(state != "enable"){
+			/*if(state != "enable"){
 				controlBar.hideClarityBtn();
-			}
+			}*/
 			//console.log("clarityButton: " + state);
 		}
 		SewisePlayerSkin.IVodSkin.timeDisplay = function(state){
 			//重置playTime显示状态。
 			/*if(state != "enable"){
-
+				
 			}*/
 		}
 		SewisePlayerSkin.IVodSkin.controlBarDisplay = function(state){
@@ -93,7 +93,7 @@
 			//重置topBar显示状态。
 			if(state != "enable"){
 				topBar.hide2();
-				controlBar.updateClarityBtnPosition();
+				//controlBar.updateClarityBtnPosition();
 			}
 		}
 		SewisePlayerSkin.IVodSkin.customStrings = function(strings){

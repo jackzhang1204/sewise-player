@@ -6,6 +6,7 @@
 	 */
 	var ControlBar = SewisePlayerSkin.ControlBar = function(elementObject, elementLayout, topBar){
 		var $container = elementObject.$container;
+		var $video = elementObject.$video;
 		var $controlbar = elementObject.$controlbar;
 		var $playBtn = elementObject.$playBtn;
 		var $pauseBtn = elementObject.$pauseBtn;
@@ -119,30 +120,21 @@
 		SewisePlayerSkin.exitFullscreen = function(){
 			that.noramlScreen();
 		}
-
-		/*$controlbar.on('tap', function(e){
+		
+		$controlbar.on('tap', function(e){
 			e.originalEvent.stopPropagation();
 		});
 		$controlbar.click(function(e){
 			e.originalEvent.stopPropagation();
-		});*/
+		});
 		
+		/**
+		 * 这里设置video不接受鼠标事件，防止android
+		 * 设备下点击video时切换播放状态，以避免和
+		 * container的click动作发生冲突。
+		 */
+		$($video).css("pointer-events", "none");
 
-		$controlbar.bind({"click": controlbarClickHandler, "tap": controlbarClickHandler});
-		function controlbarClickHandler(e){
-			e.originalEvent.stopPropagation();
-		}
-
-		$container.bind({"click": containerOnDown, "touchstart": containerOnDown});
-		function containerOnDown(e){
-			$container.mousemove();
-			if(isPlaying){
-				mainPlayer.pause();
-			}else{
-				mainPlayer.play();
-			}
-		}
-		
 		$container.bind({"mousemove": containerOnMoveHandler, "touchmove": containerOnMoveHandler});
 		$controlbar.bind({"mouseover": controlbarOnOverHandler, "touchstart": controlbarOnOverHandler});
 		$controlbar.bind({"mouseout": controlbarOnOutHandler, "touchend": controlbarOnOutHandler});
@@ -153,11 +145,17 @@
 			}
 		}
 		function controlbarOnOverHandler(e){
-			clearTimeout(hideTimeout);
+			if(hideTimeout != 0){
+				clearTimeout(hideTimeout);
+				hideTimeout = 0;
+			}
 		}
 		function controlbarOnOutHandler(e){
-			hideTimeout = setTimeout(hideControlBar, delayTime);
+			if(hideTimeout == 0){
+				hideTimeout = setTimeout(hideControlBar, delayTime);
+			}
 		}
+		
 		function hideControlBar(){
 			hideBar();
 			topBar.hide();
@@ -371,10 +369,15 @@
 			
 			if(dragging) return;
 			var playPt = playTime / duration;
-			ppLineWidth = playPt * 100 + "%";
+
+			//ppLineWidth = playPt * 100 + "%";
+			ppLineWidth = playPt * ($progressSeekLine.width() - ppPointW);
+
 			$progressPlayedLine.css("width", ppLineWidth);
 			
-			var ppPointLeft = $progressPlayedLine.width() - ppPointW / 2;
+			//var ppPointLeft = $progressPlayedLine.width() - ppPointW / 2;
+			var ppPointLeft = $progressPlayedLine.width();
+			
 			$progressPlayedPoint.css("left", ppPointLeft);
 		}
 		this.loadProgress = function(loadedPt){

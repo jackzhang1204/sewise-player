@@ -60,6 +60,7 @@
 		var vAfterUpX = 0;
 		var hideTimeout;
 		var isPlaying = false;
+		var delayTime = 5000;
 		
 		init();
 		/////////////////////////////////////////
@@ -83,15 +84,16 @@
 			$soundcloseBtn.hide();
 			$buffer.hide();
 
-			hideTimeout = setTimeout(hideControlBar, 3000);
+			hideTimeout = setTimeout(hideControlBar, delayTime);
 		}
 		
-		$container.mousemove(function(e){
-			if(displayBar == false){
-				showControlBar();
-				hideTimeout = setTimeout(hideControlBar, 3000);
-			}
-		});
+		/**
+		 * 这里设置video不接受鼠标事件，防止android
+		 * 设备下点击video时切换播放状态，以避免和
+		 * container的click动作发生冲突。
+		 */
+		$($video).css("pointer-events", "none");
+		
 		$container.click(function(e){
 			$container.mousemove();
 			if(isPlaying){
@@ -107,12 +109,28 @@
 				that.noramlScreen();
 			}
 		});
-		$controlbar.mouseover(function(e){
-			clearTimeout(hideTimeout);
-		});
-		$controlbar.mouseout(function(e){
-			hideTimeout = setTimeout(hideControlBar, 3000);
-		});
+		
+		$container.bind({"mousemove": containerOnMoveHandler, "touchmove": containerOnMoveHandler});
+		$controlbar.bind({"mouseover": controlbarOnOverHandler, "touchstart": controlbarOnOverHandler});
+		$controlbar.bind({"mouseout": controlbarOnOutHandler, "touchend": controlbarOnOutHandler});
+		function containerOnMoveHandler(e){
+			if(displayBar == false){
+				showControlBar();
+				hideTimeout = setTimeout(hideControlBar, delayTime);
+			}
+		}
+		function controlbarOnOverHandler(e){
+			if(hideTimeout != 0){
+				clearTimeout(hideTimeout);
+				hideTimeout = 0;
+			}
+		}
+		function controlbarOnOutHandler(e){
+			if(hideTimeout == 0){
+				hideTimeout = setTimeout(hideControlBar, delayTime);
+			}
+		}
+		
 		function hideControlBar(){
 			$claritySwitchBtn.hide();
 			hideBar();

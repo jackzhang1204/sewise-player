@@ -9,6 +9,8 @@
 		//this.$container = this.$sewisePlayerUi.parent().parent();
 		this.$container = this.$sewisePlayerUi.parent();
 		////////////////
+		this.$video = this.$container.find("video").get(0);
+		////////////////
 		this.$controlbar =  this.$sewisePlayerUi.find(".controlbar");
 		this.$playBtn = this.$sewisePlayerUi.find(".controlbar-btns-play");
 		this.$pauseBtn = this.$sewisePlayerUi.find(".controlbar-btns-pause");

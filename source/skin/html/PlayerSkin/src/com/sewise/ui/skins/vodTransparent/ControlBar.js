@@ -86,6 +86,14 @@
 
 			hideTimeout = setTimeout(hideControlBar, delayTime);
 		}
+
+		/**
+		 * 这里设置video不接受鼠标事件，防止android
+		 * 设备下点击video时切换播放状态，以避免和
+		 * container的click动作发生冲突。
+		 */
+		$($video).css("pointer-events", "none");
+		
 		$container.click(function(e){
 			$container.mousemove();
 			if(isPlaying){
@@ -93,7 +101,7 @@
 			}else{
 				mainPlayer.play();
 			}
-		});	
+		});
 		$container.dblclick(function(e){
 			if(screenState == "normal"){
 				that.fullScreen();
@@ -112,10 +120,15 @@
 			}
 		}
 		function controlbarOnOverHandler(e){
-			clearTimeout(hideTimeout);
+			if(hideTimeout != 0){
+				clearTimeout(hideTimeout);
+				hideTimeout = 0;
+			}
 		}
 		function controlbarOnOutHandler(e){
-			hideTimeout = setTimeout(hideControlBar, delayTime);
+			if(hideTimeout == 0){
+				hideTimeout = setTimeout(hideControlBar, delayTime);
+			}
 		}
 
 		function hideControlBar(){
@@ -194,7 +207,7 @@
 			$progressPlayedPoint.css("left", ppLineWidth - ppPointW / 2);
 			seekPt = ppLineWidth / psLineWidth;
 			mainPlayer.seek(seekPt * duration);
-
+			
 			//console.log(seekPt * duration);
 		});
 		$progressPlayedPoint.mousedown(function(e){
@@ -469,10 +482,15 @@
 			
 			if(dragging) return;
 			var playPt = playTime / duration;
-			ppLineWidth = playPt * 100 + "%";
+
+			//ppLineWidth = playPt * 100 + "%";
+			ppLineWidth = playPt * ($progressSeekLine.width() - ppPointW);
+
 			$progressPlayedLine.css("width", ppLineWidth);
 			
-			var ppPointLeft = $progressPlayedLine.width() - ppPointW / 2;
+			//var ppPointLeft = $progressPlayedLine.width() - ppPointW / 2;
+			var ppPointLeft = $progressPlayedLine.width();
+
 			$progressPlayedPoint.css("left", ppPointLeft);
 		}
 		this.loadProgress = function(loadedPt){

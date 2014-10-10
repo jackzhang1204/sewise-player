@@ -69,6 +69,13 @@
 			hideTimeout = setTimeout(hideControlBar, delayTime);
 		}
 		
+		/**
+		 * 这里设置video不接受鼠标事件，防止android
+		 * 设备下点击video时切换播放状态，以避免和
+		 * container的click动作发生冲突。
+		 */
+		$($video).css("pointer-events", "none");
+		
 		$container.click(function(e){
 			$container.mousemove();
 			if(isPlaying){
@@ -95,10 +102,15 @@
 			}
 		}
 		function controlbarOnOverHandler(e){
-			clearTimeout(hideTimeout);
+			if(hideTimeout != 0){
+				clearTimeout(hideTimeout);
+				hideTimeout = 0;
+			}
 		}
 		function controlbarOnOutHandler(e){
-			hideTimeout = setTimeout(hideControlBar, delayTime);
+			if(hideTimeout == 0){
+				hideTimeout = setTimeout(hideControlBar, delayTime);
+			}
 		}
 
 		function hideControlBar(){
