@@ -10,7 +10,7 @@
 	<!--用到的其它JS库-->
 	<script type="text/javascript" src="js/swfobject.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-
+	
 	<!-- vodFoream皮肤逻辑代码 -->
 	<script type="text/javascript" src="../src/com/sewise/ui/core/Base.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/interfaces/player/IVodPlayer.js"></script>
@@ -95,6 +95,11 @@
 
 	
 	<script>
+		//保存当前用户选取的视频清晰度
+		function saveClarityName(name){
+			console.log(name);
+		}
+
 		//点播
 		function startPlay1(){
 			SewisePlayer.doPlay();

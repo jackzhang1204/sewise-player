@@ -1,5 +1,5 @@
 /*
- * Name: VodFoream SewisePlayerSkin framework V1.0.0
+ * Name: VodTransparent SewisePlayerSkin framework V1.0.0
  * Author: Jack Zhang
  * Website: http://www.sewise.com/
  * Date: 12th June 2014

@@ -13,7 +13,7 @@
 		/////////////////////////////
 		this.setLogo = function(url){
 			$logoIcon.css("background", "url(" + url + ") 0px 0px no-repeat");
-			$logoIcon.attr("href", "http://www.foream.cn/");
+			$logoIcon.attr("href", "http://www.sewise.com/");
 		}
 		
 	};

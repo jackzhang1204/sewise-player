@@ -83,6 +83,16 @@
             	  						   	id: clarityArray[currentCheckIndex].id,
             	  							selected: true
             	  						});
+
+            	/**
+            	 * 通知页面保存当前用户选取的视频清晰度
+            	 */
+            	if(window.saveClarityName && typeof(window.saveClarityName) == "function"){
+					window.saveClarityName(clarityArray[currentCheckIndex].name);
+				}else{
+					console.log("Not found the saveClarityName function of window");
+				}
+				
             });
             clarityWindow.find("[name = cancel_clarity]").click(function(e){
             	e.originalEvent.stopPropagation();
