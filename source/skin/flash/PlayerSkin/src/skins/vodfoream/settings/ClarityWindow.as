@@ -12,6 +12,7 @@ package skins.vodfoream.settings {
 	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.external.ExternalInterface;
 	
 	import interfaces.player.IClarity;
 	
@@ -149,6 +150,8 @@ package skins.vodfoream.settings {
 					_clarity = clarityData;
 					this.dispatchEvent(new Event(PlayerEvent.CLARITY_CHANGE));
 					this.visible = false;
+					
+					ExternalInterface.call("saveClarityName", clarityData.name);
 				}
 			}
 		}

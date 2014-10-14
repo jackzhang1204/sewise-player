@@ -27,29 +27,36 @@
 							"key": 0,
 							"clarity": "low",
 							"name": "Low",
+							"selected": 0,
 							"url": "http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=42324&quality=0"
 						},
 						{
 							"key": 1,
 							"clarity": "normal",
 							"name": "Normal",
+							"selected": 1,
 							"url": "http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=42324&quality=1"
 						},
 						{
-							"key": 3,
+							"key": 2,
 							"clarity": "original",
 							"name": "Original",
+							"selected": 0,
 							"url": "http://netdisk.foream.cn:8080/netdisk/iface/downloadOpen?fileId=42324"
 						}
 	                ]
 	            },
-		        skin: "vodFlowPlayer",
+		        skin: "vodFoream",
 		        topbardisplay: "disable",
 		        fallbackurls:{
 					ogg: "http://jackzhang1204.github.io/materials/mov_bbb.ogg",
 					webm: "http://jackzhang1204.github.io/materials/mov_bbb.webm"
 				}
 			});
+			//保存当前用户选取的视频清晰度
+			function saveClarityName(name){
+				console.log(name);
+			}
 		</script>
 	</div>
 	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
