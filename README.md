@@ -296,6 +296,7 @@ Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod
 * [csu.edu.cn](http://tv.csu.edu.cn/)
 * [sktv.com.cn](http://www.sktv.com.cn/)
 * [hnntv.cn](http://www.hnntv.cn/zhibo/ly.html)
+* [ciwong.com](http://haohaizi.ciwong.com/)
 * [ltetv](http://www.wandoujia.com/apps/com.sewise.ltetv)
 
 
