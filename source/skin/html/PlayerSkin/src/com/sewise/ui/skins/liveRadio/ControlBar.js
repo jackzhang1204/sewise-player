@@ -193,7 +193,7 @@
 		});
 		*/
 		
-		$progressSeekLine.mousedown(function(e){
+		/*$progressSeekLine.mousedown(function(e){
 			//console.log(e.pageX);
 			
 			ppLineWidth = (e.pageX - e.target.getBoundingClientRect().left);
@@ -202,7 +202,7 @@
 			$progressPlayedPoint.css("left", ppLineWidth - ppPointW / 2);
 			seekPt = ppLineWidth / psLineWidth;
 			seekPlay(seekPt);
-		});
+		});*/
 		$progressPlayedPoint.mousedown(function(e){
 			//console.log("mousedown");
 
