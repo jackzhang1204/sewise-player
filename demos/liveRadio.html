@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title>Sewise Player</title>
+</head>
+<body>
+	<div style="width: 600px; height: 200px; ">
+		<script type="text/javascript" src="http://219.232.161.204/libs/swfplayer/player/sewise.player.min.js"></script>
+		<script type="text/javascript">
+			SewisePlayer.setup({
+				server: "live",
+				pid: "vk5nx2cj",
+				autostart: "true",
+				buffer: "1",
+		        title: "Live Radio",
+		        lang: 'zh_CN',
+		        skin: "liveRadio"
+			});
+		</script>
+		
+	</div>
+	<div style="padding: 20px;float: left;">注：如果当前设备为Mobile平台，播放器将自动启用HTML5播放模块播放m3u8文件。</div>
+	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
+</body>
+</html>

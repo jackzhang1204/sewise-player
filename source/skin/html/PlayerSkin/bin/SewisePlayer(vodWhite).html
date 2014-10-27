@@ -16,6 +16,8 @@
 	<script type="text/javascript" src="../src/com/sewise/interfaces/player/IVodPlayer.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/interfaces/skin/IVodSkin.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/utils/Utils.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/ads/BannersAds.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/ads/AdsContainer.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/ElementObject.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/ElementLayout.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/LogoBox.js"></script>
@@ -150,55 +152,7 @@
 		<br clear="all"/>
 	</div>
 	
-	<script>
-		//直播
-		function startPlay2(){
-			SewisePlayer.doPlay();
-		}
-		function playPause2(){
-			SewisePlayer.doPause();
-		}
-		function seekTo2(){
-			SewisePlayer.doSeek("20140224160520");
-		}
-		function playStop2(){
-			SewisePlayer.doStop();
-		}
-		function livePlay2(){
-			SewisePlayer.doLive();
-		}
-		function changeVolume2(){
-			SewisePlayer.setVolume(0.3);
-		}
-		function getLiveTime2(){
-			alert(SewisePlayer.liveTime());
-		}
-		function getPlayTime2() {
-			alert(SewisePlayer.playTime());
-		}
-		function switchChannel2(){
-			SewisePlayer.playChannel("br9anah3", "", true);
-		}
-		function switchStream2(){
-			SewisePlayer.toPlay("rtmp://192.168.1.219/livestream/7gw3yt3h", "title", "", true);
-		}
-		
-	</script>
-	<div style="padding-top: 20px;">
-		<div style="padding-right: 15px;float: left;">[直播接口]</div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:startPlay2();">播放</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:playPause2();">暂停</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:seekTo2();">跳转</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:playStop2();">停止</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:livePlay2();">直播</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:changeVolume2();">更改音量</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:getLiveTime2();">直播时间</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:getPlayTime2();">播放时间</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:switchChannel2();">切换频道</a></div>
-		<div style="padding-right: 15px;float: left;"><a href="javascript:switchStream2();">切换流</a></div>
-		<br clear="all"/>
-	</div>
-
+	
 	<!-- <br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br>

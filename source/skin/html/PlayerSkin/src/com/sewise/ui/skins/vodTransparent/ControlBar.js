@@ -504,7 +504,7 @@
 			vvLineWidth = vdLineWidth * volumePt;
 			$volumelineVolume.css("width", vvLineWidth);
 			$volumelinePoint.css("left", vvLineWidth - vlPointW / 2);
-
+			
 			mutedCheck();
 		}
 		this.hide2 = function(){

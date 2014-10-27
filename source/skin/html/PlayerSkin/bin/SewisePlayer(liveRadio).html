@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<title>Sewise Player</title>
+	<!--liveRadio皮肤样式文件-->
+	<link href="html/skins/liveRadio/skin.css" rel="stylesheet" type="text/css" />
+	
+	<!--用到的其它JS库-->
+	<script type="text/javascript" src="js/swfobject.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	
+	<!-- liveRadio皮肤逻辑代码 -->
+	<script type="text/javascript" src="../src/com/sewise/ui/core/Base.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/interfaces/player/ILivePlayer.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/interfaces/skin/ILiveSkin.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/utils/Utils.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/ads/BannersAds.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/ads/AdsContainer.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/liveRadio/ElementObject.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/liveRadio/ElementLayout.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/liveRadio/LogoBox.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/liveRadio/TopBar.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/skins/liveRadio/ControlBar.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/LiveRadio.js"></script>
+	
+</head>
+<body>
+	<div style="width: 600px; height: 200px; margin:50px; padding: 50px; border:5px solid #999;">
+		<div style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; ">
+			<!-- 主播放器文件 -->
+			<script type="text/javascript" src="sewise.player.min.js?server=live&type=mp4&streamurl=http://jackzhang1204.github.io/materials/mov_bbb.mp4&autostart=true&pid=&shifttime=&buffer=2&lang=zh_CN&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Live Radio&poster=&skin=&volume=0.6&duration=3600"></script>
+			
+			<!-- liveRadio皮肤UI -->
+			<div class="sewise-player-ui">
+				<div class="controlbar">
+					<div class="controlbar-bg">控制栏背景</div>
+					<div class="controlbar-progress">
+						<div class="controlbar-progress-totalline"></div>
+						<div class="controlbar-progress-loadedline"></div>
+						<div class="controlbar-progress-playedline"></div>
+						<div class="controlbar-progress-seekline"></div>
+						<div class="controlbar-progress-playpoint"></div>
+					</div>
+					<ul class="controlbar-btns">
+						<li><a href="javascript:;" class="controlbar-btns-play" tabindex="1">播放</a></li>
+						<li><a href="javascript:;" class="controlbar-btns-pause" tabindex="2">暂停</a></li>
+						<li><a href="javascript:;" class="controlbar-btns-soundopen" tabindex="1">音量打开</a></li>
+						<li><a href="javascript:;" class="controlbar-btns-soundclose" tabindex="1">音量关闭</a></li>
+						<li>
+							<div class="controlbar-volumeline">
+								<div class="controlbar-volumeline-bg"></div>
+								<div class="controlbar-volumeline-volume"></div>
+								<div class="controlbar-volumeline-dragger"></div>
+								<div class="controlbar-volumeline-point"></div>
+							</div>
+						</li>
+						<div class="controlbar-playtime">00:00:00/00:00:00</div>
+					</ul>
+				</div>
+				<div class="logo">
+					<a href="http://www.sewise.com/" target="_blank" class="logo-icon" tabindex="1">SEWISE RADIO</a>
+				</div>
+				<div class="topbar">
+					<div class="topbar-program">
+						<div class="topbar-clock">2014-01-01 00:00:00</div>
+						<div class="topbar-program-tip">正在播出</div>
+						<div class="topbar-program-title">电台频道</div>
+					</div>
+				</div>
+				<div class="buffer">
+					<div class="buffer-bg">背景图片</div>
+					<div class="buffer-text">
+						<div class="buffer-text-tip">正在缓冲</div>
+						<div class="buffer-text-bufferPt">...</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+
+	
+	<script>
+		//直播
+		function startPlay2(){
+			SewisePlayer.doPlay();
+		}
+		function playPause2(){
+			SewisePlayer.doPause();
+		}
+		function seekTo2(){
+			SewisePlayer.doSeek("20140224160520");
+		}
+		function playStop2(){
+			SewisePlayer.doStop();
+		}
+		function livePlay2(){
+			SewisePlayer.doLive();
+		}
+		function changeVolume2(){
+			SewisePlayer.setVolume(0.3);
+		}
+		function getLiveTime2(){
+			alert(SewisePlayer.liveTime());
+		}
+		function getPlayTime2() {
+			alert(SewisePlayer.playTime());
+		}
+		function switchChannel2(){
+			SewisePlayer.playChannel("br9anah3", "", true);
+		}
+		function switchStream2(){
+			SewisePlayer.toPlay("rtmp://192.168.1.219/livestream/7gw3yt3h", "title", "", true);
+		}
+		
+	</script>
+	<div style="padding-top: 20px;">
+		<div style="padding-right: 15px;float: left;">[直播接口]</div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:startPlay2();">播放</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:playPause2();">暂停</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:seekTo2();">跳转</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:playStop2();">停止</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:livePlay2();">直播</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:changeVolume2();">更改音量</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:getLiveTime2();">直播时间</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:getPlayTime2();">播放时间</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:switchChannel2();">切换频道</a></div>
+		<div style="padding-right: 15px;float: left;"><a href="javascript:switchStream2();">切换流</a></div>
+		<br clear="all"/>
+	</div>
+
+	<!-- <br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br> -->
+	
+</body>
+</html>

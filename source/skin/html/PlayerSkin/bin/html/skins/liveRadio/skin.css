@@ -1,0 +1,297 @@
+/*
+ * Skin for Sewise Player Plugin
+ * http://www.sewise.com/
+ * 
+ * Skin Name: Radio
+ * 
+ * Copyright (c) 2010-2014 Sewise Ltd
+ * 
+ * Author: Jack Zhang
+ * Skin Version: 1.0.0 (sewise player 1.0.0)
+ * Date: 19th February 2012
+ */
+
+/*播放器皮肤控制元件最外层*/
+div.sewise-player-ui {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	color: white;
+	font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+	font-size: 13px;
+	pointer-events: none;
+	background: url("bg.jpg") 0px 0px repeat-x;
+}
+div.sewise-player-ui *{
+	outline: none;
+}
+
+
+/*播放控制栏*/
+div.sewise-player-ui div.controlbar {
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: 120px;
+	pointer-events: auto;
+}
+div.sewise-player-ui div.controlbar div.controlbar-bg {
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	background: url("controlbarbg.jpg") 0px 0px repeat-x;
+	text-indent: -10000px;
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns {
+	position: absolute;
+	width: 100%;
+	top: 20px;
+	margin: 0;
+	padding: 0;
+	/*overflow: hidden;*/
+	list-style-type: none;
+
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li {
+	float: left;
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a {
+	display:block;
+	
+	text-indent: -10000px;
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-play {
+	width: 50px;
+	height: 50px;
+	margin-left: 35px;
+	background: url("controlbar.png") 0px -50px no-repeat;
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-play:hover {
+	background: url("controlbar.png") -50px -50px no-repeat;
+	
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-pause {
+	width: 50px;
+	height: 50px;
+	margin-left: 35px;
+	background: url("controlbar.png") 0px 0px no-repeat;
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-pause:hover {
+	background: url("controlbar.png") -50px 0px no-repeat;
+}
+
+div.sewise-player-ui div.controlbar ul.controlbar-btns div.controlbar-progress {
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+}
+div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-totalline {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	top: 0px;
+	background-color: #C5820D;
+	border: 1px solid #7E5005;
+}
+div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-loadedline {
+	position: absolute;
+	width: 0%;
+	height: 3px;
+	top: 1px;
+	background-color: #FCAD1C;
+}
+div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-playedline {
+	position: absolute;
+	width: 0%;
+	height: 3px;
+	top: 1px;
+	background-color: #FCAD1C;
+}
+div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-seekline {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	top: 0px;
+	background-color:rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-playpoint {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	display: none;
+}
+div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-playpoint:hover {
+
+}
+
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-soundopen {
+	width: 18px;
+	height: 14px;
+	margin-top: 30px;
+	margin-left: 25px;
+	background: url("controlbar.png") 0px -102px no-repeat;
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-soundopen:hover {
+	
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-soundclose {
+	width: 18px;
+	height: 14px;
+	margin-top: 30px;
+	margin-left: 25px;
+	background: url("controlbar.png") -18px -102px no-repeat;
+}
+div.sewise-player-ui div.controlbar ul.controlbar-btns li a.controlbar-btns-soundclose:hover {
+	
+}
+
+div.sewise-player-ui div.controlbar ul.controlbar-btns div.controlbar-volumeline {
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 17px;
+	top: 28px;
+	left: 5px;
+}
+div.sewise-player-ui div.controlbar div.controlbar-volumeline div.controlbar-volumeline-bg {
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	top: 3px;
+	background: url("controlbar.png") 0px -135px no-repeat;
+}
+div.sewise-player-ui div.controlbar div.controlbar-volumeline div.controlbar-volumeline-volume {
+	position: absolute;
+	width: 50%;
+	height: 5px;
+	top: 6px;
+	left: 3px;
+	background: url("controlbar.png") 0px -150px no-repeat;
+}
+div.sewise-player-ui div.controlbar div.controlbar-volumeline div.controlbar-volumeline-dragger {
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	top: 3px;
+	background-color:rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+div.sewise-player-ui div.controlbar div.controlbar-volumeline div.controlbar-volumeline-point {
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	top: 0px;
+	left: 50%;
+	cursor: pointer;
+	background: url("controlbar.png") 0px -118px no-repeat;
+}
+div.sewise-player-ui div.controlbar div.controlbar-volumeline div.controlbar-volumeline-point:hover {
+	background: url("controlbar.png") -18px -118px no-repeat;
+}
+
+
+div.sewise-player-ui div.controlbar ul.controlbar-btns div.controlbar-playtime {
+	position: relative;
+	float: right;
+	display: block;
+	color: black;
+	font-size: 13px;
+	top: -8px;
+	right: 8px;
+}
+
+
+/*logo*/
+div.sewise-player-ui div.logo {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+div.sewise-player-ui div.logo a.logo-icon {
+	display: block;
+	text-decoration: none;
+	pointer-events: auto;
+	font-size: 8px;
+	color: #B87000;
+}
+
+
+/*标题栏*/
+div.sewise-player-ui div.topbar {
+	width: 100%;
+	height: 120px;
+	color: #B87000;
+	font-size: 16px;
+}
+div.sewise-player-ui div.topbar div.topbar-program {
+	
+}
+div.sewise-player-ui div.topbar div.topbar-clock {
+	position: absolute;
+	left: 180px;
+	top: 35px;
+	text-align: right;
+}
+div.sewise-player-ui div.topbar div.topbar-program div.topbar-program-tip {
+	position: absolute;
+	left: 330px;
+	top: 35px;
+	text-align: right;
+}
+div.sewise-player-ui div.topbar div.topbar-program div.topbar-program-title {
+	position: absolute;
+	width: 350px;
+	line-height: 42px;
+	left: 110px;
+	top: 50px;
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+
+/*缓冲进度条*/
+div.sewise-player-ui div.buffer {
+	position: absolute;
+	width: 175px;
+	height: 70px;
+	left: 15px;
+	top: 40px;
+}
+div.sewise-player-ui div.buffer div.buffer-bg {
+	position: absolute;
+	display: block;
+	width: 42px;
+	height: 60px;
+	left: 0px;
+	top: 0px;
+	
+	background: url("buffer.png") 0px 0px no-repeat;
+	text-indent: -10000px;
+}
+div.sewise-player-ui div.buffer div.buffer-text {
+	position: absolute;
+	font-size: 21px;
+	color: #B87000;
+}
+div.sewise-player-ui div.buffer div.buffer-text div.buffer-text-tip{
+	position: absolute;
+	width: 125px;
+	height: 40px;
+	left: 50px;
+	top: 30px;
+}
+div.sewise-player-ui div.buffer div.buffer-text div.buffer-text-bufferPt {
+	position: absolute;
+	left: 135px;
+	top: 30px;
+}
