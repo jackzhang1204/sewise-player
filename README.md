@@ -21,7 +21,7 @@ Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod
 * 支持多平台，PC包括Windows, MacOS, Linux等。Mobile包括Android, IOS, Windows Phone等。
 * 支持多浏览器兼容，如IE6/7/8/9/10、Google Chrome、Firefox、safari、Opera等。
 * 支持多种视频格式，如mp4、m3u8、oga、webm、theora、flv、f4v等。
-* 支持多种协议直播流，如rtmp、udp、http ts、rtsp等。
+* 支持多种协议直播流，如rtmp、udp、http flv、http ts等。
 * 支持Flash播放m3u8文件，以及AES-128解码播放。
 * 支持PC与Mobile平台播放器自动识别功能。
 * 支持浏览器HTML5与Flash特性检测。
@@ -291,13 +291,14 @@ Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod
 
 
 ## Who is using Sewise Player?
-* [foream.cn](http://www.foream.cn/trending.html)
-* [autotiming.com](http://hiho.autotiming.com/search?keywords=CNN)
-* [csu.edu.cn](http://tv.csu.edu.cn/)
-* [sktv.com.cn](http://www.sktv.com.cn/)
-* [hnntv.cn](http://www.hnntv.cn/zhibo/ly.html)
-* [ciwong.com](http://haohaizi.ciwong.com/)
-* [ltetv](http://www.wandoujia.com/apps/com.sewise.ltetv)
+* [Foream](http://www.foream.cn/trending.html)
+* [Autotiming](http://hiho.autotiming.com/search?keywords=CNN)
+* [中南大学视频](http://tv.csu.edu.cn/)
+* [深圳蛇口电视台](http://www.sktv.com.cn/)
+* [海南网络广播电视台](http://www.hnntv.cn/zhibo/ly.html)
+* [习网](http://haohaizi.ciwong.com/)
+* [热点电视IOS](https://itunes.apple.com/us/app/re-dian-dian-shi/id862286172)
+* [热点电视Android](http://apk.hiapk.com/appinfo/com.pa.sztv)
 
 
 ## License
