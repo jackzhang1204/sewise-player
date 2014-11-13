@@ -29,20 +29,6 @@
 		
 		init();
 		////////////////////////////////////////////////////////////////////////////////////////////
-		document.addEventListener("fullscreenchange", fullscreenChangeHandler);
-		document.addEventListener("MSFullscreenChange", fullscreenChangeHandler);
-		document.addEventListener("mozfullscreenchange", fullscreenChangeHandler);
-		document.addEventListener("webkitfullscreenchange", fullscreenChangeHandler);
-		function fullscreenChangeHandler(){
-			if(document.fullscreenElement != null || document.msFullscreenElement != null
-				|| document.mozFullScreenElement != null || document.webkitFullscreenElement != null){
-				//console.log("document to fullscreen");
-            	that.fullScreen();
-          	}else{
-          		//console.log("document to normalscreen");
-            	that.normalScreen();
-          	}
-      	}
 		function init(){
 			if(defProgressWidth < 0){
 				defProgressWidth = defProgressWidth + $playtime.width();
@@ -52,17 +38,26 @@
 		}
 		this.fullScreen = function(state){
 			if(state == "not-support"){
+				$("body").css("overflow", "hidden");
+				
 				var clientW = $(window).width();
-				var clientH = $(window).height() - 8;
+				var clientH = $(window).height();
 				//console.log("clientW: " + clientW + "\nclientH: " + clientH);
 				$container.css("width", clientW);
 				$container.css("height", clientH);
 				
-				var offsetX = (defLeftValue - defOffsetX) + 'px';
-				var offsetY = (defTopValue - defOffsetY) + 'px';
+				//var offsetX = (defLeftValue - defOffsetX) + 'px';
+				//var offsetY = (defTopValue - defOffsetY) + 'px';
+				
+				var scrollL = $(document).scrollLeft();
+				var scrollT = $(document).scrollTop();
+				var marginL = parseInt($("body").css("margin-left"));
+				var marginT = parseInt($("body").css("margin-top"));
+				var offsetX = (defLeftValue - defOffsetX + scrollL) + 'px';
+				var offsetY = (defTopValue - defOffsetY + scrollT - marginT) + 'px';
+
 				$container.css("left", offsetX);
 				$container.css("top", offsetY);
-				$("body").css("overflow", "hidden");
 				
 				/*$container.css("width", window.screen.width);
 				$container.css("height", window.screen.height);*/
@@ -83,13 +78,28 @@
 			$controlBarProgress.css("width", fullProgressWidth);
 		}
 		this.normalScreen = function(){
-			$container.css("width", defStageWidth);
-			$container.css("height", defStageHeight);
+			//$container.css("width", defStageWidth);
+			//$container.css("height", defStageHeight);
+			
+			$container.css("width", "100%");
+			$container.css("height", "100%");
 			
 			$container.css("left", defLeftValue);
 			$container.css("top", defTopValue);
 			$("body").css("overflow", defOverflow);
 			
+			defProgressWidth = parseInt(defStageWidth) - btnsWidth;
+			if(defProgressWidth < 0){
+				defProgressWidth = defProgressWidth + $playtime.width();
+				$playtime.hide();
+			}else{
+				$playtime.show();
+			}
+			$controlBarProgress.css("width", defProgressWidth);
+		}
+		this.resize = function(){
+			defStageWidth = $container.width();
+			defStageHeight = $container.height();
 			defProgressWidth = parseInt(defStageWidth) - btnsWidth;
 			if(defProgressWidth < 0){
 				defProgressWidth = defProgressWidth + $playtime.width();

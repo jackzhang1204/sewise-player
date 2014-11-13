@@ -275,9 +275,36 @@
 		function showBar(){
 			$controlbar.css("visibility", "visible");
 		}
+
 		//////////////////////////////////////////
-		
+		document.addEventListener("fullscreenchange", fullscreenChangeHandler);
+		document.addEventListener("MSFullscreenChange", fullscreenChangeHandler);
+		document.addEventListener("mozfullscreenchange", fullscreenChangeHandler);
+		document.addEventListener("webkitfullscreenchange", fullscreenChangeHandler);
+		function fullscreenChangeHandler(){
+			if(document.fullscreenElement != null || document.msFullscreenElement != null
+				|| document.mozFullScreenElement != null || document.webkitFullscreenElement != null){
+				//console.log("document to fullscreen");
+            	elementLayout.fullScreen();
+          	}else{
+          		//console.log("document to normalscreen");
+            	elementLayout.normalScreen();
+          	}
+          	that.timeUpdate(playTime);
+      	}
+		$(window).bind("resize", nsResizeHandler);
+		function nsResizeHandler(e){
+			elementLayout.resize();
+			that.timeUpdate(playTime);
+		}
+		function fsResizeHandler(e){
+			elementLayout.fullScreen("not-support");
+			that.timeUpdate(playTime);
+		}
+
 		function fullScreen(obj){
+			$(window).unbind("resize", nsResizeHandler);
+
 			//console.log("to fullScreen");
 			if (obj.requestFullscreen){
 				obj.requestFullscreen();
@@ -296,9 +323,15 @@
 
 				//为保留直播UI控制时移，取消原生UI全屏功能
 				elementLayout.fullScreen("not-support");
+
+				that.timeUpdate(playTime);
+				$(window).bind("resize", fsResizeHandler);
 			}else{
 				//console.log("not-support");
 				elementLayout.fullScreen("not-support");
+
+				that.timeUpdate(playTime);
+				$(window).bind("resize", fsResizeHandler);
 			}
 			screenState = "full";
 			return;
@@ -314,8 +347,13 @@
 				document.webkitCancelFullScreen();
 			}else{
 				elementLayout.normalScreen();
+
+				that.timeUpdate(playTime);
+				$(window).unbind("resize", fsResizeHandler);
 			}
 			screenState = "normal";
+
+			$(window).bind("resize", nsResizeHandler);
 			return;
 		}
 

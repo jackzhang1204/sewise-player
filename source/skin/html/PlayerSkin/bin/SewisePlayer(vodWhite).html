@@ -3,13 +3,15 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 	<title>Sewise Player</title>
 	<!--vodWhite皮肤样式文件-->
 	<link href="html/skins/vodWhite/skin.css" rel="stylesheet" type="text/css" />
-
+	
 	<!--用到的其它JS库-->
 	<script type="text/javascript" src="js/swfobject.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script src="http://192.168.1.116:8081/target/target-script-min.js#anonymous"></script> -->
 
 	<!-- vodWhite皮肤逻辑代码 -->
 	<script type="text/javascript" src="../src/com/sewise/ui/core/Base.js"></script>
@@ -18,19 +20,34 @@
 	<script type="text/javascript" src="../src/com/sewise/ui/utils/Utils.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/ads/BannersAds.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/ads/AdsContainer.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/data/Statistics.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/ElementObject.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/ElementLayout.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/LogoBox.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/TopBar.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodWhite/ControlBar.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/VodWhite.js"></script>
+	
 </head>
 <body>
 	<div style="width: 640px; height: 352px; margin:50px; padding: 50px; border:5px solid #999;">
 		<div style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; ">
 			<!-- 主播放器文件 -->
 			<script type="text/javascript" src="sewise.player.min.js?server=vod&type=mp4&videourl=http://jackzhang1204.github.io/materials/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Vod Video 标题&buffer=5&poster=http://player.sewise.com/uploads/allimg/140515/1_1447358001.png&controlbardisplay=enable&topbardisplay=enable&volume=0.6&skin="></script>
-			
+
+			<!-- <script type="text/javascript" src="sewise.player.min.js"></script>
+			<script type="text/javascript">
+				SewisePlayer.setup({
+					server: "vod",
+					type: "m3u8",
+					autostart: "true",
+					//videourl: "http://116.77.32.199:5080/hls/xikf3h9q.m3u8",
+					videourl: "http://116.77.32.202:5080/data/userdata/vod/resource/201408/21141727.flv.m3u8",
+			        skin: "",
+			        title: "Live M3U8",
+			        lang: 'zh_CN'
+				});
+			</script> -->
 			
 			<!-- vodWhite皮肤UI -->
 			<div class="sewise-player-ui">

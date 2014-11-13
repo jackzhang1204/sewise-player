@@ -18,11 +18,13 @@
 	<script type="text/javascript" src="../src/com/sewise/ui/utils/Utils.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/ads/BannersAds.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/ads/AdsContainer.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/data/Statistics.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileTransparent/ElementObject.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileTransparent/ElementLayout.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileTransparent/LogoBox.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileTransparent/TopBar.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileTransparent/ControlBar.js"></script>
+	
 	<script type="text/javascript" src="../src/com/sewise/ui/VodMobileTransparent.js"></script>
 
 	<!-- <script src="http://192.168.1.116:8081/target/target-script-min.js#anonymous"></script> -->
@@ -32,14 +34,25 @@
 		<div style="width: 100%; height: 100%; position: relative; left: 0px; top: 0px; ">
 			<script type="text/javascript" src="sewise.player.min.js"></script>
 			<script type="text/javascript">
+				var statistics_data = {
+					"playCount": {
+						"request-url": "http://app.rdttv.com:81/index.php",
+						"request-data": {
+				        	"mod": "api",
+				          	"do": "showtime",
+				          	"eid": "1181",
+				          	"devid": "863654027668599",
+				          	"type": 0,
+				          	"intervallen": 2000
+				        }
+					}
+				}
 	  			SewisePlayer.setup({
 					server: "vod",
 					type: "mp4",
 					videourl: "http://jackzhang1204.github.io/materials/mov_bbb.mp4",
-					//videourl: "http://media.w3.org/2010/05/sintel/trailer.mp4",
-					//type: "m3u8",
-					//videourl: "http://netdisk.foream.cn:8080/netdisk/m3u8/25179_0.m3u8",
-			        //skin: "vodMobileTransparent",
+					
+			        statistics: statistics_data,
 			        title: "TEST测试视频"
 				});
 			</script>

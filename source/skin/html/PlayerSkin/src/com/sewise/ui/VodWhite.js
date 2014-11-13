@@ -98,6 +98,14 @@
 			
 			//console.log("customStrings: " + strings);
 		}
+		SewisePlayerSkin.IVodSkin.customDatas = function(data){
+			if(data){
+				if(data["logoLink"]){
+					logoBox.setLink(data["logoLink"]);
+				}
+			}
+			//console.log(data);
+		}
 		SewisePlayerSkin.IVodSkin.fullScreen = function(){
 			controlBar.fullScreen();
 		}
@@ -107,6 +115,12 @@
 		SewisePlayerSkin.IVodSkin.initialAds = function(data){
 			if(data){
 				SewisePlayerSkin.AdsContainer(elementObject, data);
+			}
+			//console.log(data);
+		}
+		SewisePlayerSkin.IVodSkin.initialStatistics = function(data){
+			if(data){
+				SewisePlayerSkin.Statistics(data);
 			}
 			//console.log(data);
 		}

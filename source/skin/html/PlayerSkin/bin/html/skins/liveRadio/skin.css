@@ -24,7 +24,7 @@ div.sewise-player-ui {
 	padding: 0px;
 	overflow: hidden;
 	color: white;
-	font-family: 'Segoe UI', Verdana, Arial, sans-serif;
+	font-family: 'Segoe UI', Arial, sans-serif;
 	font-size: 13px;
 	pointer-events: none;
 	background: url("bg.jpg") 0px 0px repeat-x;
@@ -121,7 +121,7 @@ div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progr
 	height: 5px;
 	top: 0px;
 	background-color:rgba(0, 0, 0, 0);
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-playpoint {
 	position: absolute;
@@ -243,7 +243,7 @@ div.sewise-player-ui div.topbar div.topbar-clock {
 }
 div.sewise-player-ui div.topbar div.topbar-program div.topbar-program-tip {
 	position: absolute;
-	left: 330px;
+	left: 335px;
 	top: 35px;
 	text-align: right;
 }

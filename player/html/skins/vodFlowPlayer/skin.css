@@ -89,6 +89,7 @@ div.sewise-player-ui div.controlbar ul.controlbar-btns div.controlbar-progress {
 	width: 315px;
 	height: 20px;
 	top: 0px;
+	left: 10px;
 }
 div.sewise-player-ui div.controlbar div.controlbar-progress div.controlbar-progress-totalline {
 	position: absolute;

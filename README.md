@@ -296,6 +296,7 @@ QQ交流群：237432172
 * [Autotiming](http://hiho.autotiming.com/search?keywords=CNN)
 * [中南大学视频](http://tv.csu.edu.cn/)
 * [深圳蛇口电视台](http://www.sktv.com.cn/)
+* [深圳天威-威视网](http://www.topway.cn/)
 * [海南网络广播电视台](http://www.hnntv.cn/zhibo/ly.html)
 * [习网](http://haohaizi.ciwong.com/)
 * [热点电视IOS](https://itunes.apple.com/us/app/re-dian-dian-shi/id862286172)

@@ -35,11 +35,13 @@
 		controlBarDisplay: function(state){},
 		topBarDisplay: function(state){},
 		customStrings: function(strings){},
+		customDatas: function(data){},
 		
 		fullScreen: function(){},
 		noramlScreen: function(){},
 		
-		initialAds: function(data){}
+		initialAds: function(data){},
+		initialStatistics: function(data){}
 		
 	};
 	

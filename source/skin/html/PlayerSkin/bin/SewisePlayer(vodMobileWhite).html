@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="../src/com/sewise/ui/utils/Utils.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/ads/BannersAds.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/ads/AdsContainer.js"></script>
+	<script type="text/javascript" src="../src/com/sewise/ui/data/Statistics.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileWhite/ElementObject.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileWhite/ElementLayout.js"></script>
 	<script type="text/javascript" src="../src/com/sewise/ui/skins/vodMobileWhite/LogoBox.js"></script>
@@ -51,6 +52,19 @@
 				        ]
 				    }
 				}
+				var statistics_data = {
+					"playCount": {
+						"request-url": "http://app.rdttv.com:81/index.php",
+						"request-data": {
+				        	"mod": "api",
+				          	"do": "showtime",
+				          	"eid": "1181",
+				          	"devid": "863654027668599",
+				          	"type": 0,
+				          	"intervallen": 2000
+				        }
+					}
+				}
 			</script>
 			<script type="text/javascript" src="sewise.player.min.js"></script>
 			<script type="text/javascript">
@@ -62,7 +76,8 @@
 					//videourl: "http://netdisk.foream.cn:8080/netdisk/m3u8/25179_0.m3u8",
 			        //skin: "vodMobileWhite",
 			        title: "TEST",
-			         adsjsondata: ads_json_data
+			        statistics: statistics_data,
+			        adsjsondata: ads_json_data
 				});
 			</script>
 

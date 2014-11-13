@@ -276,9 +276,36 @@
 		function showBar(){
 			$controlbar.css("visibility", "visible");
 		}
+
 		//////////////////////////////////////////
-		
+		document.addEventListener("fullscreenchange", fullscreenChangeHandler);
+		document.addEventListener("MSFullscreenChange", fullscreenChangeHandler);
+		document.addEventListener("mozfullscreenchange", fullscreenChangeHandler);
+		document.addEventListener("webkitfullscreenchange", fullscreenChangeHandler);
+		function fullscreenChangeHandler(){
+			if(document.fullscreenElement != null || document.msFullscreenElement != null
+				|| document.mozFullScreenElement != null || document.webkitFullscreenElement != null){
+				//console.log("document to fullscreen");
+            	elementLayout.fullScreen();
+          	}else{
+          		//console.log("document to normalscreen");
+            	elementLayout.normalScreen();
+          	}
+          	that.timeUpdate(playTime);
+      	}
+		$(window).bind("resize", nsResizeHandler);
+		function nsResizeHandler(e){
+			elementLayout.resize();
+			that.timeUpdate(playTime);
+		}
+		function fsResizeHandler(e){
+			elementLayout.fullScreen("not-support");
+			that.timeUpdate(playTime);
+		}
+
 		function fullScreen(obj){
+			$(window).unbind("resize", nsResizeHandler);
+			
 			//console.log("to fullScreen");
 			if (obj.requestFullscreen){
 				obj.requestFullscreen();
@@ -297,6 +324,9 @@
 			}else{
 				//console.log("not-support");
 				elementLayout.fullScreen("not-support");
+				
+				that.timeUpdate(playTime);
+				$(window).bind("resize", fsResizeHandler);
 			}
 			screenState = "full";
 			return;
@@ -312,8 +342,13 @@
 				document.webkitCancelFullScreen();
 			}else{
 				elementLayout.normalScreen();
+				
+				that.timeUpdate(playTime);
+				$(window).unbind("resize", fsResizeHandler);
 			}
 			screenState = "normal";
+			
+			$(window).bind("resize", nsResizeHandler);
 			return;
 		}
 
@@ -340,12 +375,20 @@
 			isPlaying = false;
 		}
 		this.setDuration = function(totalTimes){
-			duration = totalTimes;
-			durationHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(duration);
+			//duration = totalTimes;
+			
+			duration = (totalTimes != Infinity) ? totalTimes : 3600;
+			if(totalTimes > 1){
+				durationHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(duration);
+			}
 			
 			//console.log(duration);
 		}
 		this.timeUpdate = function(currentTime){
+			if(currentTime == undefined || currentTime == Infinity){
+				currentTime = 0;
+			}
+			
 			playTime = currentTime;
 			playTimeHMS = SewisePlayerSkin.Utils.stringer.secondsToHMS(playTime);
 			$playtime.text(playTimeHMS + "/" + durationHMS);

@@ -11,9 +11,14 @@
 			e.originalEvent.stopPropagation();
 		});
 		/////////////////////////////
+		var logoLink = "http://www.foream.cn/";
 		this.setLogo = function(url){
 			$logoIcon.css("background", "url(" + url + ") 0px 0px no-repeat");
-			$logoIcon.attr("href", "http://www.foream.cn/");
+			$logoIcon.attr("href", logoLink);
+		}
+		this.setLink = function(url){
+			logoLink = url;
+			$logoIcon.attr("href", logoLink);
 		}
 		
 	};

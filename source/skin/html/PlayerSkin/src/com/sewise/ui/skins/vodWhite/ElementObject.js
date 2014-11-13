@@ -57,7 +57,7 @@
 		//改为.width()只取元素的尺寸值（不带单位），这样可以防止zepto.js库取到百分比值。
 		this.defStageWidth = this.$container.width();
 		this.defStageHeight = this.$container.height();
-		
+
 		//获取初始时container的相对偏移位置///////
 		this.defLeftValue = parseInt(this.$container.css("left"));
 		this.defTopValue = parseInt(this.$container.css("top"));
