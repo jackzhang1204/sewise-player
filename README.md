@@ -4,7 +4,7 @@
 
 Support for [jQuery](http://jquery.com/) HTML player skins. 
 
-Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_videourl_mp4.html) | [Live直播](http://219.232.161.204/libs/swfplayer/player/live.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Fallback地址](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | [Bootstrap支持](http://jackzhang1204.github.io/sewise/sewise_player/demos/bootstrap.html) | [M3u8跨平台](http://jackzhang1204.github.io/sewise/sewise_player/demos/m3u8_cross_platform.html) | [More更多](http://jackzhang1204.github.io/sewise/sewise_player/demos/index.html)
+Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_videourl_mp4.html) | [Live直播](http://jackzhang1204.github.io/sewise/sewise_player/demos/live_pid.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Fallback地址](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | [Bootstrap支持](http://jackzhang1204.github.io/sewise/sewise_player/demos/bootstrap.html) | [M3u8跨平台](http://jackzhang1204.github.io/sewise/sewise_player/demos/m3u8_cross_platform.html) | [More更多](http://jackzhang1204.github.io/sewise/sewise_player/demos/index.html)
 
 QQ交流群：237432172
 
@@ -12,7 +12,7 @@ QQ交流群：237432172
 
 
 ### Sewise Player是一款专业的免费网页HTML5视频、流播放器，它功能强大，体积小，跨平台，兼容性好，使用方便简洁。
-* 播放器是主要以HTML5技术为平台开发，同时兼容Flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器播放视频。
+* 播放器是主要以HTML5技术为平台开发，同时兼容Flash技术，实现了跨平台各浏览器兼容的视频播放。使用Sewise Player您可以在Windows, MacOS, Linux，Windows Phone, Android, IOS等任意平台上，通过对应的浏览器或者APP中基于WebView播放视频。
 * Sewise Player使用非常简单，只要在页面对应的DIV内嵌入一个JS文件即可，播放器将通过自动识别浏览器的功能来启用HTML5或Flash模式播放视频。您不需要掌握任何JavaScript或ActionScript编码技术就可以制作出专业的网页视频播放器。
 * Sewise Player即可以做为单一的前台播放器来在页面上播放视频和流，也可以结合Sewise Server后台技术实现专业的可交互的点播、直播视频播放。
 
