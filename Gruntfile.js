@@ -3,7 +3,7 @@ module.exports = function(grunt) {
                    ' * Name: SewisePlayer framework 2.4.9\n' +
                    ' * Author: Jack Zhang\n' +
                    ' * Website: http://player.sewise.com\n' +
-                   ' * Date: November 12, 2014\n' +
+                   ' * Date: November 28, 2014\n' +
                    ' * Copyright: 2013-2014, Sewise\n' +
                    ' * Mail: jackzhang1204@gmail.com\n' +
                    ' * QQ: 237432172\n' +
