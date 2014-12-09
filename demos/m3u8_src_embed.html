@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title>Sewise Player</title>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<div style="width: 700px; height: 300px; ">
+		<script type="text/javascript" src="http://jackzhang1204.github.io/sewise/sewise_player/player/sewise.player.min.js"></script>
+		<script type="text/javascript">
+			var letvURL = "http://g3.letv.cn/vod/v2/NzQvMzEvNTIvbGV0di11dHMvMTQvdmVyXzAwXzE2LTI2ODY4MjI5LWF2Yy0yMjk1OTQtYWFjLTMyMDAxLTY5Njg3NTMtMjM2MTYwMjg3LTIzZWM2YTJjNGVjZmNjNTYzZWJmYzFmMmQ1MjcwZTRmLTE0MDc3ODUzMzEwMzYubXA0?b=271&mmsid=2181963&tm=1415858824&key=ee1f384d73f341e23289643a14cd3610&platid=3&splatid=304&playid=0&tss=ios&vtype=21&cvid=964198564846&retry=1";
+			var youkuURL = "http://pl.youku.com/playlist/m3u8?ts=1413447142&keyframe=1&ykss=a6ec3d54e76f345821be8ae7&vid=XMzM3MzIwNTI0&type=flv&sid=6413447142906212bad07&token=6701&oip=1944544396&ep=W3QaazLJ6MJjY0RQ87mH5t3ffCVpllWMsoRGJNyNP6EPUnfLuNmZc6IQ9vkzJWPC&did=3f2189e6a744e68de6761a20ceaf379aa8acfad4&ctype=21&ev=1";
+			var letvTitle = "播放乐视电影";
+			var youkuTitle = "播放优酷电影";
+			SewisePlayer.setup({
+				server: "vod",
+				type: "m3u8",
+				videourl: letvURL,
+		        skin: "vodWhite",
+		        claritybutton: "disable",
+		        title: letvTitle,
+		        lang: 'zh_CN'
+			});
+			$(document).ready(function(){
+				$("#switch").text(youkuTitle);
+				$("#switch").click(function(e){
+					if($("#switch").text() == youkuTitle){
+						SewisePlayer.toPlay(youkuURL, youkuTitle, 0, true);
+						$("#switch").text(letvTitle);
+					}else{
+						SewisePlayer.toPlay(letvURL, letvTitle, 0, true);
+						$("#switch").text(youkuTitle);
+					}
+				});
+			});
+		</script>
+	</div>
+	<div style="padding: 20px;"><button id="switch" style="width: 120px; height: 30px; "></button></div>
+	<div style="padding: 10px;float: left;">注：如果当前设备为Mobile平台，播放器将自动启用HTML5播放模块播放m3u8文件。</div>
+	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
+</body>
+</html>

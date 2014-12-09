@@ -11,10 +11,10 @@
 			padding: 0px;
 		}
 	</style>
+	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
 </head>
 <body>
-	<div style="width: 605px; height: 340px; margin:50px 200px; padding: 30px; border:5px solid #CCC; ">
-		<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+	<div id="player" style="width: 605px; height: 340px; margin:50px 200px; padding: 30px; border:5px solid #CCC; ">
 		<script type="text/javascript">
 			SewisePlayer.setup({
 				server: "vod",
@@ -53,7 +53,7 @@
 					ogg: "http://jackzhang1204.github.io/materials/mov_bbb.ogg",
 					webm: "http://jackzhang1204.github.io/materials/mov_bbb.webm"
 				}
-			});
+			}, "player");
 			//保存当前用户选取的视频清晰度
 			function saveClarityName(name){
 				console.log(name);

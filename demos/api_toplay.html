@@ -3,23 +3,24 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
 	<title>Sewise Player</title>
 	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
 </head>
 <body>
-	<div id="container" style="width: 640px; height: 480px; ">
+	<div id="player" style="width: 640px; height: 352px; ">
 		<script type="text/javascript">
 			SewisePlayer.setup({
 				server: "vod",
-				type: "flv",
-				videourl: "http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv",
-				poster: "http://jackzhang1204.github.io/materials/poster.png",
+				type: "mp4",
 		        skin: "vodWhite",
-		        title: "Tile 标题",
-		        lang: 'en_US',
-		        claritybutton: 'disable'
-			}, "container");
+		        title: "A-A-A-A-A",
+		        lang: 'zh_CN'
+			}, "player");
+			setTimeout(function(){
+				SewisePlayer.toPlay("http://jackzhang1204.github.io/materials/mov_bbb.mp4", "我老婆是大佬3", 0, true);
+				SewisePlayer.fullScreen();
+			}, 3000)
 		</script>
 	</div>
 	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>

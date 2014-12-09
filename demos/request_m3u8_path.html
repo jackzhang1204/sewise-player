@@ -5,24 +5,27 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
 	<title>Sewise Player</title>
-	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
 </head>
 <body>
-	<div id="player" style="width: 640px; height: 352px; ">
+	<div style="width: 640px; height: 352px; ">
+		<script type="text/javascript" src="../player/sewise.player.min.js"></script>
 		<script type="text/javascript">
 			SewisePlayer.setup({
 				server: "vod",
 				type: "m3u8",
 				autostart: "true",
-				poster: "http://jackzhang1204.github.io/materials/poster.png",
-				videourl: "http://116.77.32.199:5080/hls/xikf3h9q.m3u8",
+				
+				videourl: "http://g3.letv.cn/vod/v2/NzQvMzEvNTIvbGV0di11dHMvMTQvdmVyXzAwXzE2LTI2ODY4MjI5LWF2Yy0yMjk1OTQtYWFjLTMyMDAxLTY5Njg3NTMtMjM2MTYwMjg3LTIzZWM2YTJjNGVjZmNjNTYzZWJmYzFmMmQ1MjcwZTRmLTE0MDc3ODUzMzEwMzYubXA0?b=271&mmsid=2181963&tm=1415858824&key=ee1f384d73f341e23289643a14cd3610&platid=3&splatid=304&playid=0&tss=ios&vtype=21&cvid=964198564846&retry=1",
+				
+				//videourl: "http://pl.youku.com/playlist/m3u8?ts=1413447142&keyframe=1&ykss=a6ec3d54e76f345821be8ae7&vid=XMzM3MzIwNTI0&type=flv&sid=6413447142906212bad07&token=6701&oip=1944544396&ep=W3QaazLJ6MJjY0RQ87mH5t3ffCVpllWMsoRGJNyNP6EPUnfLuNmZc6IQ9vkzJWPC&did=3f2189e6a744e68de6761a20ceaf379aa8acfad4&ctype=21&ev=1",
+				
 		        skin: "vodWhite",
-		        title: "Live M3U8",
+		        title: "request m3u8 path",
 		        lang: 'zh_CN'
-			}, "player");
+			});
 		</script>
-
 	</div>
+	
 	<div style="padding: 20px;float: left;">注：如果当前平台为PC，播放器将启用Flash播放m3u8文件。如果当前平台为Mobile，播放器将启用HTML5播放m3u8文件。</div>
 		<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
 </body>
