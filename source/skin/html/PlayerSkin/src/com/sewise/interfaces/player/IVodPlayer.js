@@ -19,7 +19,8 @@
 		showTextTip: function(){},
 		hideTextTip: function(){},
 
-		muted: function(){}
+		muted: function(){},
+		bufferProgress: function(p){}
 		
 	};
 	

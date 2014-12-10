@@ -52,6 +52,9 @@
 		function getBufferProgress() {
 			alert(SewisePlayer.bufferProgress());
 		}
+		function setDuration(){
+        	SewisePlayer.setDuration(1245);
+		}
 
 		
 		//播放器回调方法
@@ -135,6 +138,7 @@
 		<div style="padding-right: 20px;float: left;"><a href="javascript:toFullScreen();">全屏</a></div>
 		<div style="padding-right: 20px;float: left;"><a href="javascript:toNoramlScreen();">普屏</a></div>
 		<div style="padding-right: 20px;float: left;"><a href="javascript:getBufferProgress();">缓冲进度</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:setDuration();">设置时长</a></div>
 		<br clear="all"/>
 	</div>
 	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>

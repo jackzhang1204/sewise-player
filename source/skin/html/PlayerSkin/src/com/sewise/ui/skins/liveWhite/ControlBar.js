@@ -192,6 +192,10 @@
 			$(document).bind("mouseup", ppPointMouseUpHandler);
 		});
 		function containerMouseMoveHandler(e){
+			if($progressPlayedLine.width() > $progressLoadedLine.width()){
+				return;
+			}
+			
 			var currentWidth = ppLineWidth + (e.pageX - beforeDownX);
 			if(currentWidth > 0 && currentWidth < psLineWidth){
 				//console.log(currentWidth);
@@ -231,6 +235,10 @@
 			$progressPlayedPoint.bind("touchend", ppPointTouchEndHandler);
 		}
 		function ppPointTouchMoveHandler(event){
+			if($progressPlayedLine.width() > $progressLoadedLine.width()){
+				return;
+			}
+			
 			//console.log("touchmove");
 			e = event.originalEvent;
 			//console.log(e);

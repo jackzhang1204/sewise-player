@@ -13,18 +13,23 @@
 			SewisePlayer.setup({
 				server: "live",
 				type: "rtmp",
-				autostart: "true",
-				buffer: 1,
 				streamurl: "rtmp://219.232.161.204/livestream/mtzysunq",
 		        skin: "liveWhite",
+		        title: "API-setDuration",
 		        poster: "http://jackzhang1204.github.io/materials/poster.png",
-		        claritybutton: "disable",
-				title: "rtmp fallback m3u8",
+		        lang: 'zh_CN',
 		        fallbackurls:{
-	        		m3u8: "http://219.232.161.204:80/hls/vk5nx2cj.m3u8"
+					m3u8: "http://219.232.161.204:80/hls/vk5nx2cj.m3u8"
 				}
 			}, "player");
+
+			function setDuration(){
+	        	SewisePlayer.setDuration(645);
+			}
 		</script>
+	</div>
+	<div style="padding: 10px;float: left;">
+		<input style="width: 120px; height: 30px;" type="button" value="更新时间跨度" onclick="setDuration()"/>
 	</div>
 	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
 </body>
