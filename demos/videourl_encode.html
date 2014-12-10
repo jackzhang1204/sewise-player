@@ -6,46 +6,25 @@
 <title>Sewise Player</title>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
-	var srcPath = "../player/sewise.player.min.js?server=vod&type=m3u8&videourl=" + encodeURIComponent("http://g3.letv.cn/vod/v2/NzQvMzEvNTIvbGV0di11dHMvMTQvdmVyXzAwXzE2LTI2ODY4MjI5LWF2Yy0yMjk1OTQtYWFjLTMyMDAxLTY5Njg3NTMtMjM2MTYwMjg3LTIzZWM2YTJjNGVjZmNjNTYzZWJmYzFmMmQ1MjcwZTRmLTE0MDc3ODUzMzEwMzYubXA0?b=271&mmsid=2181963&tm=1415858824&key=ee1f384d73f341e23289643a14cd3610&platid=3&splatid=304&playid=0&tss=ios&vtype=21&cvid=964198564846&retry=1") + "&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite";
-
-	var fallbackurls = {
-		ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
-		webm: "http://www.w3schools.com/html/mov_bbb.webm"
-	}
-	var state = "removed";
-	function addPlayer(){
-		if(state == "removed"){
-			var script = document.createElement('script');
-			script.type = "text/javascript";
-			script.src = srcPath + "&fallbackurls=" + encodeURIComponent(JSON.stringify(fallbackurls, "", "\t"));
-			//$("#container").append(script);
-			//用JQ的append方法动态添加脚本会造成脚本被执行两次，所以这里改为原生动态添加脚本的方式。
-			$("#container").get(0).appendChild(script);
-			state = "added";
+	$(document).ready(function(){
+		var srcPath = "../player/sewise.player.min.js?server=vod&type=m3u8&videourl=" + encodeURIComponent("http://g3.letv.cn/vod/v2/NzQvMzEvNTIvbGV0di11dHMvMTQvdmVyXzAwXzE2LTI2ODY4MjI5LWF2Yy0yMjk1OTQtYWFjLTMyMDAxLTY5Njg3NTMtMjM2MTYwMjg3LTIzZWM2YTJjNGVjZmNjNTYzZWJmYzFmMmQ1MjcwZTRmLTE0MDc3ODUzMzEwMzYubXA0?b=271&mmsid=2181963&tm=1415858824&key=ee1f384d73f341e23289643a14cd3610&platid=3&splatid=304&playid=0&tss=ios&vtype=21&cvid=964198564846&retry=1") + "&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo&buffer=5&skin=vodWhite";
+		
+		var fallbackurls = {
+			ogg: "http://www.w3schools.com/html/mov_bbb.ogg",
+			webm: "http://www.w3schools.com/html/mov_bbb.webm"
 		}
-	}
-	function removePlayer(){
-		if(window.SewisePlayer){
-			SewisePlayer.doStop();
-		}
-		if(state == "added"){
-			$("#container").empty();
-			state = "removed";
-		}
-	}
+		
+		var script = document.createElement('script');
+		script.type = "text/javascript";
+		script.src = srcPath + "&fallbackurls=" + encodeURIComponent(JSON.stringify(fallbackurls, "", "\t"));
+		//$("#container").append(script);
+		//用JQ的append方法动态添加脚本会造成脚本被执行两次，所以这里改为原生动态添加脚本的方式。
+		$("#container").get(0).appendChild(script);
+	});
 </script>
 </head>
 <body>
-	<div>
-		<div id="container" style="width: 640px; height: 352px; border: solid 1px #DDD"></div>
-		<div>
-		<div style="padding: 10px;">
-			<button onclick="addPlayer()">Add Player</button>
-			<button onclick="removePlayer()">Remove Player</button>
-		</div>
-		</div>
-		<div style="padding: 20px;float: left;">注：请在Web环境下预览该文件。</div>
-	</div>
+	<div id="container" style="width: 640px; height: 352px; border: solid 1px #DDD"></div>
 	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
 </body>
 </html>
