@@ -69,6 +69,14 @@
 				var date = new Date();
 				date.setHours(ho, mi, se);
 				return date;
+			},
+			hmsToSeconds: function(hms){
+				var hmsArray = hms.split(":");
+				var ho = hmsArray[0] ? parseInt(hmsArray[0]) : 0;
+				var mi = hmsArray[1] ? parseInt(hmsArray[1]) : 0;
+				var se = hmsArray[2] ? parseInt(hmsArray[2]) : 0;
+				var seconds = ho * 3600 + mi *60 + se;
+				return seconds;
 			}
 			
 		},

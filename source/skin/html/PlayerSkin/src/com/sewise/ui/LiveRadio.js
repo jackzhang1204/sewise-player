@@ -125,6 +125,10 @@
 			
 			//console.log(SewisePlayerSkin.Utils.language.getString("titleTip"));
 		}
+		SewisePlayerSkin.ILiveSkin.refreshTimes = function(startTime, endTime){
+			//console.log(startTime + "/" + endTime);
+			controlBar.refreshTimes(startTime, endTime);
+		}
 		
 		
 		//通知主播放器皮肤已经初始化完成.

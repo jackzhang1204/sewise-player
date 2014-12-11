@@ -40,7 +40,8 @@
 		noramlScreen: function(){},
 		
 		initialAds: function(data){},
-		initialStatistics: function(data){}
+		initialStatistics: function(data){},
+		refreshTimes: function(startTime, endTime){}
 		
 	};
 	

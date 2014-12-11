@@ -116,6 +116,9 @@
 		function switchStream2(){
 			SewisePlayer.toPlay("rtmp://192.168.1.219/livestream/7gw3yt3h", "title", "", true);
 		}
+		function refreshTimeSpan(){
+        	SewisePlayer.refreshTimeSpan("15:30:00", "15:40:00");
+		}
 		
 	</script>
 	<div style="padding-top: 20px;">
@@ -130,6 +133,7 @@
 		<div style="padding-right: 15px;float: left;"><a href="javascript:getPlayTime2();">播放时间</a></div>
 		<div style="padding-right: 15px;float: left;"><a href="javascript:switchChannel2();">切换频道</a></div>
 		<div style="padding-right: 15px;float: left;"><a href="javascript:switchStream2();">切换流</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:refreshTimeSpan();">刷新显示时间</a></div>
 		<br clear="all"/>
 	</div>
 

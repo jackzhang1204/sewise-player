@@ -26,10 +26,14 @@
 			function setDuration(){
 	        	SewisePlayer.setDuration(645);
 			}
+			function refreshTimeSpan(){
+	        	SewisePlayer.refreshTimeSpan("15:30:00", "15:40:00");
+			}
 		</script>
 	</div>
 	<div style="padding: 10px;float: left;">
 		<input style="width: 120px; height: 30px;" type="button" value="更新时间跨度" onclick="setDuration()"/>
+		<input style="width: 120px; height: 30px;" type="button" value="刷新显示时间" onclick="refreshTimeSpan()"/>
 	</div>
 	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
 </body>

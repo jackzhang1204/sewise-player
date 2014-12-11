@@ -24,7 +24,8 @@
 		
 		muted: function(){},
 		bufferProgress: function(p){},
-		setDuration: function(duration){}
+		setDuration: function(duration){},
+		refreshTimeSpan: function(startTime, endTime){}
 		
 	};
 	

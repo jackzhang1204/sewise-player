@@ -47,6 +47,7 @@
 		var isPlaying = false;
 		var hideTimeout;
 		var delayTime = 5000;
+		var fixedTimes = false;
 
 
 		init();
@@ -395,10 +396,12 @@
 		this.timeUpdate = function(){
 			if(!mainPlayer.playTime()) return;
 			
-			durationHMS = SewisePlayerSkin.Utils.stringer.dateToStrHMS(new Date(Math.ceil(mainPlayer.playTime().getTime() / 1000 / duration) * duration * 1000));
-			playTimeHMS = SewisePlayerSkin.Utils.stringer.dateToStrHMS(new Date(Math.floor(mainPlayer.playTime().getTime() / 1000 / duration) * duration * 1000));
-			$playtime.text(playTimeHMS + "/" + durationHMS);
-
+			if(!fixedTimes){
+				durationHMS = SewisePlayerSkin.Utils.stringer.dateToStrHMS(new Date(Math.ceil(mainPlayer.playTime().getTime() / 1000 / duration) * duration * 1000));
+				playTimeHMS = SewisePlayerSkin.Utils.stringer.dateToStrHMS(new Date(Math.floor(mainPlayer.playTime().getTime() / 1000 / duration) * duration * 1000));
+				$playtime.text(playTimeHMS + "/" + durationHMS);
+			}
+			
 			if(dragging) return;
 			var playPt = (Math.floor(mainPlayer.playTime().getTime() / 1000) % duration) / duration;
 			ppLineWidth = playPt * 100 + "%";
@@ -441,6 +444,11 @@
 		this.initLanguage = function(){
 			var bufferTipStr = SewisePlayerSkin.Utils.language.getString("loading");
 			$bufferTip.text(bufferTipStr);
+		}
+		this.refreshTimes = function(startTime, endTime){
+			fixedTimes = true;
+			$playtime.text(startTime + "/" + endTime);
+			duration = SewisePlayerSkin.Utils.stringer.hmsToSeconds(endTime) - SewisePlayerSkin.Utils.stringer.hmsToSeconds(startTime);
 		}
 		
 		
