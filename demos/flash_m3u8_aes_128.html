@@ -3,12 +3,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>m3u8 AES-128</title>
-		<script charset="utf-8" type="text/javascript" language="JavaScript" src="../player/js/swfobject.js"></script>
+		<title>M3U8 AES 128</title>
+		<script type="text/javascript" src="../player/sewise.player.min.js"></script>
 	</head>
 	<body>
-		<div style="width: 600px;height: 400px;">
-			<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=m3u8&videourl=http://playertest.longtailvideo.com/adaptive/customIV/prog_index.m3u8&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=Play-AES-M3u8&buffer=5&claritybutton=disable&poster=http://jackzhang1204.github.io/materials/poster.png&skin=vodWhite"></script>
+		<div id="player" style="width: 600px;height: 400px;">
+		<script type="text/javascript">
+			SewisePlayer.setup({
+				server: "vod",
+				type: "m3u8",
+				autostart: "true",
+				poster: "http://jackzhang1204.github.io/materials/poster.png",
+				videourl: "http://jackzhang1204.github.io/materials/m3u8/aes128/test.m3u8",
+		        skin: "vodWhite",
+		        title: "M3U8 AES 128",
+		        lang: "zh_CN",
+		        claritybutton: 'disable'
+			}, "player");
+		</script>
 		</div>
 		<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
 	</body>

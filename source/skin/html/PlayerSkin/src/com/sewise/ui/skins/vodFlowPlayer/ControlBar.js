@@ -425,7 +425,6 @@
 
 		function fullScreen(obj){
 			$(window).unbind("resize", nsResizeHandler);
-
 			//console.log("to fullScreen");
 			if (obj.requestFullscreen){
 				obj.requestFullscreen();
@@ -436,7 +435,6 @@
 			} else if (obj.webkitRequestFullscreen){
 				obj.webkitRequestFullscreen();
 			}else if($video.webkitEnterFullscreen){
-				//console.log("native fullscreen");
 				$video.play();
 				$video.webkitEnterFullscreen();
 				$fullscreenBtn.show();

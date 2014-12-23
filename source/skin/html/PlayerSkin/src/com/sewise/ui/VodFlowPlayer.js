@@ -142,7 +142,7 @@
 			SewisePlayer.CommandDispatcher.dispatchEvent({type: SewisePlayer.Events.PLAYER_SKIN_LOADED, playerSkin: SewisePlayerSkin.IVodSkin});
 		}catch(e){
 			console.log("No Main Player");
-
+			
 			//alert("No Main Player");
 		}
 		

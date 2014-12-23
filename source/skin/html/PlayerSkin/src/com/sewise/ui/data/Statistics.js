@@ -1,7 +1,7 @@
 (function($){
 	/**
 	 * Constructor.
-	 * @name AdsContainer : 广告盒子.
+	 * @name Statistics : 数据统计.
 	 * 
 	 */
 	
@@ -16,7 +16,7 @@
 			var requestURL = data["request-url"];
 			var requestData = data["request-data"];
 			var countDelayTime = data["request-data"]["intervallen"] ? data["request-data"]["intervallen"] : 10000;
-
+			
 			//console.log(countDelayTime);
 			setInterval(function(){
 				$.ajax({

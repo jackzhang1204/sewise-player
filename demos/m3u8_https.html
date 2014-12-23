@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>M3U8 AES 128</title>
+		<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+	</head>
+	<body>
+		<div id="player" style="width: 600px;height: 400px;">
+		<script type="text/javascript">
+			SewisePlayer.setup({
+				server: "vod",
+				type: "m3u8",
+				autostart: "true",
+				poster: "http://jackzhang1204.github.io/materials/poster.png",
+				videourl: "https://jackzhang1204.github.io/materials/m3u8/aes128/test2.m3u8",
+		        skin: "vodWhite",
+		        title: "M3U8 AES 128",
+		        lang: "zh_CN",
+		        claritybutton: 'disable'
+			}, "player");
+		</script>
+		</div>
+		<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
+	</body>
+</html>

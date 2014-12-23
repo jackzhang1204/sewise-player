@@ -22,7 +22,7 @@ QQ交流群：237432172
 * 支持多平台，PC包括Windows, MacOS, Linux等。Mobile包括Android, IOS, Windows Phone等。
 * 支持多浏览器兼容，如IE6/7/8/9/10、Google Chrome、Firefox、safari、Opera等。
 * 支持多种视频格式，如mp4、m3u8、oga、webm、theora、flv、f4v等。
-* 支持多种协议直播流，如rtmp、udp、http flv、http ts等。
+* 支持多种协议直播流，如rtmp、hls、http等。
 * 支持Flash播放m3u8文件，以及AES-128解码播放。
 * 支持PC与Mobile平台播放器自动识别功能。
 * 支持浏览器HTML5与Flash特性检测。

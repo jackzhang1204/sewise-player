@@ -67,7 +67,6 @@
 				$container.css("width", "100%");
 				$container.css("height", "100%");
 			}
-
 			var fullProgressWidth = parseInt($container.width()) - btnsWidth;
 			//console.log(fullProgressWidth);
 			if(fullProgressWidth < 0){
