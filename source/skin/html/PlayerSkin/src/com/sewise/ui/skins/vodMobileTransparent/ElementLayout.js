@@ -71,7 +71,10 @@
 				//console.log($container.width());
 			}
 
-			var fullProgressWidth = parseInt($container.width());
+			//var fullProgressWidth = parseInt($container.width());
+			//兼容火狐bootstrap框架下，弹窗全屏时进度条显示的问题。
+			var fullProgressWidth = parseInt($(window).width()) - btnsWidth;
+			
 			//console.log(fullProgressWidth);
 			
 			if(fullProgressWidth < 0){

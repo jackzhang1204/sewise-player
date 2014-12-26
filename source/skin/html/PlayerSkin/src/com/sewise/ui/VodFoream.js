@@ -80,7 +80,7 @@
 		SewisePlayerSkin.IVodSkin.timeDisplay = function(state){
 			//重置playTime显示状态。
 			/*if(state != "enable"){
-
+			
 			}*/
 		}
 		SewisePlayerSkin.IVodSkin.controlBarDisplay = function(state){

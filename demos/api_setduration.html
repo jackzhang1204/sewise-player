@@ -27,13 +27,22 @@
 	        	SewisePlayer.setDuration(645);
 			}
 			function refreshTimeSpan(){
-	        	SewisePlayer.refreshTimeSpan("15:30:00", "15:40:00");
+	        	SewisePlayer.refreshTimeSpan("00:00:00", "23:59:59");
 			}
+			function refreshTimeSpan2(){
+	        	SewisePlayer.refreshTimeSpan("00:00:00", "23:59:59", "2014/12/24 12:34:57", 1419392097);
+			}
+			setInterval(function(){
+				console.log("playTime-false: " + SewisePlayer.playTime(false));
+				console.log("playTime-true: " + SewisePlayer.playTime());
+			}, 2000);
+			
 		</script>
 	</div>
 	<div style="padding: 10px;float: left;">
 		<input style="width: 120px; height: 30px;" type="button" value="更新时间跨度" onclick="setDuration()"/>
 		<input style="width: 120px; height: 30px;" type="button" value="刷新显示时间" onclick="refreshTimeSpan()"/>
+		<input style="width: 150px; height: 30px;" type="button" value="刷新显示时间带时差" onclick="refreshTimeSpan2()"/>
 	</div>
 	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
 </body>

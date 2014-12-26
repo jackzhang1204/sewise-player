@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+	<title>Sewise Player</title>
+	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+</head>
+<body>
+	<div id="player" style="width: 640px; height: 352px; ">
+		<script type="text/javascript">
+			SewisePlayer.setup({
+				server: "vod",
+				type: "mp4",
+				primary: "flash",
+				videourl: "http://jackzhang1204.github.io/materials/mov_bbb.mp4",
+				poster: "http://jackzhang1204.github.io/materials/poster.png",
+		        skin: "vodWhite",
+		        claritybutton: "disable",
+		        title: "primary参数可设置为html5或flash",
+		        lang: "zh_CN"
+			}, "player");
+		</script>
+	</div>
+	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
+</body>
+</html>

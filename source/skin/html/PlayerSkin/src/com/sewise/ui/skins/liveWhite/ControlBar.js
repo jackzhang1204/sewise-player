@@ -448,7 +448,16 @@
 		this.refreshTimes = function(startTime, endTime){
 			fixedTimes = true;
 			$playtime.text(startTime + "/" + endTime);
-			duration = SewisePlayerSkin.Utils.stringer.hmsToSeconds(endTime) - SewisePlayerSkin.Utils.stringer.hmsToSeconds(startTime);
+			
+			//duration = SewisePlayerSkin.Utils.stringer.hmsToSeconds(endTime) - SewisePlayerSkin.Utils.stringer.hmsToSeconds(startTime);
+			var timeEnd = SewisePlayerSkin.Utils.stringer.hmsToSeconds(endTime);
+			var timeStart = SewisePlayerSkin.Utils.stringer.hmsToSeconds(startTime);
+			if(timeEnd > timeStart){
+				duration = timeEnd - timeStart;
+			}else{
+				duration = SewisePlayerSkin.Utils.stringer.hmsToSeconds("24:00:00") - timeStart + timeEnd;
+			}
+			
 		}
 		
 		

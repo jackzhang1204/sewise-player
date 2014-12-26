@@ -68,7 +68,10 @@
 				$container.css("height", "100%");
 			}
 			
-			var fullProgressWidth = parseInt($container.width()) - btnsWidth;
+			//var fullProgressWidth = parseInt($container.width()) - btnsWidth;
+			//兼容火狐bootstrap框架下，弹窗全屏时进度条显示的问题。
+			var fullProgressWidth = parseInt($(window).width()) - btnsWidth;
+
 			//console.log(fullProgressWidth);
 			if(fullProgressWidth < 0){
 				fullProgressWidth = fullProgressWidth + $playtime.width();

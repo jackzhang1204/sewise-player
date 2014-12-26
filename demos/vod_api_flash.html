@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<title>Sewise Player</title>
+	<script type="text/javascript" src="../player/sewise.player.min.js"></script>
+</head>
+<body>
+	<div style="width: 640px; height: 352px; ">
+		<div id="container" style="width: 640px; height: 360px; ">
+		<script type="text/javascript">
+			SewisePlayer.setup({
+				server: "vod",
+				type: "flv",
+				videourl: "http://219.232.161.202:5080/flvseek/data/userdata/vod/resource/201402/OVNNwRk1.flv",
+				poster: "http://jackzhang1204.github.io/materials/poster.png",
+		        skin: "vodWhite",
+		        title: "Tile 标题",
+		        lang: 'en_US',
+		        claritybutton: 'disable'
+			}, "container");
+		</script>
+	</div>
+	<script>
+		//点播接口调用方法
+		function startPlay(){
+			SewisePlayer.doPlay();
+		}
+		function playPause(){
+			SewisePlayer.doPause();
+		}
+		function seekTo(){
+			SewisePlayer.doSeek(5);
+		}
+		function playStop(){
+			SewisePlayer.doStop();
+		}
+		function changeVolume(){
+			SewisePlayer.setVolume(0.1);
+		}
+		function getDuration(){
+			alert(SewisePlayer.duration());
+		}
+		function getPlayTime(){
+			alert(SewisePlayer.playTime());
+		}
+		/*function switchProgram(){
+			SewisePlayer.playProgram("xqfa3cZn", 0, true);
+		}*/
+		function switchVideo(){
+			SewisePlayer.toPlay("http://219.232.161.206:5080/flvseek/data/userdata/vismam/downfile/201307/02005220p.flv", "300' start play", 300, true);
+		}
+		function toFullScreen(){
+			SewisePlayer.fullScreen();
+		}
+		function toNoramlScreen(){
+			SewisePlayer.noramlScreen();
+		}
+		function getBufferProgress() {
+			alert(SewisePlayer.bufferProgress());
+		}
+		
+		
+		//播放器回调方法
+		function playerReady(name){
+			console.log("Sewise Player On Ready 1");
+			//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
+		}
+		SewisePlayer.playerReady(function(name){
+			console.log("Sewise Player On Ready 2");
+		});
+
+		function onStart(name){
+	        console.log("onStart 1");
+		}
+		SewisePlayer.onStart(function(name){
+			 console.log("onStart 2");
+		});
+
+		function onStop(name){
+			 console.log("onStop 1");
+		}
+		SewisePlayer.onStop(function(name){
+			 console.log("onStop 2");
+		});
+
+		function onMetadata(meta, name){
+			console.log("onMetadata 1");
+		}
+		SewisePlayer.onMetadata(function(meta, name){
+			 console.log("onMetadata 2");
+		});
+
+		function onClarity(clarity, name){
+			console.log("onClarity 1");
+		}
+		SewisePlayer.onClarity(function(clarity, name){
+			 console.log("onClarity 2");
+		});
+
+		function onPause(name){
+			console.log("onPause 1");
+		}
+		SewisePlayer.onPause(function(name){
+			 console.log("onPause 2");
+		});
+
+		function onSeek(time, name){
+			console.log("onSeek 1: " + time);
+		}
+		SewisePlayer.onSeek(function(time, name){
+			console.log("onSeek 2: " + time);
+		});
+
+		function onPlayTime(time, name){
+			console.log("onPlayTime 1: " + time);
+		}
+		SewisePlayer.onPlayTime(function(time, name){
+			console.log("onPlayTime 2: " + time);
+		});
+
+		function onBuffer(pt, name){
+			console.log("onBuffer 1: " + pt);
+		}
+		SewisePlayer.onBuffer(function(pt, name){
+			console.log("onBuffer 2: " + pt);
+		});
+
+	</script>
+	<div style="padding-top: 20px;">
+		<div style="padding-right: 20px;float: left;">[点播接口]</div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:startPlay();">播放</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:playPause();">暂停</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:seekTo();">跳转</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:playStop();">停止</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:changeVolume();">更改音量</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:getDuration();">获取总时长</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:getPlayTime();">获取当前时间</a></div>
+		<!-- <div style="padding-right: 20px;float: left;"><a href="javascript:switchProgram();">切换节目</a></div> -->
+		<div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">切换视频</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:toFullScreen();">全屏</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:toNoramlScreen();">普屏</a></div>
+		<div style="padding-right: 20px;float: left;"><a href="javascript:getBufferProgress();">缓冲进度</a></div>
+		<br clear="all"/>
+	</div>
+	<div style="float: left; width: 100%; padding: 10px 30px; "><a href="https://github.com/jackzhang1204/sewise-player" target="_blank">Fork it on GitHub</a></div>
+</body>
+</html>

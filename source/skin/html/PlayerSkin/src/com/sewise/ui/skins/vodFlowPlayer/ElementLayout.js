@@ -59,7 +59,6 @@
 				$container.css("left", offsetX);
 				$container.css("top", offsetY);
 				
-				
 				/*$container.css("width", window.screen.width);
 				$container.css("height", window.screen.height);*/
 				//console.log($container.width());
@@ -67,8 +66,12 @@
 				$container.css("width", "100%");
 				$container.css("height", "100%");
 			}
-			var fullProgressWidth = parseInt($container.width()) - btnsWidth;
-			//console.log(fullProgressWidth);
+
+			//var fullProgressWidth = parseInt($container.width()) - btnsWidth;
+			//兼容火狐bootstrap框架下，弹窗全屏时进度条显示的问题。
+			var fullProgressWidth = parseInt($(window).width()) - btnsWidth;
+			
+			//console.log("fullProgressWidth: " + fullProgressWidth);
 			if(fullProgressWidth < 0){
 				fullProgressWidth = fullProgressWidth + $playtime.width();
 				$playtime.hide();

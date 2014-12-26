@@ -405,7 +405,7 @@
 		function fullscreenChangeHandler(){
 			if(document.fullscreenElement != null || document.msFullscreenElement != null
 				|| document.mozFullScreenElement != null || document.webkitFullscreenElement != null){
-				//console.log("document to fullscreen");
+				console.log("document to fullscreen");
             	elementLayout.fullScreen();
           	}else{
           		//console.log("document to normalscreen");
