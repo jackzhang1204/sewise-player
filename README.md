@@ -8,8 +8,10 @@ Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod
 
 QQ交流群：237432172
 
+
 ####招聘：
-* 帮现在公司高薪招H5高手要求掌握原生js、bootstratp、angularjs开发，熟悉移动端动态页面布局，我们开发中的angularjs项目http://m.tp-bihaohuo.cn/。如果合适请联系我QQ:1324999535（加Q时说明下来意）希望有幸能和您一起共事。
+####帮现在公司高薪招H5高手要求掌握原生js、bootstratp、angularjs开发，熟悉移动端动态页面布局，我们开发中的angularjs项目http://m.tp-bihaohuo.cn/。如果合适请联系我QQ:1324999535（加Q时说明下来意）希望有幸能和您一起共事。
+
 
 ## What is Sewise Player?
 
