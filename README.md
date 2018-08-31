@@ -7,11 +7,6 @@ Support for [jQuery](http://jquery.com/) HTML player skins.
 Demos: [Vod点播](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_videourl_mp4.html) | [Live直播](http://jackzhang1204.github.io/sewise/sewise_player/demos/live_pid.html) | [Flowplayer皮肤](http://jackzhang1204.github.io/sewise/sewise_player/demos/vod_skin_flowplayer.html) | [Fallback地址](http://jackzhang1204.github.io/sewise/sewise_player/demos/fallback_url.html) | [Bootstrap支持](http://jackzhang1204.github.io/sewise/sewise_player/demos/bootstrap.html) | [M3u8跨平台](http://jackzhang1204.github.io/sewise/sewise_player/demos/m3u8_cross_platform.html) | [More更多](http://jackzhang1204.github.io/sewise/sewise_player/demos/index.html)
 
 
-
-####招聘：
-####帮现在公司高薪招H5高手要求掌握原生js、bootstratp、angularjs开发，熟悉移动端动态页面布局。如果合适请联系我微信：jackzhang1204（加微时说明下来意）希望有幸能和您一起共事。我们开发中的angularjs项目http://m.bihaohuo.cn
-
-
 ## What is Sewise Player?
 
 
